@@ -1,0 +1,11 @@
+# OS / editor junk
+Thumbs.db
+ehthumbs.db
+desktop.ini
+.DS_Store
+*.tmp
+*~
+
+# Dependency / build dirs (none used, but safe defaults)
+node_modules/
+.cache/
