@@ -395,7 +395,7 @@
         link("web-design.html", "Web Design") + ".";
     }
     if (has("photo")) { return "Product, lifestyle and event photography — take a look at " + link("photography.html", "Photography") + "."; }
-    if (has("video", "reel", "edit", "motion")) { return "Reels, promos and brand videos with motion graphics and clean colour. See " + link("video-editing.html", "Video Editing") + "."; }
+    if (has("video", "reel", "edit", "motion")) { return "Reels, promos and brand videos with clean cuts and colour. See " + link("video-editing.html", "Video Editing") + "."; }
     if (has("ai", "artificial")) { return "Ronnie uses AI to speed up ideation and exploration — but every final design decision stays human-led. More on " + link("artificial-intelligence.html", "Artificial Intelligence") + "."; }
     if (has("social", "instagram", "post", "campaign")) { return "Post designs, campaign visuals, reels covers and story templates — see " + link("social-media.html", "Social Media") + "."; }
     if (has("graphic", "poster", "print", "flyer", "ad")) { return "Posters, digital ads, marketing creatives and print layouts live on the " + link("graphic.html", "Graphic") + " page."; }
