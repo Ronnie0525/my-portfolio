@@ -511,6 +511,17 @@
     });
   }
 
+  /* ---- Navbar shrink-on-scroll -------------------------------------- */
+  function wireHeaderScroll() {
+    var header = document.querySelector(".site-header");
+    if (!header) return;
+    function onScroll() {
+      header.classList.toggle("scrolled", window.scrollY > 8);
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
   /* ---- Inject favicon on every page --------------------------------- */
   function setFavicon() {
     if (document.querySelector('link[rel="icon"]')) return;
@@ -547,6 +558,7 @@
     buildWidgets();
     wireReveal();
     wireToTop();
+    wireHeaderScroll();
   }
 
   if (document.readyState === "loading") {
