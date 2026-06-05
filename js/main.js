@@ -18,35 +18,35 @@
   };
 
   var NAV = [
-    { label: "About Me", href: "about.html" },
+    { label: "About Me", href: "/about/" },
     {
       label: "Portfolio",
-      href: "graphic-design-portfolio.html",
+      href: "/graphic-design-portfolio/",
       children: [
-        { label: "Graphic", href: "graphic.html" },
-        { label: "Mockups", href: "mockups.html" },
-        { label: "Logo Branding", href: "logo-branding.html" },
-        { label: "Logo Identity", href: "logo-identity.html" }
+        { label: "Graphic", href: "/graphic/" },
+        { label: "Mockups", href: "/mockups/" },
+        { label: "Logo Branding", href: "/logo-branding/" },
+        { label: "Logo Identity", href: "/logo-identity/" }
       ]
     },
     {
       label: "Other Expertise",
-      href: "other-expertise.html",
+      href: "/other-expertise/",
       children: [
-        { label: "Web Design", href: "web-design.html" },
-        { label: "Photography", href: "photography.html" },
-        { label: "Video Editing", href: "video-editing.html" },
-        { label: "Artificial Intelligence", href: "artificial-intelligence.html" },
-        { label: "Social Media", href: "social-media.html" }
+        { label: "Web Design", href: "/web-design/" },
+        { label: "Photography", href: "/photography/" },
+        { label: "Video Editing", href: "/video-editing/" },
+        { label: "Artificial Intelligence", href: "/artificial-intelligence/" },
+        { label: "Social Media", href: "/social-media/" }
       ]
     },
     {
       label: "Tools I Use",
-      href: "tools.html",
+      href: "/tools/",
       children: [
-        { label: "Graphic Design Tools", href: "tools.html#graphic-tools" },
-        { label: "AI Tools", href: "tools.html#ai-tools" },
-        { label: "Web Tools", href: "tools.html#web-tools" }
+        { label: "Graphic Design Tools", href: "/tools/#graphic-tools" },
+        { label: "AI Tools", href: "/tools/#ai-tools" },
+        { label: "Web Tools", href: "/tools/#web-tools" }
       ]
     }
   ];
@@ -68,17 +68,21 @@
   };
 
   /* ---- Determine current page --------------------------------------- */
-  function currentPage() {
-    var path = window.location.pathname.split("/").pop();
-    return path && path.length ? path : "index.html";
+  function currentPath() {
+    var p = window.location.pathname.replace(/index\.html$/, "");
+    if (p.charAt(0) !== "/") p = "/" + p;
+    if (p.charAt(p.length - 1) !== "/") p += "/";
+    return p;
   }
-  var here = currentPage();
+  var here = currentPath();
+
+  function basePath(href) { return href.split("#")[0]; }
 
   function isActive(item) {
-    if (item.href === here) return true;
+    if (basePath(item.href) === here) return true;
     if (item.children) {
       for (var i = 0; i < item.children.length; i++) {
-        if (item.children[i].href === here) return true;
+        if (basePath(item.children[i].href) === here) return true;
       }
     }
     return false;
@@ -89,11 +93,11 @@
     var menu = "";
     NAV.forEach(function (item, idx) {
       var active = isActive(item) ? " active" : "";
-      var aria = item.href === here ? ' aria-current="page"' : "";
+      var aria = basePath(item.href) === here ? ' aria-current="page"' : "";
       if (item.children) {
         var subId = "submenu-" + idx;
         var sub = item.children.map(function (c) {
-          var ca = c.href === here ? ' class="active" aria-current="page"' : "";
+          var ca = basePath(c.href) === here ? ' class="active" aria-current="page"' : "";
           return '<li><a href="' + c.href + '"' + ca + '><span class="dot"></span>' + c.label + "</a></li>";
         }).join("");
         menu +=
@@ -112,15 +116,15 @@
 
     return '' +
       '<div class="container nav">' +
-        '<a class="brand" href="index.html" aria-label="Ronnie Balonon — Home">' +
-          '<img class="brand__logo" src="assets/logo-black.png" alt="Ronnie Balonon logo" />' +
+        '<a class="brand" href="/" aria-label="Ronnie Balonon — Home">' +
+          '<img class="brand__logo" src="/assets/logo-black.png" alt="Ronnie Balonon logo" />' +
           '<span class="brand__name">Ronnie Balonon</span>' +
         "</a>" +
         '<nav class="nav-primary" aria-label="Primary">' +
           '<ul class="nav-menu">' + menu + "</ul>" +
         "</nav>" +
         '<div class="nav-actions">' +
-          '<a class="btn btn--primary nav-cta" href="index.html#contact">Contact Me</a>' +
+          '<a class="btn btn--primary nav-cta" href="/#contact">Contact Me</a>' +
           '<button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation"><span></span></button>' +
         "</div>" +
       "</div>";
@@ -139,16 +143,16 @@
   }
 
   function buildFooter() {
-    var portfolioLinks = footerLinks(findNav("graphic-design-portfolio.html").children);
-    var expertiseLinks = footerLinks(findNav("other-expertise.html").children);
-    var toolsLinks = footerLinks(findNav("tools.html").children);
+    var portfolioLinks = footerLinks(findNav("/graphic-design-portfolio/").children);
+    var expertiseLinks = footerLinks(findNav("/other-expertise/").children);
+    var toolsLinks = footerLinks(findNav("/tools/").children);
     var year = new Date().getFullYear();
 
     return '' +
       '<div class="container">' +
         '<div class="footer-top">' +
           '<div class="footer-brand">' +
-            '<a class="brand" href="index.html"><img class="brand__logo" src="assets/logo-white.png" alt="Ronnie Balonon logo" /><span class="brand__name">Ronnie Balonon</span></a>' +
+            '<a class="brand" href="/"><img class="brand__logo" src="/assets/logo-white.png" alt="Ronnie Balonon logo" /><span class="brand__name">Ronnie Balonon</span></a>' +
             "<p>Dubai-based, AI-powered Graphic Designer crafting clean, professional and effective visual experiences for brands and businesses.</p>" +
             '<ul class="footer-contact">' +
               '<li><span class="ico">' + ICON.phone + '</span><a href="' + CONTACT.phoneHref + '">' + CONTACT.phone + "</a></li>" +
@@ -162,17 +166,17 @@
           "</div>" +
           '<div class="footer-col">' +
             "<h4>Portfolio</h4>" +
-            '<ul class="footer-links"><li><a href="graphic-design-portfolio.html">Overview</a></li>' + portfolioLinks + "</ul>" +
+            '<ul class="footer-links"><li><a href="/graphic-design-portfolio/">Overview</a></li>' + portfolioLinks + "</ul>" +
           "</div>" +
           '<div class="footer-col">' +
             "<h4>Expertise</h4>" +
-            '<ul class="footer-links"><li><a href="other-expertise.html">Overview</a></li>' + expertiseLinks + "</ul>" +
+            '<ul class="footer-links"><li><a href="/other-expertise/">Overview</a></li>' + expertiseLinks + "</ul>" +
           "</div>" +
           '<div class="footer-col">' +
             "<h4>More</h4>" +
             '<ul class="footer-links">' +
-              '<li><a href="about.html">About Me</a></li>' +
-              '<li><a href="tools.html">Tools I Use</a></li>' +
+              '<li><a href="/about/">About Me</a></li>' +
+              '<li><a href="/tools/">Tools I Use</a></li>' +
               toolsLinks +
             "</ul>" +
           "</div>" +
@@ -378,31 +382,31 @@
     }
     if (has("service", "what do you do", "offer", "help with")) {
       return "Ronnie offers a full creative toolkit: " +
-        link("graphic-design-portfolio.html", "Graphic Design") + ", " +
-        link("logo-branding.html", "Logo Branding") + ", " +
-        link("web-design.html", "Web Design") + ", " +
-        link("photography.html", "Photography") + ", " +
-        link("video-editing.html", "Video Editing") + " and " +
-        link("social-media.html", "Social Media") + ". Want details on any one?";
+        link("/graphic-design-portfolio/", "Graphic Design") + ", " +
+        link("/logo-branding/", "Logo Branding") + ", " +
+        link("/web-design/", "Web Design") + ", " +
+        link("/photography/", "Photography") + ", " +
+        link("/video-editing/", "Video Editing") + " and " +
+        link("/social-media/", "Social Media") + ". Want details on any one?";
     }
     if (has("logo", "brand", "identity")) {
-      return "For branding, see " + link("logo-branding.html", "Logo Branding") +
-        " (full identity systems) and " + link("logo-identity.html", "Logo Identity") +
+      return "For branding, see " + link("/logo-branding/", "Logo Branding") +
+        " (full identity systems) and " + link("/logo-identity/", "Logo Identity") +
         " (logo concepts, marks &amp; variations).";
     }
     if (has("web", "website", "landing", "ui")) {
       return "Ronnie designs clean, responsive sites — landing pages, portfolios and business websites. See " +
-        link("web-design.html", "Web Design") + ".";
+        link("/web-design/", "Web Design") + ".";
     }
-    if (has("photo")) { return "Product, lifestyle and event photography — take a look at " + link("photography.html", "Photography") + "."; }
-    if (has("video", "reel", "edit", "motion")) { return "Reels, promos and brand videos with clean cuts and colour. See " + link("video-editing.html", "Video Editing") + "."; }
-    if (has("ai", "artificial")) { return "Ronnie uses AI to speed up ideation and exploration — but every final design decision stays human-led. More on " + link("artificial-intelligence.html", "Artificial Intelligence") + "."; }
-    if (has("social", "instagram", "post", "campaign")) { return "Post designs, campaign visuals, reels covers and story templates — see " + link("social-media.html", "Social Media") + "."; }
-    if (has("graphic", "poster", "print", "flyer", "ad")) { return "Posters, digital ads, marketing creatives and print layouts live on the " + link("graphic.html", "Graphic") + " page."; }
-    if (has("mockup", "packaging", "preview")) { return "Realistic product and packaging mockups are on the " + link("mockups.html", "Mockups") + " page."; }
+    if (has("photo")) { return "Product, lifestyle and event photography — take a look at " + link("/photography/", "Photography") + "."; }
+    if (has("video", "reel", "edit", "motion")) { return "Reels, promos and brand videos with clean cuts and colour. See " + link("/video-editing/", "Video Editing") + "."; }
+    if (has("ai", "artificial")) { return "Ronnie uses AI to speed up ideation and exploration — but every final design decision stays human-led. More on " + link("/artificial-intelligence/", "Artificial Intelligence") + "."; }
+    if (has("social", "instagram", "post", "campaign")) { return "Post designs, campaign visuals, reels covers and story templates — see " + link("/social-media/", "Social Media") + "."; }
+    if (has("graphic", "poster", "print", "flyer", "ad")) { return "Posters, digital ads, marketing creatives and print layouts live on the " + link("/graphic/", "Graphic") + " page."; }
+    if (has("mockup", "packaging", "preview")) { return "Realistic product and packaging mockups are on the " + link("/mockups/", "Mockups") + " page."; }
     if (has("portfolio", "work", "project", "sample", "example")) {
-      return "You can explore the full " + link("graphic-design-portfolio.html", "Graphic Design Portfolio") +
-        " and " + link("other-expertise.html", "Other Expertise") + " for everything else.";
+      return "You can explore the full " + link("/graphic-design-portfolio/", "Graphic Design Portfolio") +
+        " and " + link("/other-expertise/", "Other Expertise") + " for everything else.";
     }
     if (has("price", "cost", "rate", "budget", "quote", "fee", "how much")) {
       return "Pricing depends on the scope and timeline of your project. Share a few details and Ronnie will send a tailored quote — reach him on " +
@@ -513,11 +517,11 @@
     var icon = document.createElement("link");
     icon.rel = "icon";
     icon.type = "image/png";
-    icon.href = "assets/favicon.png?v=2";
+    icon.href = "/assets/favicon.png?v=2";
     document.head.appendChild(icon);
     var touch = document.createElement("link");
     touch.rel = "apple-touch-icon";
-    touch.href = "assets/favicon.png?v=2";
+    touch.href = "/assets/favicon.png?v=2";
     document.head.appendChild(touch);
   }
 
