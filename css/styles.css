@@ -1589,3 +1589,40 @@ ul { margin: 0; padding: 0; }
 .cb-panels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: #0a0a0a; }
 .cb-panel { min-width: 0; }
 .cb-panel .shot { width: 100%; aspect-ratio: 4 / 5; object-fit: contain; display: block; background: #000; }
+
+/* =============================================================
+   Micro-interactions (site-wide) — clean, subtle motion
+   ============================================================= */
+/* Image cards: gentle zoom of the picture on hover */
+.card > .shot { transition: transform .55s var(--ease-out); }
+.card:hover > .shot { transform: scale(1.06); }
+
+/* Service-card icon "fills" with brand colour on hover */
+.service-card .ico { transition: transform .3s var(--ease), background-color .3s var(--ease), color .3s var(--ease); }
+.service-card:hover .ico { background: var(--blue-600); color: #fff; transform: translateY(-3px); }
+
+/* Masonry gallery images: lift + soft shadow on hover */
+.gallery img, .gallery video { transition: transform .4s var(--ease-out), box-shadow .4s var(--ease-out); }
+.gallery img:hover, .gallery video:hover { transform: translateY(-5px) scale(1.01); box-shadow: var(--shadow-md); }
+
+/* Footer social icons: playful pop */
+.socials a svg { transition: transform .25s var(--ease); }
+.socials a:hover svg { transform: scale(1.12) rotate(-6deg); }
+
+/* Tool chip icon: subtle scale on hover */
+.tool-chip img { transition: transform .25s var(--ease); }
+.tool-chip:hover img { transform: scale(1.06); }
+
+/* Button icon nudge */
+.btn svg { transition: transform .25s var(--ease); }
+.btn:hover svg { transform: translateX(3px); }
+.btn--whatsapp:hover svg, .btn--light:hover svg { transform: scale(1.1); }
+
+/* Category-card arrow + whole-card sheen already animate; reinforce arrow */
+.cat-card:hover .arrow { gap: 10px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .card:hover > .shot, .gallery img:hover, .gallery video:hover,
+  .service-card:hover .ico, .tool-chip:hover img,
+  .socials a:hover svg, .btn:hover svg { transform: none !important; }
+}
