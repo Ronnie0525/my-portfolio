@@ -46,16 +46,17 @@ My portfolio/
 ├── js/main.js                    # navbar + footer + widgets + interactions
 │
 │   ── NOT PART OF THE SITE ───────────────────────────────────────
-├── Asset/                        # ⚠ ORIGINAL SOURCE FILES ONLY (PSDs, raw images).
-│                                 #   Capital "A" — NOT referenced by the site.
-│                                 #   Optimised copies live in lowercase "assets/".
+├── _source/                      # ORIGINAL SOURCE FILES ONLY (PSDs, raw images).
+│                                 #   Not referenced by the site; optimised copies
+│                                 #   live in "assets/". Sorted to the top, named with
+│                                 #   a leading underscore so it's clearly "not a page".
 ├── CNAME · .nojekyll · .github/  # custom domain · Pages config · deploy workflow
 └── README.md
 ```
 
-**`assets/` vs `Asset/`** is the easiest thing to mix up: lowercase **`assets/`** holds
-the optimised files the website actually loads; capital **`Asset/`** is just your
-original source backups and can be ignored (or kept off the repo) — nothing links to it.
+**`assets/` vs `_source/`:** lowercase **`assets/`** holds the optimised files the
+website actually loads; **`_source/`** is just your original source backups (Photoshop
+files, raw photos) — nothing links to it, so it can be ignored or kept off the repo.
 
 ### How the shared UI works
 
