@@ -12,33 +12,50 @@ step, no frameworks, no dependencies.
 
 ---
 
-## File structure
+## Project structure
+
+> **Read this first if the folders look confusing.** Every top-level folder that
+> contains an `index.html` **is a page = a live URL** (e.g. `about/` → `/about/`).
+> These route folders **must stay at the root** — moving or renaming them changes
+> the site's URLs and breaks the navigation and the deployment. That's why the root
+> looks like a long list of folders; it's the site map, not clutter.
 
 ```
 My portfolio/
-├── index.html                      # Home
-├── about.html                      # About Me (1 yr exp · 50+ projects · 10+ clients)
-├── graphic-design-portfolio.html   # Graphic Design Portfolio (hub)
-├── graphic.html                    # ├─ Graphic
-├── mockups.html                    # ├─ Mockups
-├── logo-branding.html              # ├─ Logo Branding
-├── logo-identity.html              # └─ Logo Identity
-├── other-expertise.html            # Other Expertise (hub)
-├── web-design.html                 # ├─ Web Design
-├── photography.html                # ├─ Photography
-├── video-editing.html              # ├─ Video Editing
-├── artificial-intelligence.html    # ├─ Artificial Intelligence
-├── social-media.html               # └─ Social Media
-├── tools.html                      # Tools I Use (Graphic / AI / Web tools)
-├── css/
-│   └── styles.css                  # All styling + design tokens
-├── js/
-│   └── main.js                     # Navbar + footer + widgets + interactions
+├── index.html                    # Home  (/)
+│
+│   ── PAGES (each folder = one URL) ───────────────────────────────
+├── about/                        # /about/
+├── graphic-design-portfolio/     # /graphic-design-portfolio/   (Graphic Design)
+│   ├── graphic/ · mockups/ · logo-branding/ · logo-identity/    (graphic sub-pages)
+├── other-expertise/              # /other-expertise/
+│   ├── web-design/ · photography/ · video-editing/
+│   └── artificial-intelligence/ · social-media/                 (expertise pages)
+├── portfolio/                    # /portfolio/   (real-work hub)
+│   ├── graphic-design/ · web-design/ · social-media/
+│   └── photography/ · video-editing/ · artificial-intelligence/ (real work per discipline)
+├── tools/                        # /tools/
+├── resume/                       # /resume/
+│
+│   ── SITE CODE & WEB FILES (served to visitors) ─────────────────
+├── assets/                       # images, PDFs, video USED BY the live site
+│   ├── expertise/dummy/          #   AI dummy expertise visuals
+│   ├── hero/ · graphic/ · social/ · photography/ · web-design/ · ai/ · tools/
+│   └── *.webp · *.jpg · *.pdf · logos
+├── css/styles.css                # all styling + design tokens
+├── js/main.js                    # navbar + footer + widgets + interactions
+│
+│   ── NOT PART OF THE SITE ───────────────────────────────────────
+├── Asset/                        # ⚠ ORIGINAL SOURCE FILES ONLY (PSDs, raw images).
+│                                 #   Capital "A" — NOT referenced by the site.
+│                                 #   Optimised copies live in lowercase "assets/".
+├── CNAME · .nojekyll · .github/  # custom domain · Pages config · deploy workflow
 └── README.md
 ```
 
-All 12 pages live at the project root so every navigation link and asset path is
-identical across pages.
+**`assets/` vs `Asset/`** is the easiest thing to mix up: lowercase **`assets/`** holds
+the optimised files the website actually loads; capital **`Asset/`** is just your
+original source backups and can be ignored (or kept off the repo) — nothing links to it.
 
 ### How the shared UI works
 
