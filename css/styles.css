@@ -1710,11 +1710,34 @@ ul { margin: 0; padding: 0; }
 .reveal:not(.is-visible) { transform: translateY(28px) scale(.985); }
 .is-visible.reveal { transform: none; }
 
+/* "How I work" process cards — faint step number, kicker, hover accent */
+.process-card { position: relative; overflow: hidden; }
+.process-card .card__body { padding: 30px 26px 30px; }
+.process-card .process-num {
+  position: absolute; top: 0; right: 16px;
+  font-weight: 800; font-size: 4.8rem; line-height: 1;
+  letter-spacing: -.05em; color: var(--blue-600); opacity: .10;
+  pointer-events: none;
+}
+.process-card .process-kicker {
+  display: inline-block; font-size: .72rem; font-weight: 800;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: var(--blue-600); margin-bottom: 8px;
+}
+.process-card h3 { margin: 0 0 8px; position: relative; }
+.process-card::before {
+  content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+  background: linear-gradient(var(--blue-500), var(--blue-700));
+  transform: scaleY(0); transform-origin: top; transition: transform .35s var(--ease-out);
+}
+.process-card:hover::before { transform: scaleY(1); }
+
 @media (prefers-reduced-motion: reduce) {
   .card:hover > .shot, .gallery img:hover, .gallery video:hover,
   .service-card:hover .ico, .tool-chip:hover img,
   .socials a:hover svg, .btn:hover svg { transform: none !important; }
   .nav-cta::after { animation: none !important; }
+  .process-card:hover::before { transform: scaleY(1); }
   .btn--primary:not(.nav-cta):hover::before { transition: none !important; left: -160%; }
   .btn:hover, .card:hover, .filter-btn:hover { transform: none !important; }
   .reveal:not(.is-visible) { transform: none; }

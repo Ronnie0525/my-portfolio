@@ -301,6 +301,12 @@
       btns.forEach(function (btn) {
         btn.addEventListener("click", function () {
           var filter = btn.getAttribute("data-filter");
+          // No "All" button: clicking the active category again clears back to showing everything
+          if (btn.classList.contains("active") && filter !== "all") {
+            btns.forEach(function (b) { b.classList.remove("active"); b.setAttribute("aria-selected", "false"); });
+            apply("all");
+            return;
+          }
           btns.forEach(function (b) {
             var on = b === btn;
             b.classList.toggle("active", on);
