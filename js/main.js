@@ -23,6 +23,7 @@
     {
       label: "Other Expertise",
       href: "/other-expertise/",
+      noDropdown: true,
       children: [
         { label: "Web Design", href: "/web-design/" },
         { label: "Photography", href: "/photography/" },
@@ -88,7 +89,7 @@
     NAV.forEach(function (item, idx) {
       var active = isActive(item) ? " active" : "";
       var aria = basePath(item.href) === here ? ' aria-current="page"' : "";
-      if (item.children) {
+      if (item.children && !item.noDropdown) {
         var subId = "submenu-" + idx;
         var sub = item.children.map(function (c) {
           var ca = basePath(c.href) === here ? ' class="active" aria-current="page"' : "";
