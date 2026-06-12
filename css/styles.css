@@ -1657,9 +1657,9 @@ ul { margin: 0; padding: 0; }
    ============================================================= */
 @property --bd-angle { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
 
-/* Light that travels around the primary buttons' rounded stroke */
-.btn--primary { position: relative; z-index: 0; isolation: isolate; }
-.btn--primary::after {
+/* Signature CTA — light travels around the Contact button's rounded stroke (this button only) */
+.nav-cta { position: relative; z-index: 0; isolation: isolate; }
+.nav-cta::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -1676,10 +1676,26 @@ ul { margin: 0; padding: 0; }
   pointer-events: none;
 }
 @keyframes bdTravel { to { --bd-angle: 360deg; } }
-.btn--primary:hover { box-shadow: 0 12px 30px rgba(37, 99, 235, 0.45); }
-.btn--primary:hover::after { animation-duration: 1.3s; }
+.nav-cta:hover::after { animation-duration: 1.3s; }
 
-/* Buttons: subtle press + glow already lift on hover; reinforce secondary/outline */
+/* Primary buttons (everything except the nav CTA) — a light sheen sweeps across on hover */
+.btn--primary:not(.nav-cta) { position: relative; overflow: hidden; }
+.btn--primary:not(.nav-cta)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -160%;
+  width: 55%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(105deg, transparent, rgba(255, 255, 255, 0.42), transparent);
+  transform: skewX(-18deg);
+  transition: left .6s var(--ease-out);
+}
+.btn--primary:not(.nav-cta):hover::before { left: 160%; }
+.btn--primary:hover { box-shadow: 0 12px 30px rgba(37, 99, 235, 0.42); }
+
+/* Secondary / outline buttons: lift + soft glow (no sweep, no travel) */
 .btn--secondary:hover, .btn--outline-light:hover { box-shadow: 0 8px 22px rgba(15, 37, 87, 0.16); }
 
 /* Cards: softer, bluer lift-glow on hover */
@@ -1698,7 +1714,8 @@ ul { margin: 0; padding: 0; }
   .card:hover > .shot, .gallery img:hover, .gallery video:hover,
   .service-card:hover .ico, .tool-chip:hover img,
   .socials a:hover svg, .btn:hover svg { transform: none !important; }
-  .btn--primary::after { animation: none !important; }
+  .nav-cta::after { animation: none !important; }
+  .btn--primary:not(.nav-cta):hover::before { transition: none !important; left: -160%; }
   .btn:hover, .card:hover, .filter-btn:hover { transform: none !important; }
   .reveal:not(.is-visible) { transform: none; }
 }
