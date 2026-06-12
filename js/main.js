@@ -35,12 +35,12 @@
       label: "Portfolio",
       href: "/portfolio/",
       children: [
-        { label: "Graphic Design", href: "/portfolio/#graphic-design" },
-        { label: "Social Media", href: "/portfolio/#social-media" },
-        { label: "Web Design", href: "/portfolio/#web-design" },
-        { label: "Artificial Intelligence", href: "/portfolio/#artificial-intelligence" },
-        { label: "Photography", href: "/portfolio/#photography" },
-        { label: "Video Editing", href: "/portfolio/#video-editing" }
+        { label: "Graphic Design", href: "/portfolio/graphic-design/" },
+        { label: "Social Media", href: "/portfolio/social-media/" },
+        { label: "Web Design", href: "/portfolio/web-design/" },
+        { label: "Artificial Intelligence", href: "/portfolio/artificial-intelligence/" },
+        { label: "Photography", href: "/portfolio/photography/" },
+        { label: "Video Editing", href: "/portfolio/video-editing/" }
       ]
     }
   ];
