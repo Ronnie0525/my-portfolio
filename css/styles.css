@@ -444,6 +444,16 @@ ul { margin: 0; padding: 0; }
 .page-hero p { color: #cbd5e1; max-width: 60ch; font-size: 1.075rem; }
 .page-hero .btn-row { margin-top: 26px; }
 
+/* Graphic Design page hero — features the graphic-design artwork */
+.page-hero--gd {
+  background:
+    linear-gradient(90deg, rgba(9, 11, 20, 0.88) 0%, rgba(9, 11, 20, 0.68) 45%, rgba(9, 11, 20, 0.5) 100%),
+    url('../assets/graphic-design-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /* Breadcrumb */
 .breadcrumb { list-style: none; display: flex; flex-wrap: wrap; gap: 8px;
   font-size: .85rem; color: var(--muted-200); margin-bottom: 18px; }
@@ -1453,41 +1463,27 @@ ul { margin: 0; padding: 0; }
 }
 
 /* Graphic Design section — full vibrant artwork background, light overlay, glass cards */
+/* Core-craft teaser — clean dark section (artwork moved to the portfolio hero) */
 #graphic-design {
-  background-color: #0a0a0a;
-  background-image:
-    linear-gradient(rgba(9, 11, 20, 0.45), rgba(9, 11, 20, 0.45)),
-    url('../assets/graphic-design-bg.png');
-  background-size: cover;                 /* fill the whole section — no empty side bands */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;           /* artwork stays put while you scroll (parallax) */
+  background:
+    radial-gradient(900px 480px at 85% -10%, rgba(37, 99, 235, 0.26), transparent 60%),
+    var(--black);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
-/* keep the section-head readable over the clearer artwork */
-#graphic-design .section-head h2,
-#graphic-design .section-head .lead { text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55); }
 
-/* Glass (frosted) cards so the artwork shows through */
+/* Solid dark cards that read cleanly on the plain background */
 #graphic-design .card {
-  background: rgba(255, 255, 255, 0.10);
-  -webkit-backdrop-filter: blur(16px) saturate(150%);
-  backdrop-filter: blur(16px) saturate(150%);
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.38);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 #graphic-design .card h3 { color: #fff; }
 #graphic-design .card .card__cat { color: var(--blue-200); }
 #graphic-design .card .card__desc { color: rgba(255, 255, 255, 0.82); }
 #graphic-design .card .arrow { color: var(--blue-200); }
 #graphic-design .card:hover {
-  background: rgba(255, 255, 255, 0.16);
-  border-color: rgba(255, 255, 255, 0.5);
-}
-
-/* Fixed backgrounds are unreliable on mobile — fall back to normal scroll */
-@media (max-width: 900px) {
-  #graphic-design { background-attachment: scroll; }
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.28);
 }
 
 /* =============================================================

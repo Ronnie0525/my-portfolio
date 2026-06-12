@@ -19,16 +19,7 @@
 
   var NAV = [
     { label: "About Me", href: "/about/" },
-    {
-      label: "Portfolio",
-      href: "/graphic-design-portfolio/",
-      children: [
-        { label: "Graphic", href: "/graphic/" },
-        { label: "Mockups", href: "/mockups/" },
-        { label: "Logo Branding", href: "/logo-branding/" },
-        { label: "Logo Identity", href: "/logo-identity/" }
-      ]
-    },
+    { label: "Graphic Design", href: "/graphic-design-portfolio/" },
     {
       label: "Other Expertise",
       href: "/other-expertise/",
@@ -41,12 +32,15 @@
       ]
     },
     {
-      label: "Tools I Use",
-      href: "/tools/",
+      label: "Portfolio",
+      href: "/portfolio/",
       children: [
-        { label: "Graphic Design Tools", href: "/tools/#graphic-tools" },
-        { label: "AI Tools", href: "/tools/#ai-tools" },
-        { label: "Web Tools", href: "/tools/#web-tools" }
+        { label: "Graphic Design", href: "/portfolio/#graphic-design" },
+        { label: "Social Media", href: "/portfolio/#social-media" },
+        { label: "Web Design", href: "/portfolio/#web-design" },
+        { label: "Artificial Intelligence", href: "/portfolio/#artificial-intelligence" },
+        { label: "Photography", href: "/portfolio/#photography" },
+        { label: "Video Editing", href: "/portfolio/#video-editing" }
       ]
     }
   ];
@@ -143,9 +137,8 @@
   }
 
   function buildFooter() {
-    var portfolioLinks = footerLinks(findNav("/graphic-design-portfolio/").children);
+    var portfolioLinks = footerLinks(findNav("/portfolio/").children);
     var expertiseLinks = footerLinks(findNav("/other-expertise/").children);
-    var toolsLinks = footerLinks(findNav("/tools/").children);
     var year = new Date().getFullYear();
 
     return '' +
@@ -166,7 +159,7 @@
           "</div>" +
           '<div class="footer-col">' +
             "<h4>Portfolio</h4>" +
-            '<ul class="footer-links"><li><a href="/graphic-design-portfolio/">Overview</a></li>' + portfolioLinks + "</ul>" +
+            '<ul class="footer-links"><li><a href="/portfolio/">Overview</a></li>' + portfolioLinks + "</ul>" +
           "</div>" +
           '<div class="footer-col">' +
             "<h4>Expertise</h4>" +
@@ -176,8 +169,9 @@
             "<h4>More</h4>" +
             '<ul class="footer-links">' +
               '<li><a href="/about/">About Me</a></li>' +
+              '<li><a href="/graphic-design-portfolio/">Graphic Design</a></li>' +
               '<li><a href="/tools/">Tools I Use</a></li>' +
-              toolsLinks +
+              '<li><a href="/resume/">Resume</a></li>' +
             "</ul>" +
           "</div>" +
         "</div>" +
