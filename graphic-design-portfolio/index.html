@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Graphic Design Portfolio — Ronnie Balonon</title>
   <meta name="description" content="Explore Ronnie Balonon's graphic design portfolio — clean layouts, strong branding and visual storytelling across graphic work, mockups, logo branding and logo identity." />
-  <link rel="stylesheet" href="/css/styles.css?v=7" />
-  <script src="/js/main.js?v=7" defer></script>
+  <link rel="stylesheet" href="/css/styles.css?v=8" />
+  <script src="/js/main.js?v=8" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -53,48 +53,35 @@
           </ul>
         </div>
         <div class="feature__media reveal">
-          <div class="card"><img class="shot shot--4x3" src="/assets/expertise/dummy/graphic-design-expertise.webp" alt="Graphic design expertise visual with floating design boards, color swatches and abstract layout grids in deep blue and white" loading="lazy" decoding="async" width="1600" height="1200" /></div>
+          <div class="card"><img class="shot" src="/assets/expertise/dummy/graphic-design-expertise.webp" alt="Graphic design expertise visual with floating design boards, color swatches and abstract layout grids in deep blue and white" loading="lazy" decoding="async" width="1600" height="1200" /></div>
         </div>
       </div>
     </section>
 
-    <!-- Categories -->
+    <!-- Graphic work gallery (all graphic samples inline) -->
     <section class="section section--tint" id="categories">
-      <div class="container">
+      <div class="container" data-filter-group>
         <div class="section-head center reveal">
           <p class="eyebrow">Explore</p>
-          <h2>Portfolio categories</h2>
-          <p class="lead" style="margin-inline:auto;">Dive into a focused area of my graphic design work.</p>
+          <h2>Graphic design work</h2>
+          <p class="lead" style="margin-inline:auto;">Branding, logo identity, print, mockups, digital ads and posters — all in one place.</p>
         </div>
-        <div class="grid grid--2 stagger reveal">
-          <article class="card cat-card service-card">
-            <span class="card__cat">Graphic</span>
-            <h3>Graphic</h3>
-            <p class="card__desc">Posters, digital ads, marketing creatives, print layouts and promotional materials.</p>
-            <span class="arrow" data-arrow>View graphic work </span>
-            <a class="stretched" href="/graphic/" aria-label="View Graphic work"></a>
-          </article>
-          <article class="card cat-card service-card">
-            <span class="card__cat">Mockups</span>
-            <h3>Mockups</h3>
-            <p class="card__desc">Product mockups, brand presentations and packaging previews that feel real.</p>
-            <span class="arrow" data-arrow>View mockups </span>
-            <a class="stretched" href="/mockups/" aria-label="View Mockups"></a>
-          </article>
-          <article class="card cat-card service-card">
-            <span class="card__cat">Logo Branding</span>
-            <h3>Logo Branding</h3>
-            <p class="card__desc">Full brand identity systems — logos, palettes, type and guidelines.</p>
-            <span class="arrow" data-arrow>View branding </span>
-            <a class="stretched" href="/logo-branding/" aria-label="View Logo Branding"></a>
-          </article>
-          <article class="card cat-card service-card">
-            <span class="card__cat">Logo Identity</span>
-            <h3>Logo Identity</h3>
-            <p class="card__desc">Logo concepts, icon marks, wordmarks, monograms and variations.</p>
-            <span class="arrow" data-arrow>View logo identity </span>
-            <a class="stretched" href="/logo-identity/" aria-label="View Logo Identity"></a>
-          </article>
+        <div class="filterbar reveal" role="tablist" aria-label="Filter graphic work by category">
+          <button class="filter-btn active" type="button" data-filter="all" aria-selected="true">All</button>
+          <button class="filter-btn" type="button" data-filter="branding" aria-selected="false">Branding</button>
+          <button class="filter-btn" type="button" data-filter="logo" aria-selected="false">Logo</button>
+          <button class="filter-btn" type="button" data-filter="mockups" aria-selected="false">Mockups</button>
+          <button class="filter-btn" type="button" data-filter="print" aria-selected="false">Print</button>
+          <button class="filter-btn" type="button" data-filter="digital" aria-selected="false">Digital Ads</button>
+          <button class="filter-btn" type="button" data-filter="poster" aria-selected="false">Poster</button>
+        </div>
+        <div class="grid grid--3 stagger reveal">
+          <article class="card" data-category="branding"><img class="shot shot--4x3 shot--top" src="/assets/graphic/branding.webp" alt="Brand identity sample — logo, stationery and guidelines in deep blue" loading="lazy" decoding="async" width="1400" height="1050" /><div class="card__body"><span class="card__cat">Branding</span><h3>Identity Rollout</h3><p class="card__desc">A cohesive brand applied across logo, stationery and app UI.</p></div></article>
+          <article class="card" data-category="logo"><img class="shot shot--4x3 shot--top" src="/assets/graphic/logo-monogram.webp" alt="Monogram logo concept with construction grid and variations in deep blue" loading="lazy" decoding="async" width="1400" height="1050" /><div class="card__body"><span class="card__cat">Logo</span><h3>Monogram Concept</h3><p class="card__desc">A versatile monogram mark with construction grid and variations.</p></div></article>
+          <article class="card" data-category="mockups"><img class="shot shot--4x3 shot--top" src="/assets/graphic/mockups.webp" alt="Packaging mockup set — box, pouch, bottle and bag in deep blue" loading="lazy" decoding="async" width="1400" height="1050" /><div class="card__body"><span class="card__cat">Mockups</span><h3>Packaging Preview</h3><p class="card__desc">Realistic packaging visuals for client sign-off.</p></div></article>
+          <article class="card" data-category="print"><img class="shot shot--4x3 shot--top" src="/assets/graphic/print.webp" alt="Editorial and print layout sample in deep blue and white" loading="lazy" decoding="async" width="1400" height="1050" /><div class="card__body"><span class="card__cat">Print</span><h3>Editorial Layout</h3><p class="card__desc">A clean magazine-style spread with confident type hierarchy.</p></div></article>
+          <article class="card" data-category="digital"><img class="shot shot--4x3 shot--top" src="/assets/graphic/digital-ads.webp" alt="Digital ad campaign creative set in deep blue" loading="lazy" decoding="async" width="1400" height="1050" /><div class="card__body"><span class="card__cat">Digital Ads</span><h3>Campaign Creative</h3><p class="card__desc">A scroll-stopping ad set built for performance and recall.</p></div></article>
+          <article class="card" data-category="poster"><img class="shot shot--4x3 shot--top" src="/assets/graphic/posters.webp" alt="Event poster and banner set in deep blue" loading="lazy" decoding="async" width="1400" height="1050" /><div class="card__body"><span class="card__cat">Poster</span><h3>Event Posters</h3><p class="card__desc">A bold, focal-point composition for an event launch.</p></div></article>
         </div>
       </div>
     </section>
