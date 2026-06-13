@@ -663,17 +663,35 @@ ul { margin: 0; padding: 0; }
 
 /* ---------- CTA band ---------- */
 .cta-band {
+  position: relative;
+  overflow: hidden;
   background:
-    radial-gradient(700px 360px at 12% -20%, rgba(255,255,255,.18), transparent 60%),
-    linear-gradient(135deg, var(--blue-600), var(--blue-700));
+    radial-gradient(620px 340px at 88% 118%, rgba(96, 165, 250, 0.55), transparent 60%),
+    radial-gradient(560px 300px at 10% -25%, rgba(255, 255, 255, 0.18), transparent 60%),
+    linear-gradient(135deg, #1e3a8a 0%, var(--blue-600) 52%, #1d4ed8 100%);
   color: #fff;
   border-radius: var(--radius-lg);
-  padding: clamp(36px, 6vw, 64px);
+  padding: clamp(44px, 7vw, 78px) clamp(26px, 6vw, 64px);
   text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 30px 70px rgba(30, 58, 138, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
-.cta-band h2 { color: #fff; }
-.cta-band p { color: rgba(255,255,255,.9); max-width: 56ch; margin-inline: auto; }
-.cta-band .btn-row { justify-content: center; margin-top: 26px; }
+/* subtle dot-grid texture, fading toward the bottom */
+.cta-band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1.5px);
+  background-size: 22px 22px;
+  -webkit-mask: radial-gradient(130% 120% at 50% -10%, #000 30%, transparent 72%);
+          mask: radial-gradient(130% 120% at 50% -10%, #000 30%, transparent 72%);
+  opacity: 0.55;
+}
+.cta-band > * { position: relative; z-index: 1; }
+.cta-band h2 { color: #fff; font-size: clamp(1.7rem, 3.4vw, 2.55rem); letter-spacing: -0.01em; }
+.cta-band p { color: rgba(255, 255, 255, 0.92); max-width: 54ch; margin-inline: auto; }
+.cta-band .btn-row { justify-content: center; margin-top: 30px; }
 .cta-contact {
   display: flex; flex-wrap: wrap; gap: 12px 28px; justify-content: center;
   margin-top: 26px; font-weight: 600;
@@ -1746,4 +1764,57 @@ ul { margin: 0; padding: 0; }
   .btn--primary:not(.nav-cta):hover::before { transition: none !important; left: -160%; }
   .btn:hover, .card:hover, .filter-btn:hover { transform: none !important; }
   .reveal:not(.is-visible) { transform: none; }
+}
+
+/* =============================================================
+   Lightbox — click a gallery image to preview it full-screen
+   ============================================================= */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(16px, 4vw, 56px);
+  background: rgba(5, 8, 20, 0.92);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+.lightbox.is-open { display: flex; animation: lbFade .22s var(--ease-out); }
+@keyframes lbFade { from { opacity: 0; } to { opacity: 1; } }
+.lightbox__img {
+  max-width: 92vw;
+  max-height: 86vh;
+  border-radius: 14px;
+  object-fit: contain;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.6);
+  background: #0b1020;
+}
+.lightbox__close, .lightbox__nav {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color .2s var(--ease), transform .2s var(--ease);
+}
+.lightbox__close:hover, .lightbox__nav:hover { background: rgba(255, 255, 255, 0.24); transform: scale(1.06); }
+.lightbox__close { top: 18px; right: 18px; }
+.lightbox__close svg { width: 22px; height: 22px; }
+.lightbox__nav { top: 50%; transform: translateY(-50%); }
+.lightbox__nav:hover { transform: translateY(-50%) scale(1.06); }
+.lightbox__nav svg { width: 24px; height: 24px; }
+.lightbox__prev { left: 18px; }
+.lightbox__prev svg { transform: rotate(90deg); }
+.lightbox__next { right: 18px; }
+.lightbox__next svg { transform: rotate(-90deg); }
+@media (max-width: 600px) {
+  .lightbox__close, .lightbox__nav { width: 40px; height: 40px; }
+  .lightbox__prev { left: 10px; } .lightbox__next { right: 10px; }
 }

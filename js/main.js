@@ -537,6 +537,64 @@
     document.head.appendChild(touch);
   }
 
+  /* ---- Lightbox preview for gallery images -------------------------- */
+  function wireLightbox() {
+    var imgs = [].slice.call(
+      document.querySelectorAll("[data-filter-group] img.shot, .photo-grid img.shot, main .grid img.shot, .cb-panel img.shot")
+    ).filter(function (img) {
+      if (img.closest(".feature__media")) return false;        // feature visuals, not gallery items
+      var card = img.closest(".card");
+      if (card && card.querySelector("a.stretched")) return false; // skip cards that link out (e.g. PDF covers)
+      return true;
+    });
+    if (!imgs.length) return;
+
+    var lb = document.createElement("div");
+    lb.className = "lightbox";
+    lb.setAttribute("aria-hidden", "true");
+    lb.innerHTML =
+      '<button class="lightbox__close" type="button" aria-label="Close preview">' + ICON.close + "</button>" +
+      '<button class="lightbox__nav lightbox__prev" type="button" aria-label="Previous image">' + ICON.caret + "</button>" +
+      '<img class="lightbox__img" alt="" />' +
+      '<button class="lightbox__nav lightbox__next" type="button" aria-label="Next image">' + ICON.caret + "</button>";
+    document.body.appendChild(lb);
+    var lbImg = lb.querySelector(".lightbox__img");
+    var idx = 0;
+
+    function show(i) {
+      idx = (i + imgs.length) % imgs.length;
+      lbImg.src = imgs[idx].currentSrc || imgs[idx].src;
+      lbImg.alt = imgs[idx].alt || "";
+    }
+    function open(i) {
+      show(i);
+      lb.classList.add("is-open");
+      lb.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+    function close() {
+      lb.classList.remove("is-open");
+      lb.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      lbImg.removeAttribute("src");
+    }
+
+    imgs.forEach(function (img, i) {
+      img.style.cursor = "zoom-in";
+      img.addEventListener("click", function () { open(i); });
+    });
+    lb.querySelector(".lightbox__close").addEventListener("click", close);
+    lb.querySelector(".lightbox__prev").addEventListener("click", function (e) { e.stopPropagation(); show(idx - 1); });
+    lb.querySelector(".lightbox__next").addEventListener("click", function (e) { e.stopPropagation(); show(idx + 1); });
+    lb.addEventListener("click", function (e) { if (e.target === lb) close(); });
+    document.addEventListener("keydown", function (e) {
+      if (!lb.classList.contains("is-open")) return;
+      if (e.key === "Escape") close();
+      else if (e.key === "ArrowLeft") show(idx - 1);
+      else if (e.key === "ArrowRight") show(idx + 1);
+    });
+  }
+
   /* ---- Init ---------------------------------------------------------- */
   function init() {
     setFavicon();
@@ -556,6 +614,7 @@
     injectArrows();
     fillCTAs();
     wireFilters();
+    wireLightbox();
     buildWidgets();
     wireReveal();
     wireToTop();
