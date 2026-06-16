@@ -1234,6 +1234,21 @@ ul { margin: 0; padding: 0; }
 @media (max-width: 1024px) { .hero__portrait { min-height: 600px; } }
 @media (max-width: 900px)  { .hero__portrait { display: none; } }
 
+/* Lanyard framed in a dark panel (About page "Who I am" sub-hero) */
+.lanyard-panel {
+  min-height: 600px;
+  border-radius: 24px;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 90% at 72% 0%, rgba(37, 99, 235, .22), transparent 58%),
+    linear-gradient(165deg, #0c1224 0%, #060912 70%, #04060d 100%);
+  box-shadow: var(--shadow-lg);
+}
+@media (max-width: 900px) {
+  /* keep the ID visible on the About page even though the home hero hides it */
+  .feature__media .lanyard-panel { display: block; min-height: 540px; }
+}
+
 .lanyard-stage {
   position: absolute; inset: 0;
   perspective: 1400px;

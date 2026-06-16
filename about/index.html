@@ -7,6 +7,7 @@
   <meta name="description" content="About Ronnie Balonon — a Dubai-based, AI-powered graphic designer with 1 year of professional experience, 50+ projects delivered and 10+ happy clients." />
   <link rel="stylesheet" href="/css/styles.css?v=17" />
   <script src="/js/main.js?v=17" defer></script>
+  <script src="/js/lanyard.js?v=17" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -50,8 +51,58 @@
     <!-- About narrative -->
     <section class="section">
       <div class="container feature">
-        <div class="feature__media reveal">
-          <div class="card card--portrait"><img class="shot shot--4x5" src="/assets/portrait.png" alt="Portrait of Ronnie Balonon, graphic designer based in Dubai" loading="lazy" /></div>
+        <div class="feature__media">
+          <div class="hero__portrait lanyard-panel">
+            <div class="lanyard-stage" id="lanyardStage">
+              <div class="lanyard-drop" id="lanyardDrop">
+                <svg class="lanyard-rope" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="ropeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%"   stop-color="hsl(0 0% 14%)"/>
+                      <stop offset="22%"  stop-color="hsl(0 0% 6%)"/>
+                      <stop offset="50%"  stop-color="hsl(0 0% 2%)"/>
+                      <stop offset="78%"  stop-color="hsl(0 0% 6%)"/>
+                      <stop offset="100%" stop-color="hsl(0 0% 14%)"/>
+                    </linearGradient>
+                  </defs>
+                  <path class="rope-edge"   id="ropeEdgeL"   d=""/>
+                  <path class="rope-strand" id="ropeStrandL" d=""/>
+                  <text class="rope-text"><textPath href="#ropeStrandL" startOffset="40">RONNIE&#160;BALONON&#160;&#160;·&#160;&#160;AI-POWERED&#160;GRAPHIC&#160;DESIGN&#160;&#160;·&#160;&#160;RONNIE&#160;BALONON&#160;&#160;·&#160;&#160;AI-POWERED&#160;GRAPHIC&#160;DESIGN&#160;&#160;·&#160;&#160;</textPath></text>
+                  <path class="rope-edge"   id="ropeEdgeR"   d=""/>
+                  <path class="rope-strand" id="ropeStrandR" d=""/>
+                  <text class="rope-text"><textPath href="#ropeStrandR" startOffset="40">AI-POWERED&#160;GRAPHIC&#160;DESIGN&#160;&#160;·&#160;&#160;RONNIE&#160;BALONON&#160;&#160;·&#160;&#160;AI-POWERED&#160;GRAPHIC&#160;DESIGN&#160;&#160;·&#160;&#160;RONNIE&#160;BALONON&#160;&#160;·&#160;&#160;</textPath></text>
+                </svg>
+                <div class="lanyard-pin" id="lanyardPin">
+                  <div class="lanyard-buckle"><span class="buckle-slot"></span></div>
+                  <div class="lanyard-hint" id="lanyardHint" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M9 11V6a2 2 0 0 1 4 0v5"/>
+                      <path d="M13 9V4.5a2 2 0 0 1 4 0V13"/>
+                      <path d="M17 8V6a2 2 0 0 1 4 0v10a6 6 0 0 1-6 6h-3a6 6 0 0 1-5.2-3l-3.4-5.7a2 2 0 0 1 .8-2.8 2 2 0 0 1 2.4.4L9 14"/>
+                    </svg>
+                    <span>DRAG</span>
+                  </div>
+                  <div class="lanyard-card" id="lanyardCard">
+                    <div class="lanyard-slot"></div>
+                    <div class="lanyard-header">DESIGNER&nbsp;·&nbsp;ID</div>
+                    <div class="lanyard-photo-frame">
+                      <div class="lanyard-photo">
+                        <span class="lanyard-monogram" aria-hidden="true">RB</span>
+                        <img src="/assets/portrait.png" alt="Portrait of Ronnie Balonon" onerror="this.remove();"/>
+                      </div>
+                    </div>
+                    <div class="lanyard-name">Ronnie Balonon Jr.</div>
+                    <div class="lanyard-info">
+                      <div class="info-row"><span class="info-key">ROLE</span><span class="info-sep">:</span><span class="info-val">Graphic Designer</span></div>
+                      <div class="info-row"><span class="info-key">LOC</span><span class="info-sep">:</span><span class="info-val">DUBAI</span></div>
+                      <div class="info-row"><span class="info-key">YEAR</span><span class="info-sep">:</span><span class="info-val">2026</span></div>
+                    </div>
+                    <div class="lanyard-bottom-bar">PORTFOLIO</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="reveal">
           <p class="eyebrow">Who I am</p>
