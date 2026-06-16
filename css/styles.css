@@ -390,6 +390,7 @@ ul { margin: 0; padding: 0; }
   grid-template-columns: 1.1fr .9fr;
   gap: 56px;
   align-items: center;
+  min-height: clamp(540px, 74vh, 760px);
   padding-block: clamp(56px, 9vw, 110px);
 }
 .hero h1 { color: #fff; }
@@ -1234,20 +1235,15 @@ ul { margin: 0; padding: 0; }
 @media (max-width: 1024px) { .hero__portrait { min-height: 600px; } }
 @media (max-width: 900px)  { .hero__portrait { display: none; } }
 
-/* Lanyard framed in a dark panel (About page "Who I am" sub-hero) */
-.lanyard-panel {
-  min-height: 600px;
-  border-radius: 24px;
-  overflow: hidden;
+/* About "Who I am" dark sub-hero: glow + readable body text on black */
+.who-subhero {
   background:
-    radial-gradient(120% 90% at 72% 0%, rgba(37, 99, 235, .22), transparent 58%),
-    linear-gradient(165deg, #0c1224 0%, #060912 70%, #04060d 100%);
-  box-shadow: var(--shadow-lg);
+    radial-gradient(900px 480px at 16% -10%, rgba(37, 99, 235, .20), transparent 60%),
+    var(--black);
 }
-@media (max-width: 900px) {
-  /* keep the ID visible on the About page even though the home hero hides it */
-  .feature__media .lanyard-panel { display: block; min-height: 540px; }
-}
+.section--dark .muted { color: #94a3b8; }
+.section--dark .feature__list strong { color: #fff; }
+.section--dark .feature__list span:not(.check) { color: #cbd5e1; }
 
 .lanyard-stage {
   position: absolute; inset: 0;
