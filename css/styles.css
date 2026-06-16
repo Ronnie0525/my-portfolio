@@ -1237,6 +1237,8 @@ ul { margin: 0; padding: 0; }
 
 /* About "Who I am" dark sub-hero: glow + readable body text on black */
 .who-subhero {
+  position: relative;
+  overflow: hidden; /* keep the lanyard rope/card from bleeding into neighbours */
   background:
     radial-gradient(900px 480px at 16% -10%, rgba(37, 99, 235, .20), transparent 60%),
     var(--black);
