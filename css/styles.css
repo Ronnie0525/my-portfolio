@@ -482,6 +482,17 @@ ul { margin: 0; padding: 0; }
 .page-hero--social{ background-image: url('../assets/hero/social-media.webp'); }
 .page-hero--web   { background-image: url('../assets/hero/web-design.webp'); }
 
+/* About hero — moved from the home hero: image + left-to-right dark overlay */
+.page-hero--about {
+  background-color: #050814;
+  background-image:
+    linear-gradient(90deg, rgba(5,8,20,.93) 0%, rgba(5,8,20,.74) 38%, rgba(5,8,20,.45) 66%, rgba(5,8,20,.66) 100%),
+    url('../assets/about-hero.png');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+}
+
 /* Breadcrumb */
 .breadcrumb { list-style: none; display: flex; flex-wrap: wrap; gap: 8px;
   font-size: .85rem; color: var(--muted-200); margin-bottom: 18px; }
