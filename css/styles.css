@@ -381,20 +381,16 @@ ul { margin: 0; padding: 0; }
   color: #fff;
   background-color: #050814;
   background-image: url('../assets/hero-bg.webp');
-  background-size: contain;          /* show the whole image — never crop the subject */
+  background-size: cover;
   background-position: right center;
   background-repeat: no-repeat;
-}
-@media (max-width: 900px) {
-  /* on narrow screens contain would shrink to a thin strip, so fill instead */
-  .hero { background-size: cover; background-position: center top; }
 }
 .hero__grid {
   display: grid;
   grid-template-columns: 1.1fr .9fr;
   gap: 56px;
   align-items: center;
-  min-height: clamp(540px, 74vh, 760px);
+  min-height: calc(100vh - var(--nav-h));
   padding-block: clamp(56px, 9vw, 110px);
 }
 .hero h1 { color: #fff; }
