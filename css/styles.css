@@ -1118,6 +1118,7 @@ ul { margin: 0; padding: 0; }
 .shot--1x1  { aspect-ratio: 1 / 1; }
 .shot--16x9 { aspect-ratio: 16 / 9; }
 .shot--4x5  { aspect-ratio: 4 / 5; }
+.shot--9x16 { aspect-ratio: 9 / 16; }
 .shot--top  { object-position: top center; }
 
 /* Feature media: lock the image to a clean 4:3 so the grid/flex row can't stretch it tall */
