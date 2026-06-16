@@ -1523,51 +1523,72 @@ ul { margin: 0; padding: 0; }
    Clients logo loop (linked logos, pause on hover)
    ============================================================= */
 .clients-loop {
-  padding-block: clamp(72px, 8vw, 116px);
+  padding-block: clamp(78px, 8vw, 122px);
   overflow: hidden;
   background: var(--surface);
   border-top: 1px solid var(--border);
 }
-.clients-loop__head { margin-bottom: 40px; }
+.clients-loop__head { margin-bottom: 46px; }
+.clients-loop .logo-marquee {
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
+}
 /* Slower track + pause when the cursor is over the strip */
-.clients-loop .logo-marquee__track { gap: 22px; animation-duration: 48s; }
+.clients-loop .logo-marquee__track { gap: 26px; animation-duration: 54s; }
 .clients-loop .logo-marquee:hover .logo-marquee__track,
 .clients-loop .logo-marquee:focus-within .logo-marquee__track { animation-play-state: paused; }
 .client-logo {
   flex: none;
-  width: 220px;
-  height: 120px;
+  width: 212px;
+  height: 132px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 26px 28px;
+  padding: 18px 26px;
   background: #fff;
   border: 1px solid var(--border);
-  border-radius: 18px;
-  box-shadow: 0 6px 20px rgba(15, 23, 42, .06);
-  transition: transform .28s var(--ease), box-shadow .28s var(--ease), border-color .28s var(--ease);
+  border-radius: 20px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .04), 0 10px 26px rgba(15, 23, 42, .06);
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease);
 }
+/* Logos keep their true brand colours; size is normalised per brand below */
 .client-logo img {
-  max-width: 100%;
-  max-height: 100%;
   width: auto;
+  height: auto;
+  max-width: 150px;
+  max-height: 58px;
   object-fit: contain;
-  filter: grayscale(1);
-  opacity: .62;
-  transition: filter .28s var(--ease), opacity .28s var(--ease), transform .28s var(--ease);
+  transition: transform .3s var(--ease);
 }
 .client-logo:hover,
 .client-logo:focus-visible {
-  transform: translateY(-5px);
-  box-shadow: 0 16px 34px rgba(15, 23, 42, .14);
+  transform: translateY(-6px);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .05), 0 20px 40px rgba(15, 23, 42, .13);
   border-color: var(--blue-200);
   outline: none;
 }
 .client-logo:hover img,
-.client-logo:focus-visible img { filter: grayscale(0); opacity: 1; transform: scale(1.04); }
+.client-logo:focus-visible img { transform: scale(1.05); }
+
+/* Optical normalisation — each source PNG carries different built-in padding,
+   so caps are tuned per brand to give every logo equal visual weight. */
+.client-logo--bloomfield img { max-height: 92px; max-width: 92px; }
+.client-logo--power img      { max-height: 86px; max-width: 132px; }
+.client-logo--click img      { max-height: 50px; max-width: 124px; }
+.client-logo--deg img        { max-height: 84px; max-width: 112px; }
+.client-logo--ils img        { max-height: 82px; max-width: 92px; }
+.client-logo--alcon img      { max-height: 96px; max-width: 96px; }
+
 @media (max-width: 600px) {
-  .client-logo { width: 176px; height: 100px; padding: 20px 22px; }
+  .client-logo { width: 170px; height: 114px; padding: 16px 22px; }
+  .client-logo img { max-height: 50px; max-width: 124px; }
+  .client-logo--bloomfield img { max-height: 80px; max-width: 80px; }
+  .client-logo--power img      { max-height: 74px; max-width: 116px; }
+  .client-logo--click img      { max-height: 44px; max-width: 108px; }
+  .client-logo--deg img        { max-height: 72px; max-width: 98px; }
+  .client-logo--ils img        { max-height: 70px; max-width: 80px; }
+  .client-logo--alcon img      { max-height: 84px; max-width: 84px; }
 }
 /* When the loop is paused into a static wrapped grid, drop the duplicate set */
 @media (prefers-reduced-motion: reduce) {
