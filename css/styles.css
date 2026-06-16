@@ -381,9 +381,13 @@ ul { margin: 0; padding: 0; }
   color: #fff;
   background-color: #050814;
   background-image: url('../assets/hero-bg.webp');
-  background-size: cover;
+  background-size: contain;          /* show the whole image — never crop the subject */
   background-position: right center;
   background-repeat: no-repeat;
+}
+@media (max-width: 900px) {
+  /* on narrow screens contain would shrink to a thin strip, so fill instead */
+  .hero { background-size: cover; background-position: center top; }
 }
 .hero__grid {
   display: grid;
