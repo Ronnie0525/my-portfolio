@@ -1539,27 +1539,54 @@ ul { margin: 0; padding: 0; }
 .clients-loop .logo-marquee:focus-within .logo-marquee__track { animation-play-state: paused; }
 .client-logo {
   flex: none;
-  width: 212px;
-  height: 132px;
+  width: 296px;
+  height: 108px;
   box-sizing: border-box;
-  display: flex;
+  display: grid;
+  grid-template-columns: 100px minmax(0, 1fr);
   align-items: center;
-  justify-content: center;
-  padding: 18px 26px;
+  gap: 18px;
+  padding: 16px 26px 16px 16px;
   background: #fff;
   border: 1px solid var(--border);
   border-radius: 20px;
   box-shadow: 0 1px 2px rgba(15, 23, 42, .04), 0 10px 26px rgba(15, 23, 42, .06);
   transition: transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease);
+  text-decoration: none;
+}
+/* Left: logo mark, divided from the name */
+.client-logo__mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 76px;
+  padding-right: 18px;
+  border-right: 1px solid var(--border);
 }
 /* Logos keep their true brand colours; size is normalised per brand below */
-.client-logo img {
+.client-logo__mark img {
   width: auto;
   height: auto;
-  max-width: 150px;
-  max-height: 58px;
+  max-width: 82px;
+  max-height: 56px;
   object-fit: contain;
   transition: transform .3s var(--ease);
+}
+/* Right: company name + sector */
+.client-logo__text { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.client-logo__name {
+  font-weight: 700;
+  font-size: 1.04rem;
+  letter-spacing: -.01em;
+  line-height: 1.15;
+  color: var(--ink);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.client-logo__cat {
+  font-size: .78rem;
+  color: var(--muted);
+  line-height: 1.2;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .client-logo:hover,
 .client-logo:focus-visible {
@@ -1568,27 +1595,29 @@ ul { margin: 0; padding: 0; }
   border-color: var(--blue-200);
   outline: none;
 }
-.client-logo:hover img,
-.client-logo:focus-visible img { transform: scale(1.05); }
+.client-logo:hover .client-logo__mark img,
+.client-logo:focus-visible .client-logo__mark img { transform: scale(1.06); }
 
 /* Optical normalisation — each source PNG carries different built-in padding,
-   so caps are tuned per brand to give every logo equal visual weight. */
-.client-logo--bloomfield img { max-height: 92px; max-width: 92px; }
-.client-logo--power img      { max-height: 86px; max-width: 132px; }
-.client-logo--click img      { max-height: 50px; max-width: 124px; }
-.client-logo--deg img        { max-height: 84px; max-width: 112px; }
-.client-logo--ils img        { max-height: 82px; max-width: 92px; }
-.client-logo--alcon img      { max-height: 96px; max-width: 96px; }
+   so the mark size is tuned per brand to give every logo equal weight. */
+.client-logo--bloomfield .client-logo__mark img { max-height: 72px; max-width: 72px; }
+.client-logo--power .client-logo__mark img      { max-height: 66px; max-width: 80px; }
+.client-logo--click .client-logo__mark img       { max-height: 42px; max-width: 82px; }
+.client-logo--deg .client-logo__mark img         { max-height: 66px; max-width: 74px; }
+.client-logo--ils .client-logo__mark img         { max-height: 66px; max-width: 70px; }
+.client-logo--alcon .client-logo__mark img       { max-height: 74px; max-width: 74px; }
 
 @media (max-width: 600px) {
-  .client-logo { width: 170px; height: 114px; padding: 16px 22px; }
-  .client-logo img { max-height: 50px; max-width: 124px; }
-  .client-logo--bloomfield img { max-height: 80px; max-width: 80px; }
-  .client-logo--power img      { max-height: 74px; max-width: 116px; }
-  .client-logo--click img      { max-height: 44px; max-width: 108px; }
-  .client-logo--deg img        { max-height: 72px; max-width: 98px; }
-  .client-logo--ils img        { max-height: 70px; max-width: 80px; }
-  .client-logo--alcon img      { max-height: 84px; max-width: 84px; }
+  .client-logo { width: 262px; height: 96px; grid-template-columns: 84px minmax(0, 1fr); gap: 14px; padding: 14px 20px 14px 14px; }
+  .client-logo__mark { height: 62px; padding-right: 14px; }
+  .client-logo__mark img { max-height: 48px; max-width: 70px; }
+  .client-logo__name { font-size: .98rem; }
+  .client-logo--bloomfield .client-logo__mark img { max-height: 60px; max-width: 60px; }
+  .client-logo--power .client-logo__mark img      { max-height: 54px; max-width: 68px; }
+  .client-logo--click .client-logo__mark img       { max-height: 36px; max-width: 70px; }
+  .client-logo--deg .client-logo__mark img         { max-height: 56px; max-width: 64px; }
+  .client-logo--ils .client-logo__mark img         { max-height: 56px; max-width: 60px; }
+  .client-logo--alcon .client-logo__mark img       { max-height: 62px; max-width: 62px; }
 }
 /* When the loop is paused into a static wrapped grid, drop the duplicate set */
 @media (prefers-reduced-motion: reduce) {
