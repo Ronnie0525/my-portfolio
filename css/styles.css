@@ -384,7 +384,7 @@ ul { margin: 0; padding: 0; }
     linear-gradient(90deg, rgba(5,8,20,.93) 0%, rgba(5,8,20,.74) 38%, rgba(5,8,20,.45) 66%, rgba(5,8,20,.66) 100%),
     url('../assets/hero-bg.png');
   background-size: cover, cover;
-  background-position: center, center;
+  background-position: center, right center;
   background-repeat: no-repeat, no-repeat;
 }
 .hero__grid {
