@@ -595,6 +595,70 @@
     });
   }
 
+  /* ---- Expertise carousel (3-up, infinite prev/next) ---------------- */
+  function wireExpCarousel() {
+    var roots = document.querySelectorAll("[data-exp-carousel]");
+    Array.prototype.forEach.call(roots, function (root) {
+      var track = root.querySelector("[data-exp-track]");
+      var prev = root.querySelector("[data-exp-prev]");
+      var next = root.querySelector("[data-exp-next]");
+      if (!track || !prev || !next) return;
+
+      var originals = Array.prototype.slice.call(track.children);
+      var count = originals.length;
+      if (count < 2) { prev.style.display = next.style.display = "none"; return; }
+
+      // Clone the full set once so wrapping is seamless.
+      originals.forEach(function (node) {
+        var clone = node.cloneNode(true);
+        clone.setAttribute("aria-hidden", "true");
+        Array.prototype.forEach.call(clone.querySelectorAll("a"), function (a) { a.setAttribute("tabindex", "-1"); });
+        track.appendChild(clone);
+      });
+
+      var index = 0;
+      var animating = false;
+
+      function step() {
+        var first = track.children[0];
+        var style = window.getComputedStyle(track);
+        var gap = parseFloat(style.columnGap || style.gap || "0") || 0;
+        return first.getBoundingClientRect().width + gap;
+      }
+      function place(animate) {
+        track.style.transition = animate ? "transform .5s var(--ease-out, ease)" : "none";
+        track.style.transform = "translateX(" + (-index * step()) + "px)";
+      }
+      function go(dir) {
+        if (animating) return;
+        if (dir < 0 && index === 0) {        // wrap left: jump to mirror, then slide
+          index = count;
+          place(false);
+          // force reflow so the jump isn't animated
+          void track.offsetWidth;
+        }
+        animating = true;
+        index += dir;
+        place(true);
+      }
+      track.addEventListener("transitionend", function (e) {
+        if (e.propertyName !== "transform") return;
+        animating = false;
+        if (index >= count) { index -= count; place(false); }   // wrap right
+      });
+
+      next.addEventListener("click", function () { go(1); });
+      prev.addEventListener("click", function () { go(-1); });
+
+      var rt;
+      window.addEventListener("resize", function () {
+        clearTimeout(rt);
+        rt = setTimeout(function () { place(false); }, 120);
+      });
+      place(false);
+    });
+  }
+
   /* ---- Init ---------------------------------------------------------- */
   function init() {
     setFavicon();
@@ -619,6 +683,7 @@
     wireReveal();
     wireToTop();
     wireHeaderScroll();
+    wireExpCarousel();
   }
 
   if (document.readyState === "loading") {
