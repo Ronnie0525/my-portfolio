@@ -1606,6 +1606,8 @@ ul { margin: 0; padding: 0; }
 .client-logo--deg .client-logo__mark img         { max-height: 66px; max-width: 74px; }
 .client-logo--ils .client-logo__mark img         { max-height: 66px; max-width: 70px; }
 .client-logo--alcon .client-logo__mark img       { max-height: 74px; max-width: 74px; }
+/* ILS uses its full name as the title, so let it wrap instead of truncating */
+.client-logo--ils .client-logo__name { white-space: normal; font-size: .94rem; line-height: 1.22; }
 
 @media (max-width: 600px) {
   .client-logo { width: 262px; height: 96px; grid-template-columns: 84px minmax(0, 1fr); gap: 14px; padding: 14px 20px 14px 14px; }
