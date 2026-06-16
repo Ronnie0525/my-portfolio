@@ -1250,6 +1250,9 @@ ul { margin: 0; padding: 0; }
 .section--dark .muted { color: #94a3b8; }
 .section--dark .feature__list strong { color: #fff; }
 .section--dark .feature__list span:not(.check) { color: #cbd5e1; }
+/* Keep the draggable ID card in front of the text when it overlaps */
+.who-subhero .feature__media { position: relative; z-index: 3; }
+.who-subhero .feature > .reveal { position: relative; z-index: 1; }
 
 .lanyard-stage {
   position: absolute; inset: 0;
