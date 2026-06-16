@@ -1519,6 +1519,61 @@ ul { margin: 0; padding: 0; }
   .logo-marquee__track { animation: none; flex-wrap: wrap; justify-content: center; gap: 14px; }
 }
 
+/* =============================================================
+   Clients logo loop (linked logos, pause on hover)
+   ============================================================= */
+.clients-loop {
+  padding-block: clamp(72px, 8vw, 116px);
+  overflow: hidden;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+.clients-loop__head { margin-bottom: 40px; }
+/* Slower track + pause when the cursor is over the strip */
+.clients-loop .logo-marquee__track { gap: 22px; animation-duration: 48s; }
+.clients-loop .logo-marquee:hover .logo-marquee__track,
+.clients-loop .logo-marquee:focus-within .logo-marquee__track { animation-play-state: paused; }
+.client-logo {
+  flex: none;
+  width: 220px;
+  height: 120px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 26px 28px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, .06);
+  transition: transform .28s var(--ease), box-shadow .28s var(--ease), border-color .28s var(--ease);
+}
+.client-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: .62;
+  transition: filter .28s var(--ease), opacity .28s var(--ease), transform .28s var(--ease);
+}
+.client-logo:hover,
+.client-logo:focus-visible {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 34px rgba(15, 23, 42, .14);
+  border-color: var(--blue-200);
+  outline: none;
+}
+.client-logo:hover img,
+.client-logo:focus-visible img { filter: grayscale(0); opacity: 1; transform: scale(1.04); }
+@media (max-width: 600px) {
+  .client-logo { width: 176px; height: 100px; padding: 20px 22px; }
+}
+/* When the loop is paused into a static wrapped grid, drop the duplicate set */
+@media (prefers-reduced-motion: reduce) {
+  .clients-loop .client-logo[aria-hidden="true"] { display: none; }
+}
+
 /* Graphic Design section — full vibrant artwork background, light overlay, glass cards */
 /* Core-craft teaser — clean dark section (artwork moved to the portfolio hero) */
 #graphic-design {
