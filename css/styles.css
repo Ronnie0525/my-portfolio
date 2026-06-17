@@ -251,7 +251,7 @@ ul { margin: 0; padding: 0; }
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   list-style: none;
 }
 .nav-item { position: relative; }
@@ -303,7 +303,7 @@ ul { margin: 0; padding: 0; }
   position: absolute;
   top: calc(100% + 8px);
   left: 0;
-  min-width: 230px;
+  min-width: 252px;
   padding: 8px;
   list-style: none;
   background: #fff;
@@ -383,7 +383,7 @@ ul { margin: 0; padding: 0; }
   overflow: hidden;
   color: #fff;
   background-color: #050814;
-  background-image: url('../assets/hero-bg.webp');
+  background-image: url('../assets/hero-bg.webp?v=23');
   background-size: cover;
   background-position: right center;
   background-repeat: no-repeat;
@@ -403,8 +403,8 @@ ul { margin: 0; padding: 0; }
   color: var(--blue-200);
   margin-bottom: 18px;
 }
-.hero__intro { color: #cbd5e1; font-size: 1.075rem; max-width: 54ch; }
-.hero .btn-row { margin-top: 28px; }
+.hero__intro { color: #d6deec; font-size: 1.18rem; line-height: 1.7; max-width: 52ch; margin-top: 22px; }
+.hero .btn-row { margin-top: 34px; }
 .hero__meta {
   display: flex; flex-wrap: wrap; gap: 28px;
   margin-top: 40px; padding-top: 28px;
@@ -1176,8 +1176,35 @@ ul { margin: 0; padding: 0; }
   background: rgba(255,255,255,.04);
 }
 .id-chip b { color: #fff; font-weight: 700; }
-.hero h1 { font-size: clamp(2.4rem, 5.2vw, 4rem); line-height: 1.08; }
-.hero h1 em { font-style: italic; font-weight: 600; color: var(--blue-200); }
+.hero h1 {
+  font-size: clamp(2.5rem, 5.4vw, 4.3rem);
+  line-height: 1.1;
+  letter-spacing: -.035em;
+  font-weight: 800;
+  background: linear-gradient(180deg, #ffffff 0%, #ffffff 55%, #c9d8ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow: 0 2px 40px rgba(37, 99, 235, .25);
+}
+.hero h1 em {
+  font-style: italic;
+  font-weight: 700;
+  background: linear-gradient(120deg, #7aa2ff 0%, #b9ccff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow: 0 0 36px rgba(91, 140, 255, .55);
+}
+/* Hero eyebrow — brighter and more spaced for presence */
+.hero .eyebrow {
+  font-size: .85rem;
+  letter-spacing: .22em;
+  color: var(--blue-200);
+}
+.hero .eyebrow::before { width: 34px; height: 2px; background: var(--blue-200); }
 
 .hero__portrait { position: relative; max-width: 420px; margin-inline: auto; }
 .portrait-frame {
@@ -1899,7 +1926,6 @@ ul { margin: 0; padding: 0; }
 .filter-btn:hover { transform: translateY(-1px); }
 
 /* Scroll-reveal: add a touch of scale so sections ease in, not just fade */
-.reveal { will-change: opacity, transform; }
 .reveal:not(.is-visible) { transform: translateY(28px) scale(.985); }
 .is-visible.reveal { transform: none; }
 
@@ -1988,3 +2014,153 @@ ul { margin: 0; padding: 0; }
   .lightbox__close, .lightbox__nav { width: 40px; height: 40px; }
   .lightbox__prev { left: 10px; } .lightbox__next { right: 10px; }
 }
+
+/* =============================================================
+   ENHANCEMENT PASS — buttons, text, cards & scroll behaviour
+   Site-wide polish (JS-assisted, reduced-motion safe).
+   Adds: button text slide-swap, animated link underlines,
+   cursor-follow card spotlight, scroll progress bar,
+   anchor offset under the sticky header, richer reveals.
+   ============================================================= */
+
+/* ---- Branded text selection ---- */
+::selection   { background: var(--blue-600); color: #fff; }
+::-moz-selection { background: var(--blue-600); color: #fff; }
+
+/* ---- Anchor jumps land below the sticky header ---- */
+html { scroll-padding-top: calc(var(--nav-h) + 18px); }
+
+/* ---- Scroll progress bar (filled as the page scrolls) ---- */
+.scroll-progress {
+  position: fixed; inset: 0 0 auto 0;
+  height: 2px; width: 100%;
+  transform: scaleX(0); transform-origin: 0 50%;
+  background: linear-gradient(90deg, var(--blue-500), var(--blue-700));
+  box-shadow: 0 1px 5px rgba(37, 99, 235, .35);   /* downward, soft — no bloom onto the header */
+  z-index: 1100; pointer-events: none;
+  will-change: transform;
+}
+
+/* ---- Button label slide-swap on hover --------------------------------
+   main.js wraps each button's text in
+   <span class="btn__t"><span class="btn__t-in" data-label="…">…</span></span>
+   so the label can slide up while a duplicate rises into place.        */
+.btn__t { position: relative; display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.25; }
+.btn__t-in { display: inline-block; line-height: 1.25; transition: transform .42s var(--ease-out); }
+.btn__t-in::after {
+  content: attr(data-label);
+  position: absolute; left: 0; top: 100%; width: 100%; white-space: nowrap;
+}
+.btn:hover .btn__t-in,
+.btn:focus-visible .btn__t-in { transform: translateY(-100%); }
+/* tiny press feedback (overrides the earlier translateY(0)) */
+.btn:active { transform: translateY(0) scale(.97); }
+
+/* ---- Secondary / light buttons get a soft fill on hover ---- */
+.btn--secondary:hover { background: var(--blue-50); }
+
+/* ---- Animated underline for links inside running text ---- */
+.lead a, .card__desc a, .feature p a, .page-hero p a, .prose a {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 100% 1px;            /* faint resting underline (never colour-only) */
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  padding-bottom: 1px;
+  transition: background-size .3s var(--ease-out), color .2s var(--ease);
+}
+.lead a:hover, .card__desc a:hover, .feature p a:hover,
+.page-hero p a:hover, .prose a:hover { background-size: 100% 2px; }   /* thickens on hover */
+
+/* ---- Cards: cursor-follow spotlight (main.js sets --mx / --my) ---- */
+.card { position: relative; }
+.card::after {
+  content: "";
+  position: absolute; inset: 0; z-index: -1;   /* behind text/image; only paints over the card surface */
+  border-radius: inherit; pointer-events: none;
+  opacity: 0; transition: opacity .3s var(--ease);
+  background: radial-gradient(220px circle at var(--mx, 50%) var(--my, 0%),
+              rgba(37, 99, 235, .12), transparent 60%);
+}
+.card:hover::after { opacity: 1; }
+/* brighter glow where cards sit on a dark background */
+.section--dark .card::after,
+#graphic-design .card::after {
+  background: radial-gradient(250px circle at var(--mx, 50%) var(--my, 0%),
+              rgba(125, 165, 255, .20), transparent 60%);
+}
+
+/* ---- Richer scroll reveal: gentle blur lifts away as it enters ---- */
+.reveal { transition: opacity .7s var(--ease-out), transform .7s var(--ease-out), filter .7s var(--ease-out); }
+.reveal:not(.is-visible) { filter: blur(4px); }
+.reveal.is-visible { filter: blur(0); }
+/* Optional directional / zoom reveal utilities (use on any .reveal) */
+.reveal--left:not(.is-visible)  { transform: translateX(-34px); }
+.reveal--right:not(.is-visible) { transform: translateX(34px); }
+.reveal--zoom:not(.is-visible)  { transform: scale(.94); }
+
+/* ---- Count-up numbers: avoid layout shift while animating ---- */
+.is-counting { font-variant-numeric: tabular-nums; }
+
+/* ---- Reduced-motion: strip the added motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  .btn__t-in,
+  .btn:hover .btn__t-in,
+  .btn:focus-visible .btn__t-in { transform: none !important; }
+  .btn:active { transform: none !important; }
+  .card::after { display: none; }
+  .scroll-progress { display: none; }
+  .reveal:not(.is-visible) { filter: none; }
+  .reveal--left:not(.is-visible),
+  .reveal--right:not(.is-visible),
+  .reveal--zoom:not(.is-visible) { transform: none; }
+}
+
+/* =============================================================
+   POST-REVIEW REFINEMENTS — accessibility, robustness & nav
+   ============================================================= */
+
+/* Release the one-shot reveal's compositor hint once it has animated in */
+.reveal.is-visible { will-change: auto; }
+
+/* Keep the blur-in on text reveals, but skip it on image/media-bearing
+   wrappers so large photos aren't GPU-blurred on scroll-in */
+.reveal:has(img, video, .shot, .card):not(.is-visible) { filter: none; }
+
+/* In-text links on dark backgrounds: lighter blue for legible contrast */
+.page-hero p a, .section--dark .lead a, .section--dark p a,
+.section--dark .card__desc a { color: var(--blue-200); }
+.page-hero p a:hover, .section--dark .lead a:hover,
+.section--dark p a:hover, .section--dark .card__desc a:hover { color: #fff; }
+
+/* Hero headline uses background-clip:text + transparent fill. Restore a
+   solid colour where that can't paint, so the title never goes invisible. */
+@media (forced-colors: active) {
+  .hero h1, .hero h1 em {
+    -webkit-text-fill-color: currentColor;
+    color: CanvasText;
+    background: none;
+  }
+}
+@media print {
+  .hero h1, .hero h1 em {
+    -webkit-text-fill-color: #000;
+    color: #000;
+    background: none;
+  }
+}
+
+/* ---- Navbar: centred, balanced menu + Portfolio dropdown icons ---- */
+.nav-primary { flex: 1; display: flex; justify-content: center; }
+
+.dropdown a .d-ico {
+  flex: none;
+  display: grid; place-items: center;
+  width: 30px; height: 30px;
+  border-radius: 9px;
+  background: var(--blue-50);
+  color: var(--blue-600);
+  transition: background-color .2s var(--ease), color .2s var(--ease), transform .2s var(--ease);
+}
+.dropdown a .d-ico svg { width: 16px; height: 16px; }
+.dropdown a:hover .d-ico,
+.dropdown a.active .d-ico { background: var(--blue-600); color: #fff; transform: scale(1.06); }

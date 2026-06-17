@@ -18,6 +18,7 @@
   };
 
   var NAV = [
+    { label: "Home", href: "/" },
     { label: "About Me", href: "/about/" },
     { label: "Graphic Design", href: "/graphic-design-portfolio/" },
     {
@@ -36,12 +37,12 @@
       label: "Portfolio",
       href: "/portfolio/",
       children: [
-        { label: "Graphic Design", href: "/portfolio/graphic-design/" },
-        { label: "Social Media", href: "/portfolio/social-media/" },
-        { label: "Web Design", href: "/portfolio/web-design/" },
-        { label: "Artificial Intelligence", href: "/portfolio/artificial-intelligence/" },
-        { label: "Photography", href: "/portfolio/photography/" },
-        { label: "Video Editing", href: "/portfolio/video-editing/" }
+        { label: "Graphic Design", href: "/portfolio/graphic-design/", icon: "layers" },
+        { label: "Social Media", href: "/portfolio/social-media/", icon: "share" },
+        { label: "Web Design", href: "/portfolio/web-design/", icon: "monitor" },
+        { label: "Artificial Intelligence", href: "/portfolio/artificial-intelligence/", icon: "ai" },
+        { label: "Photography", href: "/portfolio/photography/", icon: "camera" },
+        { label: "Video Editing", href: "/portfolio/video-editing/", icon: "film" }
       ]
     }
   ];
@@ -59,7 +60,13 @@
     whatsapp: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.523 5.26l-.999 3.648 3.965-1.039zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>',
     ai: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 4.6L18.5 9.5 13.9 11.4 12 16l-1.9-4.6L5.5 9.5l4.6-1.9z"/><path d="M19 14l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg>',
     close: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>',
-    send: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>'
+    send: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>',
+    home: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5 12 3l9 6.5"/><path d="M5 10v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V10"/><path d="M9 21v-6h6v6"/></svg>',
+    layers: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>',
+    share: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>',
+    monitor: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>',
+    camera: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>',
+    film: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>'
   };
 
   /* ---- Determine current page --------------------------------------- */
@@ -93,7 +100,10 @@
         var subId = "submenu-" + idx;
         var sub = item.children.map(function (c) {
           var ca = basePath(c.href) === here ? ' class="active" aria-current="page"' : "";
-          return '<li><a href="' + c.href + '"' + ca + '><span class="dot"></span>' + c.label + "</a></li>";
+          var lead = c.icon
+            ? '<span class="d-ico">' + (ICON[c.icon] || "") + "</span>"
+            : '<span class="dot"></span>';
+          return '<li><a href="' + c.href + '"' + ca + ">" + lead + c.label + "</a></li>";
         }).join("");
         menu +=
           '<li class="nav-item nav-item--has-dropdown">' +
@@ -659,6 +669,113 @@
     });
   }
 
+  /* ---- Button label slide-swap -------------------------------------- */
+  /* Wrap each button's visible text so it can slide up on hover while a
+     duplicate (the ::after, via data-label) rises into place. SVG icons
+     are left untouched. Runs after header/footer/CTAs are injected.     */
+  function enhanceButtons() {
+    document.querySelectorAll(".btn").forEach(function (btn) {
+      if (btn.dataset.tEnhanced) return;
+      btn.dataset.tEnhanced = "1";
+      Array.prototype.slice.call(btn.childNodes).forEach(function (node) {
+        if (node.nodeType !== 3) return;            // text nodes only
+        var label = node.textContent.replace(/\s+/g, " ").trim();
+        if (!label) return;
+        var outer = document.createElement("span");
+        outer.className = "btn__t";
+        var inner = document.createElement("span");
+        inner.className = "btn__t-in";
+        inner.textContent = label;
+        inner.setAttribute("data-label", label);
+        outer.appendChild(inner);
+        btn.replaceChild(outer, node);
+      });
+    });
+  }
+
+  /* ---- Scroll progress bar ------------------------------------------ */
+  function wireScrollProgress() {
+    var bar = document.createElement("div");
+    bar.className = "scroll-progress";
+    bar.setAttribute("aria-hidden", "true");
+    document.body.appendChild(bar);
+    var ticking = false;
+    function update() {
+      var doc = document.documentElement;
+      var max = doc.scrollHeight - doc.clientHeight;
+      var p = max > 0 ? Math.min(1, Math.max(0, doc.scrollTop / max)) : 0;
+      bar.style.transform = "scaleX(" + p + ")";
+      ticking = false;
+    }
+    function onScroll() {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll, { passive: true });
+    update();
+  }
+
+  /* ---- Cursor-follow card spotlight --------------------------------- */
+  function wireCardSpotlight() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (window.matchMedia("(hover: none)").matches) return;   // skip touch
+    document.querySelectorAll(".card").forEach(function (card) {
+      var raf = 0, px = 0, py = 0;
+      card.addEventListener("pointermove", function (e) {
+        px = e.clientX; py = e.clientY;
+        if (raf) return;                              // coalesce to one update per frame
+        raf = window.requestAnimationFrame(function () {
+          raf = 0;
+          var r = card.getBoundingClientRect();        // read fresh each frame (stays correct while scrolling)
+          if (!r.width || !r.height) return;
+          card.style.setProperty("--mx", ((px - r.left) / r.width * 100) + "%");
+          card.style.setProperty("--my", ((py - r.top) / r.height * 100) + "%");
+        });
+      });
+    });
+  }
+
+  /* ---- Count-up for stat numbers ------------------------------------ */
+  function wireCountUp() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var nums = document.querySelectorAll(".stat .num, .stat-card .num, .hero__meta .num");
+    if (!nums.length || !("IntersectionObserver" in window)) return;
+
+    function run(el) {
+      var raw = el.textContent.trim();
+      var m = raw.match(/^(\D*?)(\d[\d,]*(?:\.\d+)?)(.*)$/);
+      if (!m) return;
+      var prefix = m[1], suffix = m[3];
+      var hadComma = m[2].indexOf(",") !== -1;
+      var decimals = (m[2].split(".")[1] || "").length;
+      var target = parseFloat(m[2].replace(/,/g, ""));
+      if (isNaN(target)) return;
+
+      var dur = 1100, start = performance.now();
+      el.classList.add("is-counting");
+      function fmt(v) {
+        var n = decimals ? v.toFixed(decimals)
+              : (hadComma ? Math.round(v).toLocaleString() : String(Math.round(v)));
+        return prefix + n + suffix;
+      }
+      function tick(now) {
+        var t = Math.min(1, (now - start) / dur);
+        var eased = 1 - Math.pow(1 - t, 3);          // easeOutCubic
+        el.textContent = fmt(target * eased);
+        if (t < 1) window.requestAnimationFrame(tick);
+        else { el.textContent = fmt(target); el.classList.remove("is-counting"); }
+      }
+      window.requestAnimationFrame(tick);
+    }
+
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { run(entry.target); obs.unobserve(entry.target); }
+      });
+    }, { threshold: 0.5 });
+    nums.forEach(function (el) { obs.observe(el); });
+  }
+
   /* ---- Init ---------------------------------------------------------- */
   function init() {
     setFavicon();
@@ -677,6 +794,7 @@
     }
     injectArrows();
     fillCTAs();
+    enhanceButtons();        // after header/footer/CTAs so every .btn is wrapped
     wireFilters();
     wireLightbox();
     buildWidgets();
@@ -684,6 +802,9 @@
     wireToTop();
     wireHeaderScroll();
     wireExpCarousel();
+    wireScrollProgress();
+    wireCardSpotlight();
+    wireCountUp();
   }
 
   if (document.readyState === "loading") {
