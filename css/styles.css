@@ -1716,9 +1716,10 @@ ul { margin: 0; padding: 0; }
   .clients-loop .client-logo[aria-hidden="true"] { display: none; }
 }
 
-/* Graphic Design section — full vibrant artwork background, light overlay, glass cards */
-/* Core-craft teaser — clean dark section (artwork moved to the portfolio hero) */
-#graphic-design {
+/* Core-craft teaser — clean dark section (home only).
+   Scoped to .section--dark so the same #graphic-design id reused on the
+   Portfolio page stays a normal light section (readable dark-on-light). */
+.section--dark#graphic-design {
   background:
     radial-gradient(900px 480px at 85% -10%, rgba(37, 99, 235, 0.26), transparent 60%),
     var(--black);
@@ -1726,16 +1727,16 @@ ul { margin: 0; padding: 0; }
 }
 
 /* Solid dark cards that read cleanly on the plain background */
-#graphic-design .card {
+.section--dark#graphic-design .card {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
-#graphic-design .card h3 { color: #fff; }
-#graphic-design .card .card__cat { color: var(--blue-200); }
-#graphic-design .card .card__desc { color: rgba(255, 255, 255, 0.82); }
-#graphic-design .card .arrow { color: var(--blue-200); }
-#graphic-design .card:hover {
+.section--dark#graphic-design .card h3 { color: #fff; }
+.section--dark#graphic-design .card .card__cat { color: var(--blue-200); }
+.section--dark#graphic-design .card .card__desc { color: rgba(255, 255, 255, 0.82); }
+.section--dark#graphic-design .card .arrow { color: var(--blue-200); }
+.section--dark#graphic-design .card:hover {
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.28);
 }
@@ -2084,7 +2085,7 @@ html { scroll-padding-top: calc(var(--nav-h) + 18px); }
 .card:hover::after { opacity: 1; }
 /* brighter glow where cards sit on a dark background */
 .section--dark .card::after,
-#graphic-design .card::after {
+.section--dark#graphic-design .card::after {
   background: radial-gradient(250px circle at var(--mx, 50%) var(--my, 0%),
               rgba(125, 165, 255, .20), transparent 60%);
 }
