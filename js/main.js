@@ -379,65 +379,204 @@
     wireAI(dock, panel);
   }
 
-  /* ---- AI assistant: local, keyword-based knowledge ----------------- */
+  /* ---- AI assistant: local knowledge base + typo-tolerant matching ---
+     Knows the whole site (who Ronnie is, services, experience, clients,
+     tools, pricing, contact…) and tolerates misspellings via fuzzy
+     token matching, so "phtography" / "servies" / "portfolyo" still work. */
+  var AI_LINK = function (href, label, ext) {
+    return '<a href="' + href + '"' + (ext ? ' target="_blank" rel="noopener"' : "") + ">" + label + "</a>";
+  };
+  var WA = function (label) { return AI_LINK(CONTACT.whatsappHref, label || "WhatsApp", true); };
+  var EMAIL = function (label) { return '<a href="mailto:' + CONTACT.email + '">' + (label || CONTACT.email) + "</a>"; };
+
+  /* Levenshtein edit distance — powers spelling tolerance */
+  function aiLev(a, b) {
+    var m = a.length, n = b.length;
+    if (!m) return n; if (!n) return m;
+    var prev = [], cur = [], i, j;
+    for (j = 0; j <= n; j++) prev[j] = j;
+    for (i = 1; i <= m; i++) {
+      cur[0] = i;
+      for (j = 1; j <= n; j++) {
+        var cost = a.charCodeAt(i - 1) === b.charCodeAt(j - 1) ? 0 : 1;
+        cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + cost);
+      }
+      for (j = 0; j <= n; j++) prev[j] = cur[j];
+    }
+    return prev[n];
+  }
+
+  /* Common function words: allowed to match a keyword only EXACTLY, never
+     fuzzily — stops "there"~"where", "were"~"where", "yours"~"yourself" etc. */
+  var AI_STOP = { there:1, here:1, were:1, your:1, yours:1, you:1, are:1, the:1,
+    this:1, that:1, these:1, those:1, with:1, have:1, has:1, had:1, will:1,
+    would:1, could:1, should:1, and:1, but:1, not:1, for:1, from:1, into:1,
+    want:1, need:1, like:1, was:1, them:1, they:1, their:1, then:1, than:1 };
+
+  /* One user token ~ one keyword? exact, sensible substring, or close spelling.
+     The shorter side must be >= 5 chars for a substring hit, so tiny tokens
+     like "hi" don't match inside "graphic" and "your" inside "yourself". */
+  function aiTokSim(a, b) {
+    if (a === b) return true;
+    if (AI_STOP[a]) return false;                  // common words: exact-only
+    var la = a.length, lb = b.length;
+    if (Math.min(la, lb) >= 5 && (a.indexOf(b) !== -1 || b.indexOf(a) !== -1)) return true;
+    var thr = lb <= 3 ? 0 : (lb <= 6 ? 1 : 2);     // short words demand an exact hit
+    if (!thr || Math.abs(la - lb) > thr) return false;
+    return aiLev(a, b) <= thr;
+  }
+
+  /* Score an intent: multi-word phrase hits weigh more than single keywords.
+     Phrases are matched on word boundaries (space-padded) so "who are you"
+     doesn't fire on "who are your clients". */
+  function aiScore(intent, norm, toks) {
+    var s = 0, i, j;
+    if (intent.phrases) {
+      var padded = " " + norm + " ";
+      for (i = 0; i < intent.phrases.length; i++) {
+        if (padded.indexOf(" " + intent.phrases[i] + " ") !== -1) s += 3;
+      }
+    }
+    if (intent.keys) for (i = 0; i < intent.keys.length; i++) {
+      for (j = 0; j < toks.length; j++) { if (aiTokSim(toks[j], intent.keys[i])) { s += 1; break; } }
+    }
+    return s;
+  }
+
+  var AI_FALLBACK =
+    "I'm not totally sure I caught that — try rephrasing, or pick a topic: " +
+    "<strong>who Ronnie is</strong>, <strong>services</strong>, <strong>portfolio</strong>, " +
+    "<strong>experience</strong>, <strong>clients</strong>, <strong>tools</strong>, " +
+    "<strong>pricing &amp; availability</strong> or <strong>contact</strong>. " +
+    "You can also message Ronnie directly on " + WA() + ".";
+
+  /* Ordered knowledge base. keys = fuzzy single words; phrases = substrings. */
+  var AI_KB = [
+    { keys: ["services", "service", "offer", "offerings", "expertise", "capabilities", "skills", "skill"],
+      phrases: ["what do you do", "what can you do", "what do you offer", "what services", "services you offer", "what you do", "can you do"],
+      a: "Ronnie offers a full creative toolkit: " + AI_LINK("/graphic-design-portfolio/", "Graphic Design") + ", " +
+         AI_LINK("/logo-branding/", "Logo Branding") + ", " + AI_LINK("/web-design/", "Web Design") + ", " +
+         AI_LINK("/photography/", "Photography") + ", " + AI_LINK("/video-editing/", "Video Editing") + " and " +
+         AI_LINK("/social-media/", "Social Media") + ". Want details on any one?" },
+
+    { keys: ["logo", "logos", "brand", "branding", "identity", "guidelines", "guideline", "wordmark", "monogram", "rebrand", "logotype"],
+      phrases: ["brand identity", "logo design", "visual identity"],
+      a: "For branding: " + AI_LINK("/logo-branding/", "Logo Branding") + " covers full identity systems (logos, palettes &amp; guidelines), and " +
+         AI_LINK("/logo-identity/", "Logo Identity") + " covers logo concepts, marks, wordmarks &amp; monograms." },
+
+    { keys: ["web", "website", "websites", "landing", "ui", "ux", "site", "sites", "webpage", "webdesign"],
+      phrases: ["web design", "landing page", "build a website", "make a website", "build a site"],
+      a: "Ronnie designs clean, responsive websites — landing pages, portfolios and business sites, with UI direction. See " +
+         AI_LINK("/web-design/", "Web Design") + ", or real builds in the " + AI_LINK("/portfolio/web-design/", "web portfolio") + "." },
+
+    { keys: ["photo", "photos", "photography", "photographer", "photoshoot", "picture", "pictures", "camera", "portrait", "portraits"],
+      phrases: ["product shots", "photo shoot"],
+      a: "Product, food, beverage, coffee and portrait photography — take a look at " + AI_LINK("/photography/", "Photography") + "." },
+
+    { keys: ["video", "videos", "reel", "reels", "editing", "edit", "edits", "motion", "promo", "clip", "clips", "footage"],
+      phrases: ["video editing", "video edit"],
+      a: "Reels, promos and short-form edits with clean cuts and colour — see " + AI_LINK("/video-editing/", "Video Editing") + "." },
+
+    { keys: ["social", "instagram", "insta", "facebook", "tiktok", "post", "posts", "feed", "stories", "story", "campaign", "campaigns", "content"],
+      phrases: ["social media"],
+      a: "Post designs, campaign visuals, reels and story templates — see " + AI_LINK("/social-media/", "Social Media") +
+         ". For Ronnie's latest handles, message him on " + WA() + "." },
+
+    { keys: ["graphic", "graphics", "poster", "posters", "print", "flyer", "flyers", "leaflet", "leaflets", "banner", "banners", "menu", "menus", "signage", "brochure", "brochures", "ad", "ads", "advertising"],
+      phrases: ["print design", "business card", "business cards", "roll up"],
+      a: "Posters, digital ads, flyers, leaflets, roll-up banners, restaurant menus, business cards and product packaging — explore the " +
+         AI_LINK("/graphic/", "Graphic") + " page, plus " + AI_LINK("/mockups/", "Mockups") + " for realistic previews." },
+
+    { keys: ["mockup", "mockups", "mock", "packaging", "preview", "previews"],
+      a: "Realistic product &amp; packaging mockups are on the " + AI_LINK("/mockups/", "Mockups") + " page." },
+
+    { keys: ["ai", "artificial", "midjourney", "chatgpt", "claude", "kling", "dreamina", "freepik", "automation", "gpt"],
+      phrases: ["artificial intelligence", "ai workflow", "ai tools", "use ai"],
+      a: "Ronnie uses AI tools — Claude, ChatGPT, Midjourney, Freepik, Kling and Dreamina — to speed up ideation and exploration, while every final design decision stays human-led. More on " +
+         AI_LINK("/artificial-intelligence/", "Artificial Intelligence") + "." },
+
+    { keys: ["tools", "tool", "software", "apps", "app", "programs", "program", "adobe", "illustrator", "photoshop", "indesign", "lightroom", "premiere", "figma", "vscode", "xd"],
+      phrases: ["what tools", "tools do you use", "software do you use", "what software", "apps do you use"],
+      a: "Ronnie's toolkit: <strong>Adobe Illustrator, Photoshop, InDesign, Lightroom, Premiere Pro, XD</strong>, <strong>Figma</strong> and <strong>VS Code</strong> — plus AI tools like <strong>Claude, ChatGPT, Midjourney, Freepik, Kling</strong> and <strong>Dreamina</strong>. See the " +
+         AI_LINK("/tools/", "Tools I Use") + " page." },
+
+    { keys: ["portfolio", "work", "works", "project", "projects", "sample", "samples", "example", "examples", "showcase", "gallery"],
+      phrases: ["your work", "see your work", "view work", "past work", "previous work"],
+      a: "Explore real work across every discipline in the " + AI_LINK("/portfolio/", "Portfolio") + " — " +
+         AI_LINK("/portfolio/graphic-design/", "graphic design") + ", " + AI_LINK("/portfolio/web-design/", "web") + ", " +
+         AI_LINK("/portfolio/social-media/", "social media") + ", " + AI_LINK("/portfolio/photography/", "photography") + ", " +
+         AI_LINK("/portfolio/video-editing/", "video") + " and " + AI_LINK("/portfolio/artificial-intelligence/", "AI") + "." },
+
+    { keys: ["client", "clients", "companies", "company", "brands", "customers"],
+      phrases: ["worked with", "work for", "who have you worked", "clients you", "worked for"],
+      a: "Ronnie has worked with brands including <strong>Alcon</strong> (advertising), <strong>Power Media</strong> (media &amp; advertising), <strong>Click</strong> (advertising agency), <strong>33 Degree</strong> (speciality coffee), <strong>Bloomfields</strong> (real estate) and <strong>International Logistics Services</strong>. See the work in the " +
+         AI_LINK("/portfolio/", "Portfolio") + "." },
+
+    { keys: ["experience", "experienced", "years", "year", "senior", "junior", "skilled"],
+      phrases: ["how long", "years of experience", "your experience", "how experienced", "work history"],
+      a: "Ronnie has <strong>1+ year</strong> of professional experience as a freelance graphic designer in Dubai — <strong>50+ projects</strong> for <strong>10+ happy clients</strong>. His work spans full brand identities (logos, colour systems, typography, guidelines), print &amp; packaging, plus web/UI, photography, video and social media. Full details on his " +
+         AI_LINK("/resume/", "Resume") + "." },
+
+    { keys: ["process", "workflow", "steps", "step", "approach", "stages", "method"],
+      phrases: ["how do you work", "your process", "how does it work", "what is the process", "how you work", "work process"],
+      a: "Ronnie works in four clear steps: <strong>1) Discover</strong> — goals, audience &amp; brand; <strong>2) Design</strong> — clean, intentional visuals; <strong>3) Refine</strong> — review &amp; polish through structured feedback; <strong>4) Deliver</strong> — organised, production-ready files. See the full process " +
+         AI_LINK("/#process", "here") + "." },
+
+    { keys: ["price", "pricing", "cost", "costs", "rate", "rates", "budget", "quote", "fee", "fees", "charge", "charges", "expensive", "cheap", "afford", "pay"],
+      phrases: ["how much", "price list", "your rates", "cost to"],
+      a: "Pricing depends on your project's scope and timeline. Share a few details and Ronnie will send a tailored quote — reach him on " +
+         WA() + " or " + EMAIL("email") + "." },
+
+    { keys: ["hire", "available", "availability", "freelance", "collab", "collaborate", "collaboration", "start", "book", "booking", "busy", "commission"],
+      phrases: ["work with", "are you available", "can you help", "take on", "open for", "work together", "hire you", "looking for a designer", "need a designer", "available for"],
+      a: "Yes — Ronnie is available for freelance work, collaborations and design projects in Dubai and beyond. The fastest way to start is " +
+         WA() + "." },
+
+    { keys: ["contact", "reach", "email", "mail", "phone", "call", "whatsapp", "whatsap", "number", "message", "dm", "text", "gmail"],
+      phrases: ["get in touch", "reach you", "contact details", "phone number", "email address", "contact ronnie", "reach ronnie", "contact info"],
+      a: "Here's how to reach Ronnie:<br>📞 <a href=\"" + CONTACT.phoneHref + "\">" + CONTACT.phone + "</a>" +
+         "<br>✉️ " + EMAIL() + "<br>💬 " + WA("Chat on WhatsApp") },
+
+    { keys: ["where", "location", "located", "based", "dubai", "uae", "city", "country", "emirates", "region"],
+      phrases: ["where are you", "based in", "where is ronnie", "where do you"],
+      a: "Ronnie is a graphic designer based in <strong>Dubai, UAE</strong>, working with clients locally and internationally." },
+
+    { keys: ["language", "languages", "speak", "speaks", "english", "filipino", "tagalog", "bilingual"],
+      phrases: ["what language", "languages do you"],
+      a: "Ronnie speaks <strong>English</strong> and <strong>Filipino</strong>." },
+
+    { keys: ["education", "study", "studied", "degree", "school", "college", "university", "qualification", "graduate", "diploma"],
+      phrases: ["did you study", "your education", "where did you study"],
+      a: "Ronnie holds an <strong>Associate in Computer Technology (ACT)</strong> from <strong>STI College</strong>." },
+
+    { keys: ["resume", "cv", "curriculum"],
+      phrases: ["download cv", "download resume", "your cv", "your resume", "see your resume"],
+      a: "You can view Ronnie's one-page " + AI_LINK("/resume/", "Resume") + ", or download the " +
+         AI_LINK("/assets/Ronnie-Balonon-Resume.pdf", "Resume PDF") + " / " + AI_LINK("/assets/Ronnie-Balonon-CV.pdf", "full CV") + "." },
+
+    { keys: ["ronnie", "balonon", "who", "yourself", "about", "bio", "background", "profile", "designer"],
+      phrases: ["who is", "who s", "who are you", "about you", "about ronnie", "about him", "tell me about", "your background", "your story", "who is ronnie"],
+      a: "Ronnie Balonon Jr. is a Dubai-based, <strong>AI-powered graphic designer</strong>. He blends clean, professional design — branding, layouts and visual storytelling — with AI-driven workflows that move fast while keeping every final decision human-led. With <strong>1+ year</strong> of professional experience, he's delivered <strong>50+ projects</strong> for <strong>10+ happy clients</strong>. More on the " +
+         AI_LINK("/about/", "About") + " page or his " + AI_LINK("/resume/", "Resume") + "." },
+
+    { keys: ["hi", "hello", "hey", "salam", "marhaba", "yo", "sup", "hola", "greetings", "hiya"],
+      phrases: ["good morning", "good evening", "good afternoon"],
+      a: "Hi there! 👋 I'm Ronnie's assistant. Ask me about <strong>who he is</strong>, his <strong>services</strong>, <strong>portfolio</strong>, <strong>experience</strong>, <strong>tools</strong>, <strong>pricing &amp; availability</strong> or <strong>contact</strong> details. What would you like to know?" },
+
+    { keys: ["thanks", "thank", "shukran", "appreciate", "thx", "ty"],
+      a: "You're welcome! 🙏 Feel free to reach out anytime on " + WA() + " or " + EMAIL("email") + "." }
+  ];
+
   function aiReply(text) {
-    var t = (text || "").toLowerCase();
-    var link = function (href, label) { return '<a href="' + href + '">' + label + "</a>"; };
-    var has = function () {
-      for (var i = 0; i < arguments.length; i++) { if (t.indexOf(arguments[i]) !== -1) return true; }
-      return false;
-    };
-
-    if (has("hi", "hello", "hey", "salam", "marhaba")) {
-      return "Hi there! 👋 I'm Ronnie's assistant. I can tell you about his <strong>services</strong>, show you the <strong>portfolio</strong>, or share <strong>contact</strong> details. What would you like to know?";
+    var norm = (text || "").toLowerCase().replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ").trim();
+    if (!norm) return "Ask me anything about Ronnie — his work, services, experience, tools or how to get in touch. 🙂";
+    var toks = norm.split(" ");
+    var best = null, bestScore = 0;
+    for (var i = 0; i < AI_KB.length; i++) {
+      var sc = aiScore(AI_KB[i], norm, toks);
+      if (sc > bestScore) { bestScore = sc; best = AI_KB[i]; }
     }
-    if (has("service", "what do you do", "offer", "help with")) {
-      return "Ronnie offers a full creative toolkit: " +
-        link("/graphic-design-portfolio/", "Graphic Design") + ", " +
-        link("/logo-branding/", "Logo Branding") + ", " +
-        link("/web-design/", "Web Design") + ", " +
-        link("/photography/", "Photography") + ", " +
-        link("/video-editing/", "Video Editing") + " and " +
-        link("/social-media/", "Social Media") + ". Want details on any one?";
-    }
-    if (has("logo", "brand", "identity")) {
-      return "For branding, see " + link("/logo-branding/", "Logo Branding") +
-        " (full identity systems) and " + link("/logo-identity/", "Logo Identity") +
-        " (logo concepts, marks &amp; variations).";
-    }
-    if (has("web", "website", "landing", "ui")) {
-      return "Ronnie designs clean, responsive sites — landing pages, portfolios and business websites. See " +
-        link("/web-design/", "Web Design") + ".";
-    }
-    if (has("photo")) { return "Product, lifestyle and event photography — take a look at " + link("/photography/", "Photography") + "."; }
-    if (has("video", "reel", "edit", "motion")) { return "Reels, promos and brand videos with clean cuts and colour. See " + link("/video-editing/", "Video Editing") + "."; }
-    if (has("ai", "artificial")) { return "Ronnie uses AI to speed up ideation and exploration — but every final design decision stays human-led. More on " + link("/artificial-intelligence/", "Artificial Intelligence") + "."; }
-    if (has("social", "instagram", "post", "campaign")) { return "Post designs, campaign visuals, reels covers and story templates — see " + link("/social-media/", "Social Media") + "."; }
-    if (has("graphic", "poster", "print", "flyer", "ad")) { return "Posters, digital ads, marketing creatives and print layouts live on the " + link("/graphic/", "Graphic") + " page."; }
-    if (has("mockup", "packaging", "preview")) { return "Realistic product and packaging mockups are on the " + link("/mockups/", "Mockups") + " page."; }
-    if (has("portfolio", "work", "project", "sample", "example")) {
-      return "You can explore the full " + link("/graphic-design-portfolio/", "Graphic Design Portfolio") +
-        " and " + link("/other-expertise/", "Other Expertise") + " for everything else.";
-    }
-    if (has("price", "cost", "rate", "budget", "quote", "fee", "how much")) {
-      return "Pricing depends on the scope and timeline of your project. Share a few details and Ronnie will send a tailored quote — reach him on " +
-        '<a href="' + CONTACT.whatsappHref + '" target="_blank" rel="noopener">WhatsApp</a> or ' +
-        '<a href="mailto:' + CONTACT.email + '">email</a>.';
-    }
-    if (has("contact", "reach", "email", "phone", "call", "whatsapp", "number")) {
-      return "Here's how to reach Ronnie:<br>📞 <a href=\"" + CONTACT.phoneHref + "\">" + CONTACT.phone + "</a>" +
-        "<br>✉️ <a href=\"mailto:" + CONTACT.email + "\">" + CONTACT.email + "</a>" +
-        "<br>💬 <a href=\"" + CONTACT.whatsappHref + "\" target=\"_blank\" rel=\"noopener\">Chat on WhatsApp</a>";
-    }
-    if (has("hire", "available", "freelance", "work with", "collab", "start")) {
-      return "Yes — Ronnie is available for freelance work and collaborations in Dubai and beyond. The fastest way to start is " +
-        '<a href="' + CONTACT.whatsappHref + '" target="_blank" rel="noopener">WhatsApp</a>.';
-    }
-    if (has("where", "location", "based", "dubai")) { return "Ronnie is a graphic designer based in <strong>Dubai, UAE</strong>, working with clients locally and internationally."; }
-    if (has("thank", "thanks", "shukran")) { return "You're welcome! 🙏 Feel free to reach out anytime on WhatsApp or email."; }
-
-    return "Good question! I can help with <strong>services</strong>, <strong>portfolio</strong>, <strong>pricing &amp; availability</strong> or <strong>contact</strong> details. You can also message Ronnie directly on " +
-      '<a href="' + CONTACT.whatsappHref + '" target="_blank" rel="noopener">WhatsApp</a>.';
+    return (best && bestScore > 0) ? best.a : AI_FALLBACK;
   }
 
   function wireAI(dock, panel) {
@@ -474,7 +613,7 @@
       }, 650);
     }
 
-    var QUICK = ["Services", "Portfolio", "Pricing & availability", "Contact"];
+    var QUICK = ["About Ronnie", "Services", "Portfolio", "Pricing", "Contact"];
     function renderChips() {
       chips.innerHTML = "";
       QUICK.forEach(function (q) {
@@ -501,7 +640,7 @@
       launch.classList.remove("fab__pulse");
       if (!greeted) {
         greeted = true;
-        addMsg("Hi! 👋 I'm Ronnie's AI assistant. Ask me about his services, portfolio, pricing or how to get in touch.", "bot");
+        addMsg("Hi! 👋 I'm Ronnie's AI assistant. Ask me about <strong>who he is</strong>, his <strong>services</strong>, <strong>portfolio</strong>, <strong>experience</strong>, <strong>tools</strong>, <strong>pricing</strong> or how to <strong>get in touch</strong> — typos are fine. 🙂", "bot");
         renderChips();
       }
       setTimeout(function () { input.focus(); }, 200);
