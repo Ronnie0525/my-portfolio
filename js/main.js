@@ -314,6 +314,8 @@
           // No "All" button: clicking the active category again clears back to showing everything
           if (btn.classList.contains("active") && filter !== "all") {
             btns.forEach(function (b) { b.classList.remove("active"); b.setAttribute("aria-selected", "false"); });
+            var allBtn = group.querySelector('[data-filter="all"]');
+            if (allBtn) { allBtn.classList.add("active"); allBtn.setAttribute("aria-selected", "true"); }
             apply("all");
             return;
           }
@@ -689,11 +691,11 @@
   /* ---- Lightbox preview for gallery images -------------------------- */
   function wireLightbox() {
     var imgs = [].slice.call(
-      document.querySelectorAll("[data-filter-group] img.shot, .photo-grid img.shot, main .grid img.shot, .cb-panel img.shot")
+      document.querySelectorAll("[data-filter-group] img.shot, .photo-grid img.shot, main .grid img.shot, .cb-panel img.shot, .work-grid img.shot")
     ).filter(function (img) {
       if (img.closest(".feature__media")) return false;        // feature visuals, not gallery items
-      var card = img.closest(".card");
-      if (card && card.querySelector("a.stretched")) return false; // skip cards that link out (e.g. PDF covers)
+      var container = img.closest(".card, .work-tile");
+      if (container && container.querySelector("a.stretched")) return false; // skip items that link out (PDF/website)
       return true;
     });
     if (!imgs.length) return;
