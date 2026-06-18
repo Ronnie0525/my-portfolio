@@ -122,8 +122,7 @@
     return '' +
       '<div class="container nav">' +
         '<a class="brand" href="/" aria-label="Ronnie Balonon — Home">' +
-          '<img class="brand__logo" src="/assets/logo-black.png" alt="Ronnie Balonon logo" />' +
-          '<span class="brand__name">Ronnie Balonon</span>' +
+          '<img class="brand__logo" src="/assets/logo-black.png" alt="Ronnie Balonon" />' +
         "</a>" +
         '<nav class="nav-primary" aria-label="Primary">' +
           '<ul class="nav-menu">' + menu + "</ul>" +
@@ -156,7 +155,7 @@
       '<div class="container">' +
         '<div class="footer-top">' +
           '<div class="footer-brand">' +
-            '<a class="brand" href="/"><img class="brand__logo" src="/assets/logo-white.png" alt="Ronnie Balonon logo" /><span class="brand__name">Ronnie Balonon</span></a>' +
+            '<a class="brand" href="/" aria-label="Ronnie Balonon — Home"><img class="brand__logo" src="/assets/logo-black.png" alt="Ronnie Balonon" /></a>' +
             "<p>Dubai-based, AI-powered Graphic Designer crafting clean, professional and effective visual experiences for brands and businesses.</p>" +
             '<ul class="footer-contact">' +
               '<li><span class="ico">' + ICON.phone + '</span><a href="' + CONTACT.phoneHref + '">' + CONTACT.phone + "</a></li>" +
@@ -680,11 +679,11 @@
     var icon = document.createElement("link");
     icon.rel = "icon";
     icon.type = "image/png";
-    icon.href = "/assets/favicon.png?v=2";
+    icon.href = "/assets/favicon.png?v=3";
     document.head.appendChild(icon);
     var touch = document.createElement("link");
     touch.rel = "apple-touch-icon";
-    touch.href = "/assets/favicon.png?v=2";
+    touch.href = "/assets/favicon.png?v=3";
     document.head.appendChild(touch);
   }
 

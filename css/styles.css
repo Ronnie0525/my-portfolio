@@ -1091,9 +1091,10 @@ ul { margin: 0; padding: 0; }
    ============================================================= */
 
 /* Brand logo image (replaces the RB box) */
-.brand__logo { height: 24px; width: auto; display: block; transition: height .3s var(--ease); }
-.site-header.scrolled .brand__logo { height: 21px; }
-.footer-brand .brand__logo { height: 34px; }
+.brand__logo { height: 30px; width: auto; display: block; transition: height .3s var(--ease); }
+.site-header.scrolled .brand__logo { height: 26px; }
+/* The signature logo is dark navy — invert it to white on the black footer */
+.footer-brand .brand__logo { height: 36px; filter: brightness(0) invert(1); }
 
 /* ID-card fields (hero portrait) */
 .id-data {
