@@ -122,7 +122,7 @@
     return '' +
       '<div class="container nav">' +
         '<a class="brand" href="/" aria-label="Ronnie Balonon — Home">' +
-          '<img class="brand__logo" src="/assets/logo-black.png?v=2" alt="Ronnie Balonon" />' +
+          '<img class="brand__logo" src="/assets/logo-black.png?v=3" alt="Ronnie Balonon" />' +
         "</a>" +
         '<nav class="nav-primary" aria-label="Primary">' +
           '<ul class="nav-menu">' + menu + "</ul>" +
@@ -155,7 +155,7 @@
       '<div class="container">' +
         '<div class="footer-top">' +
           '<div class="footer-brand">' +
-            '<a class="brand" href="/" aria-label="Ronnie Balonon — Home"><img class="brand__logo" src="/assets/logo-black.png?v=2" alt="Ronnie Balonon" /></a>' +
+            '<a class="brand" href="/" aria-label="Ronnie Balonon — Home"><img class="brand__logo" src="/assets/logo-black.png?v=3" alt="Ronnie Balonon" /></a>' +
             "<p>Dubai-based, AI-powered Graphic Designer crafting clean, professional and effective visual experiences for brands and businesses.</p>" +
             '<ul class="footer-contact">' +
               '<li><span class="ico">' + ICON.phone + '</span><a href="' + CONTACT.phoneHref + '">' + CONTACT.phone + "</a></li>" +
