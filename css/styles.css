@@ -2298,3 +2298,13 @@ html { scroll-padding-top: calc(var(--nav-h) + 18px); }
 .work-grid--square .work-tile { aspect-ratio: 1 / 1; }
 @media (max-width: 900px) { .work-grid--square { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 560px) { .work-grid--square { grid-template-columns: repeat(2, 1fr); } }
+
+/* =============================================================
+   "See more" — clamp a gallery to a few items, reveal on click
+   (main.js sets up the toggle; respects the active category filter)
+   ============================================================= */
+.clamp-hide { display: none !important; }
+.more-row { display: flex; justify-content: center; margin-top: 32px; }
+.more-row[hidden] { display: none; }
+.more-row .btn svg { width: 16px; height: 16px; transition: transform .25s var(--ease); }
+.more-row .btn[aria-expanded="true"] svg { transform: rotate(180deg); }

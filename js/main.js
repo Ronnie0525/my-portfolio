@@ -306,6 +306,9 @@
           var show = filter === "all" || it.getAttribute("data-category") === filter;
           it.classList.toggle("is-hidden", !show);
         });
+        // re-apply the "see more" clamp to the newly-filtered set
+        var cg = group.querySelector("[data-clamp]");
+        if (cg && cg._reclamp) cg._reclamp();
       }
 
       btns.forEach(function (btn) {
@@ -327,6 +330,37 @@
           apply(filter);
         });
       });
+    });
+  }
+
+  /* ---- "See more": clamp a gallery to N items, reveal on click ------ */
+  function wireShowMore() {
+    document.querySelectorAll("[data-clamp]").forEach(function (grid) {
+      var container = grid.parentNode;
+      var btn = container.querySelector("[data-show-more]");
+      if (!btn) return;
+      var limit = parseInt(grid.getAttribute("data-clamp"), 10) || 8;
+      var expanded = false;
+      var kids = Array.prototype.slice.call(grid.children);
+
+      function apply() {
+        var shown = 0, totalVisible = 0;
+        kids.forEach(function (it) {
+          if (it.classList.contains("is-hidden")) { it.classList.remove("clamp-hide"); return; }
+          totalVisible++;
+          shown++;
+          if (!expanded && shown > limit) it.classList.add("clamp-hide");
+          else it.classList.remove("clamp-hide");
+        });
+        var row = btn.closest(".more-row") || btn;
+        row.hidden = totalVisible <= limit;
+        btn.setAttribute("aria-expanded", expanded ? "true" : "false");
+        btn.querySelector(".more-label").textContent = expanded ? "See less" : "See more";
+      }
+
+      btn.addEventListener("click", function () { expanded = !expanded; apply(); });
+      grid._reclamp = function () { expanded = false; apply(); };  // called by the filter
+      apply();
     });
   }
 
@@ -937,6 +971,7 @@
     fillCTAs();
     enhanceButtons();        // after header/footer/CTAs so every .btn is wrapped
     wireFilters();
+    wireShowMore();
     wireLightbox();
     buildWidgets();
     wireReveal();
