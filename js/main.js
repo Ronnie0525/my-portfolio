@@ -951,6 +951,119 @@
     nums.forEach(function (el) { obs.observe(el); });
   }
 
+  /* ---- Video tiles: play muted while in view, pause when they leave -
+     Posters cover the idle state, so nothing ever renders as a blank box. */
+  function wireVideoAutoplay() {
+    var vids = document.querySelectorAll("video[poster]");
+    if (!vids.length || !("IntersectionObserver" in window)) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (navigator.connection && navigator.connection.saveData) return;
+
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var v = entry.target;
+        if (entry.isIntersecting) {
+          if (v.dataset.userPaused === "1") return;
+          v.muted = true;
+          var p = v.play();
+          if (p && p.catch) p.catch(function () {});   // autoplay blocked: poster stays
+        } else if (!v.paused) {
+          v.dataset.autoPause = "1";
+          v.pause();
+        }
+      });
+    }, { threshold: 0.35 });
+
+    vids.forEach(function (v) {
+      v.muted = true;
+      v.playsInline = true;
+      // Respect a deliberate pause: don't fight the visitor on the next scroll.
+      v.addEventListener("pause", function () {
+        if (v.dataset.autoPause === "1") { v.dataset.autoPause = ""; return; }
+        v.dataset.userPaused = "1";
+      });
+      v.addEventListener("play", function () { v.dataset.userPaused = ""; });
+      obs.observe(v);
+    });
+  }
+
+  /* ---- Page transition: brief fade before leaving to another page --- */
+  function wirePageTransitions() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    document.addEventListener("click", function (e) {
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      var a = e.target.closest("a[href]");
+      if (!a || a.hasAttribute("download") || (a.target && a.target !== "_self")) return;
+      var href = a.getAttribute("href");
+      if (!href || /^(#|mailto:|tel:|javascript:)/.test(href)) return;
+      var url;
+      try { url = new URL(href, window.location.href); } catch (err) { return; }
+      if (url.origin !== window.location.origin) return;
+      if (url.pathname === window.location.pathname && url.hash) return; // in-page anchor
+      e.preventDefault();
+      document.documentElement.classList.add("pt-leaving");
+      setTimeout(function () { window.location.href = url.href; }, 220);
+    });
+    // If the page is restored from bfcache (browser back/forward), clear any stale state.
+    window.addEventListener("pageshow", function () {
+      document.documentElement.classList.remove("pt-leaving");
+    });
+  }
+
+  /* ---- Work-tile tilt (image-forward galleries) ---------------------- */
+  function wireTileTilt() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (window.matchMedia("(hover: none)").matches) return;
+    var MAX_DEG = 6;
+    document.querySelectorAll(".work-tile").forEach(function (tile) {
+      var raf = 0, px = 0, py = 0;
+      function apply() {
+        raf = 0;
+        var r = tile.getBoundingClientRect();
+        if (!r.width || !r.height) return;
+        var rx = (((py - r.top) / r.height) - 0.5) * -MAX_DEG;
+        var ry = (((px - r.left) / r.width) - 0.5) * MAX_DEG;
+        tile.style.transform = "translateY(-4px) perspective(700px) rotateX(" + rx.toFixed(2) + "deg) rotateY(" + ry.toFixed(2) + "deg)";
+      }
+      tile.addEventListener("pointermove", function (e) {
+        if (e.pointerType === "touch") return;
+        px = e.clientX; py = e.clientY;
+        if (!raf) raf = window.requestAnimationFrame(apply);
+      });
+      tile.addEventListener("pointerleave", function () {
+        if (raf) { window.cancelAnimationFrame(raf); raf = 0; }
+        tile.style.transform = "";
+      });
+    });
+  }
+
+  /* ---- Split [data-split-words] headlines for a word-by-word reveal - */
+  function wireWordReveal() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    document.querySelectorAll("[data-split-words]").forEach(function (el) {
+      var i = 0;
+      (function split(node) {
+        Array.prototype.slice.call(node.childNodes).forEach(function (child) {
+          if (child.nodeType === 3) {
+            var frag = document.createDocumentFragment();
+            child.textContent.split(/(\s+)/).forEach(function (chunk) {
+              if (!chunk) return;
+              if (!chunk.trim()) { frag.appendChild(document.createTextNode(chunk)); return; }
+              var span = document.createElement("span");
+              span.className = "word-reveal";
+              span.style.setProperty("--i", i++);
+              span.textContent = chunk;
+              frag.appendChild(span);
+            });
+            node.replaceChild(frag, child);
+          } else if (child.nodeType === 1) {
+            split(child);
+          }
+        });
+      })(el);
+    });
+  }
+
   /* ---- Init ---------------------------------------------------------- */
   function init() {
     setFavicon();
@@ -981,6 +1094,10 @@
     wireScrollProgress();
     wireCardSpotlight();
     wireCountUp();
+    wirePageTransitions();
+    wireTileTilt();
+    wireWordReveal();
+    wireVideoAutoplay();
   }
 
   if (document.readyState === "loading") {

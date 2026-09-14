@@ -1163,6 +1163,9 @@ ul { margin: 0; padding: 0; }
 
 /* Video cards */
 .video-card video { width: 100%; display: block; background: #000; }
+/* Clips vary between 9:16 and 4:5 — let each card hug its own clip instead of
+   stretching to the tallest one in the row and trailing blank space. */
+.video-card { align-self: start; }
 
 /* ---- Hero redesign (old-portfolio style) ---- */
 .hero__grid { align-items: center; }
@@ -2308,3 +2311,116 @@ html { scroll-padding-top: calc(var(--nav-h) + 18px); }
 .more-row[hidden] { display: none; }
 .more-row .btn svg { width: 16px; height: 16px; transition: transform .25s var(--ease); }
 .more-row .btn[aria-expanded="true"] svg { transform: rotate(180deg); }
+
+/* =============================================================
+   Work rail — replaces the old "lone button in an empty section".
+   A compact band that points at the portfolio with some context.
+   ============================================================= */
+.section--slim { padding-block: clamp(40px, 5vw, 68px); }
+/* Follows a section that already paid for the gap — don't stack both paddings. */
+.section--flush-top { padding-top: clamp(6px, 1.2vw, 20px); }
+.work-rail {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px 32px;
+  flex-wrap: wrap;
+  padding: 28px clamp(24px, 3.4vw, 40px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(560px 200px at 88% -40%, var(--blue-50), transparent 70%),
+    var(--surface-2);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow .35s var(--ease-out), border-color .35s var(--ease-out);
+}
+.work-rail:hover { box-shadow: var(--shadow-md); border-color: var(--blue-200); }
+/* thin accent edge that grows in on hover */
+.work-rail::before {
+  content: "";
+  position: absolute; inset: 0 auto 0 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--blue-500), var(--blue-700));
+  transform: scaleY(0); transform-origin: 50% 0;
+  transition: transform .45s var(--ease-out);
+}
+.work-rail:hover::before { transform: scaleY(1); }
+.work-rail__text { min-width: 0; }
+.work-rail__text .eyebrow { margin-bottom: 6px; }
+.work-rail h2 {
+  margin: 0;
+  font-size: clamp(1.25rem, 1.9vw, 1.6rem);
+  letter-spacing: -.015em;
+}
+.work-rail p { margin: 6px 0 0; color: var(--muted); font-size: .95rem; }
+.work-rail .btn { flex: none; }
+.section--dark .work-rail {
+  border-color: rgba(255,255,255,.14);
+  background: radial-gradient(560px 200px at 88% -40%, rgba(37,99,235,.22), transparent 70%), rgba(255,255,255,.04);
+}
+.section--dark .work-rail p { color: var(--muted-200); }
+@media (max-width: 620px) {
+  .work-rail { flex-direction: column; align-items: flex-start; }
+  .work-rail .btn { width: 100%; justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .work-rail::before { transform: scaleY(1); }
+}
+
+/* =============================================================
+   About — skills: heading beside the pills instead of stranded
+   above them in a tall empty band.
+   ============================================================= */
+.skills-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .skills-split { grid-template-columns: 1fr; gap: 28px; }
+}
+
+/* =============================================================
+   Tools loop: pause the strip while the cursor rests on it
+   (parity with the clients loop, which already does this)
+   ============================================================= */
+.tools-loop .logo-marquee:hover .logo-marquee__track,
+.tools-loop .logo-marquee:focus-within .logo-marquee__track { animation-play-state: paused; }
+
+/* =============================================================
+   Page transition — brief fade on the way to another internal page
+   (main.js adds .pt-leaving to <html> right before navigating away)
+   ============================================================= */
+body { transition: opacity .22s var(--ease); }
+html.pt-leaving body { opacity: 0; }
+@media (prefers-reduced-motion: reduce) {
+  html.pt-leaving body { opacity: 1; transition: none; }
+}
+
+/* =============================================================
+   Work-tile tilt (main.js drives rotateX/rotateY via inline style
+   on pointermove; this just sets up the 3D context + a safe reset)
+   ============================================================= */
+.work-tile { transform-style: preserve-3d; }
+@media (prefers-reduced-motion: reduce), (hover: none) {
+  .work-tile { transform: none !important; }
+}
+
+/* =============================================================
+   Hero headline — word-by-word reveal (main.js splits [data-split-words])
+   ============================================================= */
+.word-reveal {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(.4em);
+  filter: blur(4px);
+  transition: opacity .6s var(--ease-out), transform .6s var(--ease-out), filter .6s var(--ease-out);
+  transition-delay: calc(var(--i, 0) * 45ms);
+}
+.reveal.is-visible .word-reveal { opacity: 1; transform: none; filter: none; }
+@media (prefers-reduced-motion: reduce) {
+  .word-reveal { opacity: 1; transform: none; filter: none; transition: none; }
+}
