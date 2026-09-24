@@ -1,0 +1,11 @@
+{
+  "name": "ronnie-portfolio",
+  "private": true,
+  "description": "Static portfolio with optional local image and content authoring tools",
+  "scripts": {
+    "designs": "node scripts/build-design-studies.cjs",
+    "images": "node scripts/optimize-images.cjs",
+    "projects": "node scripts/build-projects.cjs"
+  },
+  "devDependencies": { "sharp": "0.35.4" }
+}

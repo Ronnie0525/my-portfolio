@@ -86,9 +86,7 @@ placeholders:
 
 ## How to run it locally
 
-### Option A — Just open it
-Double-click **`index.html`**, or drag it into your browser. Everything works from
-the local file system.
+Use a local HTTP server: root-relative asset paths do not work when opening the HTML as a file.
 
 ### Option B — VS Code Live Server (recommended)
 1. Open the **My portfolio** folder in **VS Code**
@@ -163,3 +161,21 @@ To use a real image, swap it for a standard `<img>` (keep the descriptive `alt`)
 ---
 
 © Ronnie Balonon — Dubai-based Graphic Designer · 0543763091 · ronniebalonon1996@gmail.com
+
+## Portfolio enhancements
+
+The original blue/black/white identity and portrait hero are retained. `css/enhancements.css` contains scoped layout refinements, mobile hero contrast and inner-page spacing. The homepage leads with graphic design and supporting expertise, followed by selected work, process, tools, clients and contact.
+
+Six service illustrations were generated with the built-in image_gen tool and optimised as `assets/expertise/*-v2.webp`. Exact prompts, original output paths and final filenames are recorded in `assets/expertise/image-prompts.json`. These illustrate services; actual project and photography galleries retain their existing work. All former `assets/expertise/dummy/` references now use the new illustrations or existing Click project imagery.
+
+## Page organisation
+
+The homepage has one primary navigation bar. Graphic Design is a service directory linking to Marketing & Print, Mockups, Brand Identity and Logo Design. Other Expertise groups the five supporting disciplines. Portfolio is a six-collection directory; individual collections retain their project galleries. Service pages use one hero action row, followed by service details and a final contact section. Existing page URLs remain unchanged.
+
+## Artwork and image performance
+
+Nine editable design studies replace the previous poster/editorial samples. Their SVG sources and WebP exports are in `assets/design-studies/`; concept studies are labelled separately from client projects.
+
+Live raster images now use WebP exports in `assets/optimized/`, with responsive sizes and full-resolution artwork previews. Original images are retained. `assets/optimized/manifest.json` records file sizes and output paths. The hero is preloaded; lower-page images are lazy-loaded, and videos do not preload media until needed.
+
+To add recent graphic projects, edit `content/graphic-projects.json` and follow `content/README.md`. Optional authoring commands: `npm run projects`, `npm run designs`, and `npm run images`. The published website remains static and has no runtime dependencies.

@@ -20,7 +20,12 @@
   var NAV = [
     { label: "Home", href: "/" },
     { label: "About Me", href: "/about/" },
-    { label: "Graphic Design", href: "/graphic-design-portfolio/" },
+    { label: "Graphic Design", href: "/graphic-design-portfolio/", noDropdown: true, children: [
+      { label: "Marketing & Print", href: "/graphic/" },
+      { label: "Mockups", href: "/mockups/" },
+      { label: "Brand Identity", href: "/logo-branding/" },
+      { label: "Logo Design", href: "/logo-identity/" }
+    ] },
     {
       label: "Other Expertise",
       href: "/other-expertise/",
@@ -122,7 +127,7 @@
     return '' +
       '<div class="container nav">' +
         '<a class="brand" href="/" aria-label="Ronnie Balonon — Home">' +
-          '<img class="brand__logo" src="/assets/logo-black.png?v=3" alt="" />' +
+          '<img class="brand__logo" src="/assets/optimized/logo-black-png-256.webp" alt="" />' +
           '<span class="brand__name">Ronnie Balonon</span>' +
         "</a>" +
         '<nav class="nav-primary" aria-label="Primary">' +
@@ -156,17 +161,12 @@
       '<div class="container">' +
         '<div class="footer-top">' +
           '<div class="footer-brand">' +
-            '<a class="brand" href="/" aria-label="Ronnie Balonon — Home"><img class="brand__logo" src="/assets/logo-black.png?v=3" alt="" /><span class="brand__name">Ronnie Balonon</span></a>' +
+            '<a class="brand" href="/" aria-label="Ronnie Balonon — Home"><img class="brand__logo" src="/assets/optimized/logo-black-png-256.webp" alt="" /><span class="brand__name">Ronnie Balonon</span></a>' +
             "<p>Dubai-based, AI-powered Graphic Designer crafting clean, professional and effective visual experiences for brands and businesses.</p>" +
             '<ul class="footer-contact">' +
               '<li><span class="ico">' + ICON.phone + '</span><a href="' + CONTACT.phoneHref + '">' + CONTACT.phone + "</a></li>" +
               '<li><span class="ico">' + ICON.mail + '</span><a href="mailto:' + CONTACT.email + '">' + CONTACT.email + "</a></li>" +
             "</ul>" +
-            '<div class="socials">' +
-              '<a href="#" aria-label="Instagram (placeholder)">' + ICON.instagram + "</a>" +
-              '<a href="#" aria-label="Facebook (placeholder)">' + ICON.facebook + "</a>" +
-              '<a href="#" aria-label="TikTok (placeholder)">' + ICON.tiktok + "</a>" +
-            "</div>" +
           "</div>" +
           '<div class="footer-col">' +
             "<h4>Portfolio</h4>" +
@@ -383,8 +383,8 @@
     var dock = document.createElement("div");
     dock.className = "fab-dock";
     dock.innerHTML =
-      '<button class="fab fab--ai fab__pulse" type="button" id="ai-launch" aria-label="Open AI assistant" aria-expanded="false" aria-controls="ai-panel">' +
-        ICON.ai + '<span class="fab__tip">Ask AI</span>' +
+      '<button class="fab fab--ai fab__pulse" type="button" id="ai-launch" aria-label="Open portfolio guide" aria-expanded="false" aria-controls="ai-panel">' +
+        ICON.ai + '<span class="fab__tip">Quick help</span>' +
       "</button>" +
       '<a class="fab fab--wa" href="' + CONTACT.whatsappHref + '" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">' +
         ICON.whatsapp + '<span class="fab__tip">WhatsApp</span>' +
@@ -395,7 +395,7 @@
     panel.className = "ai-panel";
     panel.id = "ai-panel";
     panel.setAttribute("role", "dialog");
-    panel.setAttribute("aria-label", "AI assistant");
+    panel.setAttribute("aria-label", "Portfolio guide");
     panel.innerHTML =
       '<div class="ai-head">' +
         '<span class="avatar">' + ICON.ai + "</span>" +
@@ -676,7 +676,7 @@
       launch.classList.remove("fab__pulse");
       if (!greeted) {
         greeted = true;
-        addMsg("Hi! 👋 I'm Ronnie's AI assistant. Ask me about <strong>who he is</strong>, his <strong>services</strong>, <strong>portfolio</strong>, <strong>experience</strong>, <strong>tools</strong>, <strong>pricing</strong> or how to <strong>get in touch</strong> — typos are fine. 🙂", "bot");
+        addMsg("Hi! 👋 I'm Ronnie's portfolio guide. Ask me about <strong>who he is</strong>, his <strong>services</strong>, <strong>portfolio</strong>, <strong>experience</strong>, <strong>tools</strong>, <strong>pricing</strong> or how to <strong>get in touch</strong> — typos are fine. 🙂", "bot");
         renderChips();
       }
       setTimeout(function () { input.focus(); }, 200);
@@ -737,36 +737,62 @@
     var lb = document.createElement("div");
     lb.className = "lightbox";
     lb.setAttribute("aria-hidden", "true");
+    lb.setAttribute("role", "dialog");
+    lb.setAttribute("aria-modal", "true");
+    lb.setAttribute("aria-label", "Artwork preview");
     lb.innerHTML =
       '<button class="lightbox__close" type="button" aria-label="Close preview">' + ICON.close + "</button>" +
       '<button class="lightbox__nav lightbox__prev" type="button" aria-label="Previous image">' + ICON.caret + "</button>" +
       '<img class="lightbox__img" alt="" />' +
-      '<button class="lightbox__nav lightbox__next" type="button" aria-label="Next image">' + ICON.caret + "</button>";
+      '<button class="lightbox__nav lightbox__next" type="button" aria-label="Next image">' + ICON.caret + "</button>" +
+      '<p class="lightbox__caption" aria-live="polite"></p>';
     document.body.appendChild(lb);
     var lbImg = lb.querySelector(".lightbox__img");
     var idx = 0;
+    var returnFocus = null, previousOverflow = "", background = [];
 
     function show(i) {
       idx = (i + imgs.length) % imgs.length;
-      lbImg.src = imgs[idx].currentSrc || imgs[idx].src;
+      lbImg.src = imgs[idx].dataset.full || imgs[idx].currentSrc || imgs[idx].src;
       lbImg.alt = imgs[idx].alt || "";
+      var card = imgs[idx].closest(".card, .work-tile");
+      var title = card && card.querySelector("h3");
+      lb.querySelector(".lightbox__caption").textContent = (idx + 1) + " / " + imgs.length + " — " + (title ? title.textContent : lbImg.alt);
     }
     function open(i) {
+      returnFocus = document.activeElement;
+      previousOverflow = document.body.style.overflow;
       show(i);
       lb.classList.add("is-open");
       lb.setAttribute("aria-hidden", "false");
       document.body.style.overflow = "hidden";
+      background = Array.prototype.filter.call(document.body.children, function (el) {
+        return el !== lb && !el.inert && el.tagName !== "SCRIPT";
+      });
+      background.forEach(function (el) { el.inert = true; });
+      lb.querySelector(".lightbox__close").focus();
     }
     function close() {
       lb.classList.remove("is-open");
       lb.setAttribute("aria-hidden", "true");
-      document.body.style.overflow = "";
+      document.body.style.overflow = previousOverflow;
       lbImg.removeAttribute("src");
+      background.forEach(function (el) { el.inert = false; });
+      if (returnFocus) returnFocus.focus({ preventScroll: true });
     }
 
     imgs.forEach(function (img, i) {
       img.style.cursor = "zoom-in";
-      img.addEventListener("click", function () { open(i); });
+      var trigger = img.closest("[data-preview]") || img;
+      if (trigger === img) {
+        img.tabIndex = 0;
+        img.setAttribute("role", "button");
+        img.setAttribute("aria-label", "View artwork: " + img.alt);
+        img.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(i); }
+        });
+      }
+      trigger.addEventListener("click", function () { open(i); });
     });
     lb.querySelector(".lightbox__close").addEventListener("click", close);
     lb.querySelector(".lightbox__prev").addEventListener("click", function (e) { e.stopPropagation(); show(idx - 1); });
@@ -777,6 +803,12 @@
       if (e.key === "Escape") close();
       else if (e.key === "ArrowLeft") show(idx - 1);
       else if (e.key === "ArrowRight") show(idx + 1);
+      else if (e.key === "Tab") {
+        var controls = Array.prototype.slice.call(lb.querySelectorAll("button"));
+        var at = controls.indexOf(document.activeElement);
+        e.preventDefault();
+        controls[(at + (e.shiftKey ? -1 : 1) + controls.length) % controls.length].focus();
+      }
     });
   }
 

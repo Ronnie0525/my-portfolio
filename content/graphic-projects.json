@@ -1,0 +1,58 @@
+{
+  "projects": [
+    {
+      "title": "Click — Brand Identity",
+      "category": "Branding",
+      "description": "Logo, colour and full brand guidelines for a Dubai marketing agency.",
+      "image": "/assets/click-brand-identity-cover.jpg",
+      "alt": "Click brand identity guidelines — cover",
+      "url": "/assets/click-brand-identity.pdf",
+      "status": "published"
+    },
+    {
+      "title": "Power Media — Proposal",
+      "category": "Proposal",
+      "description": "A social media management proposal designed for an outdoor-media brand.",
+      "image": "/assets/power-media-proposal-cover.jpg",
+      "alt": "Power Media social media management proposal — cover",
+      "url": "/assets/power-media-proposal.pdf",
+      "status": "published"
+    },
+    {
+      "title": "Almasar",
+      "category": "Branding",
+      "description": "Brand identity for a logistics & delivery company.",
+      "image": "/assets/graphic-concepts/almasar-cover.png",
+      "alt": "Almasar branding project — cover",
+      "url": "https://drive.google.com/file/d/1DzV74nA6Mjl_5qcTgHp0ctYIzrsKriLf/view",
+      "status": "published"
+    },
+    {
+      "title": "Bakepoint",
+      "category": "Branding",
+      "description": "Bakery brand identity and packaging.",
+      "image": "/assets/graphic-concepts/bakepoint-thumb.jpg",
+      "alt": "Bakepoint branding project — cover",
+      "url": "https://drive.google.com/file/d/1jw8bbASc40bD3pVwV27lWyu9c9vZs0v4/view",
+      "status": "published"
+    },
+    {
+      "title": "DSPS",
+      "category": "Branding",
+      "description": "Brand identity and collateral system.",
+      "image": "/assets/graphic-concepts/dsps-cover.png",
+      "alt": "DSPS branding project — cover",
+      "url": "https://drive.google.com/file/d/1a0hkNEfDVR-unOZKDtFUdGI_6BYXpaFm/view",
+      "status": "published"
+    },
+    {
+      "title": "Habit Mahshi",
+      "category": "Branding",
+      "description": "Restaurant brand identity and packaging.",
+      "image": "/assets/graphic-concepts/habitmahshi-thumb.jpg",
+      "alt": "Habit Mahshi branding project — cover",
+      "url": "https://drive.google.com/file/d/1mycx-T17ZnFH2qRC-jbs5di_rUZNPsf4/view",
+      "status": "published"
+    }
+  ]
+}

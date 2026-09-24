@@ -1,0 +1,42 @@
+{
+  "generator": "Built-in image_gen",
+  "purpose": "AI-generated service illustrations; not client projects",
+  "assets": [
+    {
+      "name": "graphic",
+      "output": "assets/expertise/graphic-v2.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape 3:2 service illustration for an AI-powered graphic designer's portfolio, black, white and electric-blue visual identity. Create a premium realistic editorial photograph of a graphic designer's working desk: tangible typography layout boards, color swatches, a drawing tablet and stylus, and a monitor showing an elegant abstract blue-and-white vector identity composition. Precise materials, credible design craft, sophisticated directional studio lighting, restrained cobalt blue highlights, dark charcoal studio background. Main subjects centered with breathing room, suitable for a 4:3 crop. No person, no readable text, no logos, no watermark. This illustrates the service, not a real client project.",
+      "source": "C:\\Users\\Windows\\.codex\\generated_images\\01a0c966-82bb-77f0-b874-4d97dd038fb1\\exec-065f0a62-ca9f-4780-ae5a-0f2dfc6cf1a4.png"
+    },
+    {
+      "name": "photography",
+      "output": "assets/expertise/photography-v2.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: 3:2 landscape service illustration for an AI-powered graphic designer portfolio. Premium editorial studio photography, black and white with restrained electric cobalt-blue accents, realistic materials and physically credible objects, sophisticated light, centered composition with breathing room suitable for 4:3 crop. No people, no logos, no readable text, no watermark. Illustrative service visual, not a client deliverable. A professional mirrorless camera and lens in foreground on a dark studio desk, behind them a small beautifully lit coffee and pastry product photography set with softbox and reflector. Crisp photographic craft, warm coffee contrasted against cool blue background.",
+      "source": "C:\\Users\\Windows\\.codex\\generated_images\\01a0c966-82bb-77f0-b874-4d97dd038fb1\\exec-e0a3d0de-f181-48a4-9201-d30e3e268972.png"
+    },
+    {
+      "name": "social-media",
+      "output": "assets/expertise/social-media-v2.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: 3:2 landscape service illustration for an AI-powered graphic designer portfolio. Premium editorial studio photography, black and white with restrained electric cobalt-blue accents, realistic materials and physically credible objects, sophisticated light, centered composition with breathing room suitable for 4:3 crop. No people, no logos, no readable text, no watermark. Illustrative service visual, not a client deliverable. A polished social media content creation desk with an upright smartphone and an array of printed square and vertical campaign compositions, showing cohesive coffee product photography, abstract cobalt typographic shapes, a planner with simple unlabelled grid. Tangible convincing objects, art-directed campaign aesthetic.",
+      "source": "C:\\Users\\Windows\\.codex\\generated_images\\01a0c966-82bb-77f0-b874-4d97dd038fb1\\exec-52d034cf-3d77-492b-8d3b-1872f92f001e.png"
+    },
+    {
+      "name": "video-editing",
+      "output": "assets/expertise/video-editing-v2.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: 3:2 landscape service illustration for an AI-powered graphic designer portfolio. Premium editorial studio photography, black and white with restrained electric cobalt-blue accents, realistic materials and physically credible objects, sophisticated light, centered composition with breathing room suitable for 4:3 crop. No people, no logos, no readable text, no watermark. Illustrative service visual, not a client deliverable. A professional video editing workstation, large monitor showing a credible multitrack editing timeline with colored video clips and audio waveforms beneath a cinematic coffee pouring preview, control dial surface and headphones in foreground. Moody navy and charcoal with blue accent lighting, premium realistic creative studio.",
+      "source": "C:\\Users\\Windows\\.codex\\generated_images\\01a0c966-82bb-77f0-b874-4d97dd038fb1\\exec-8d49cb40-2aa5-4e55-bb15-44ffbe1431e2.png"
+    },
+    {
+      "name": "web-design",
+      "output": "assets/expertise/web-design-v2.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: 3:2 landscape service illustration for an AI-powered graphic designer portfolio. Premium editorial studio photography, black and white with restrained electric cobalt-blue accents, realistic materials and physically credible objects, sophisticated light, centered composition with breathing room suitable for 4:3 crop. No people, no logos, no readable text, no watermark. Illustrative service visual, not a client deliverable. A web design and development workstation with a wide display split between an abstract syntax-colored code editor and a sophisticated blue-and-white responsive website preview; a laptop and upright phone show matching responsive page layouts. Dark desk, studio lighting, tangible keyboard and trackpad, elegant technical craft, no robotic imagery.",
+      "source": "C:\\Users\\Windows\\.codex\\generated_images\\01a0c966-82bb-77f0-b874-4d97dd038fb1\\exec-3c3ce8e8-f3a9-45ac-9d3d-92987818c33b.png"
+    },
+    {
+      "name": "ai",
+      "output": "assets/expertise/ai-v2.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: 3:2 landscape service illustration for an AI-powered graphic designer portfolio. Premium editorial studio photography, black and white with restrained electric cobalt-blue accents, realistic materials and physically credible objects, sophisticated light, centered composition with breathing room suitable for 4:3 crop. No people, no logos, no readable text, no watermark. Illustrative service visual, not a client deliverable. A creative AI image-making workstation: a pen tablet and stylus beside a wide monitor displaying an elegant grid of surreal product-image variations, cobalt translucent sculptural objects and studio still lifes. Fine blue light trails subtly connect a physical sketch sheet to the polished generated imagery, grounded photographic set, no robot, no brain, no glowing AI lettering.",
+      "source": "C:\\Users\\Windows\\.codex\\generated_images\\01a0c966-82bb-77f0-b874-4d97dd038fb1\\exec-89593d9a-8c5f-4842-b6cf-9cf786056c5e.png"
+    }
+  ]
+}

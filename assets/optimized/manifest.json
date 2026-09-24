@@ -1,0 +1,2958 @@
+{
+  "imageCount": 124,
+  "originalBytes": 88069174,
+  "previewBytes": 6838828,
+  "savingsPercent": 92,
+  "images": {
+    "/assets/Clients/33-degree.png": {
+      "src": "/assets/optimized/Clients/33-degree-png-256.webp",
+      "full": "/assets/optimized/Clients/33-degree-png-256.webp",
+      "width": 256,
+      "height": 256,
+      "variants": [
+        {
+          "src": "/assets/optimized/Clients/33-degree-png-256.webp",
+          "width": 256,
+          "height": 256,
+          "bytes": 15260
+        }
+      ],
+      "originalBytes": 37153,
+      "previewBytes": 15260
+    },
+    "/assets/Clients/alcon.png": {
+      "src": "/assets/optimized/Clients/alcon-png-256.webp",
+      "full": "/assets/optimized/Clients/alcon-png-256.webp",
+      "width": 256,
+      "height": 256,
+      "variants": [
+        {
+          "src": "/assets/optimized/Clients/alcon-png-256.webp",
+          "width": 256,
+          "height": 256,
+          "bytes": 18098
+        }
+      ],
+      "originalBytes": 74550,
+      "previewBytes": 18098
+    },
+    "/assets/Clients/bloomfields.png": {
+      "src": "/assets/optimized/Clients/bloomfields-png-256.webp",
+      "full": "/assets/optimized/Clients/bloomfields-png-256.webp",
+      "width": 256,
+      "height": 257,
+      "variants": [
+        {
+          "src": "/assets/optimized/Clients/bloomfields-png-256.webp",
+          "width": 256,
+          "height": 257,
+          "bytes": 10254
+        }
+      ],
+      "originalBytes": 19006,
+      "previewBytes": 10254
+    },
+    "/assets/Clients/click.png": {
+      "src": "/assets/optimized/Clients/click-png-256.webp",
+      "full": "/assets/optimized/Clients/click-png-256.webp",
+      "width": 256,
+      "height": 129,
+      "variants": [
+        {
+          "src": "/assets/optimized/Clients/click-png-256.webp",
+          "width": 256,
+          "height": 129,
+          "bytes": 4906
+        }
+      ],
+      "originalBytes": 7825,
+      "previewBytes": 4906
+    },
+    "/assets/Clients/ils.png": {
+      "src": "/assets/optimized/Clients/ils-png-256.webp",
+      "full": "/assets/optimized/Clients/ils-png-256.webp",
+      "width": 256,
+      "height": 229,
+      "variants": [
+        {
+          "src": "/assets/optimized/Clients/ils-png-256.webp",
+          "width": 256,
+          "height": 229,
+          "bytes": 26888
+        }
+      ],
+      "originalBytes": 47050,
+      "previewBytes": 26888
+    },
+    "/assets/Clients/power-media.png": {
+      "src": "/assets/optimized/Clients/power-media-png-256.webp",
+      "full": "/assets/optimized/Clients/power-media-png-256.webp",
+      "width": 256,
+      "height": 197,
+      "variants": [
+        {
+          "src": "/assets/optimized/Clients/power-media-png-256.webp",
+          "width": 256,
+          "height": 197,
+          "bytes": 9754
+        }
+      ],
+      "originalBytes": 10133,
+      "previewBytes": 9754
+    },
+    "/assets/about-hero.png": {
+      "src": "/assets/optimized/about-hero-png-960.webp",
+      "full": "/assets/optimized/about-hero-png-1672.webp",
+      "width": 960,
+      "height": 540,
+      "variants": [
+        {
+          "src": "/assets/optimized/about-hero-png-480.webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 7070
+        },
+        {
+          "src": "/assets/optimized/about-hero-png-960.webp",
+          "width": 960,
+          "height": 540,
+          "bytes": 19780
+        },
+        {
+          "src": "/assets/optimized/about-hero-png-1672.webp",
+          "width": 1672,
+          "height": 941,
+          "bytes": 45434
+        }
+      ],
+      "originalBytes": 1421470,
+      "previewBytes": 19780
+    },
+    "/assets/click-brand-identity-cover.jpg": {
+      "src": "/assets/optimized/click-brand-identity-cover-jpg-960.webp",
+      "full": "/assets/optimized/click-brand-identity-cover-jpg-1100.webp",
+      "width": 960,
+      "height": 677,
+      "variants": [
+        {
+          "src": "/assets/optimized/click-brand-identity-cover-jpg-480.webp",
+          "width": 480,
+          "height": 339,
+          "bytes": 17752
+        },
+        {
+          "src": "/assets/optimized/click-brand-identity-cover-jpg-960.webp",
+          "width": 960,
+          "height": 677,
+          "bytes": 42740
+        },
+        {
+          "src": "/assets/optimized/click-brand-identity-cover-jpg-1100.webp",
+          "width": 1100,
+          "height": 776,
+          "bytes": 50606
+        }
+      ],
+      "originalBytes": 94833,
+      "previewBytes": 42740
+    },
+    "/assets/design-studies/beyond-the-canvas.webp": {
+      "src": "/assets/optimized/design-studies/beyond-the-canvas-webp-900.webp",
+      "full": "/assets/optimized/design-studies/beyond-the-canvas-webp-900.webp",
+      "width": 900,
+      "height": 1200,
+      "variants": [
+        {
+          "src": "/assets/optimized/design-studies/beyond-the-canvas-webp-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 14260
+        },
+        {
+          "src": "/assets/optimized/design-studies/beyond-the-canvas-webp-900.webp",
+          "width": 900,
+          "height": 1200,
+          "bytes": 29198
+        }
+      ],
+      "originalBytes": 31196,
+      "previewBytes": 29198
+    },
+    "/assets/design-studies/burgers-and-shakes.webp": {
+      "src": "/assets/optimized/design-studies/burgers-and-shakes-webp-900.webp",
+      "full": "/assets/optimized/design-studies/burgers-and-shakes-webp-900.webp",
+      "width": 900,
+      "height": 1200,
+      "variants": [
+        {
+          "src": "/assets/optimized/design-studies/burgers-and-shakes-webp-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 16230
+        },
+        {
+          "src": "/assets/optimized/design-studies/burgers-and-shakes-webp-900.webp",
+          "width": 900,
+          "height": 1200,
+          "bytes": 32928
+        }
+      ],
+      "originalBytes": 36524,
+      "previewBytes": 32928
+    },
+    "/assets/design-studies/coastal-escape.webp": {
+      "src": "/assets/optimized/design-studies/coastal-escape-webp-900.webp",
+      "full": "/assets/optimized/design-studies/coastal-escape-webp-900.webp",
+      "width": 900,
+      "height": 1200,
+      "variants": [
+        {
+          "src": "/assets/optimized/design-studies/coastal-escape-webp-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 15970
+        },
+        {
+          "src": "/assets/optimized/design-studies/coastal-escape-webp-900.webp",
+          "width": 900,
+          "height": 1200,
+          "bytes": 33574
+        }
+      ],
+      "originalBytes": 37540,
+      "previewBytes": 33574
+    },
+    "/assets/design-studies/dinner-menu.webp": {
+      "src": "/assets/optimized/design-studies/dinner-menu-webp-960.webp",
+      "full": "/assets/optimized/design-studies/dinner-menu-webp-1200.webp",
+      "width": 960,
+      "height": 800,
+      "variants": [
+        {
+          "src": "/assets/optimized/design-studies/dinner-menu-webp-480.webp",
+          "width": 480,
+          "height": 400,
+          "bytes": 13626
+        },
+        {
+          "src": "/assets/optimized/design-studies/dinner-menu-webp-960.webp",
+          "width": 960,
+          "height": 800,
+          "bytes": 31848
+        },
+        {
+          "src": "/assets/optimized/design-studies/dinner-menu-webp-1200.webp",
+          "width": 1200,
+          "height": 1000,
+          "bytes": 46560
+        }
+      ],
+      "originalBytes": 53208,
+      "previewBytes": 31848
+    },
+    "/assets/design-studies/editorial-ritual.webp": {
+      "src": "/assets/optimized/design-studies/editorial-ritual-webp-960.webp",
+      "full": "/assets/optimized/design-studies/editorial-ritual-webp-1200.webp",
+      "width": 960,
+      "height": 704,
+      "variants": [
+        {
+          "src": "/assets/optimized/design-studies/editorial-ritual-webp-480.webp",
+          "width": 480,
+          "height": 352,
+          "bytes": 17706
+        },
+        {
+          "src": "/assets/optimized/design-studies/editorial-ritual-webp-960.webp",
+          "width": 960,
+          "height": 704,
+          "bytes": 41872
+        },
+        {
+          "src": "/assets/optimized/design-studies/editorial-ritual-webp-1200.webp",
+          "width": 1200,
+          "height": 880,
+          "bytes": 61764
+        }
+      ],
+      "originalBytes": 67222,
+      "previewBytes": 41872
+    },
+    "/assets/design-studies/keep-going.webp": {
+      "src": "/assets/optimized/design-studies/keep-going-webp-900.webp",
+      "full": "/assets/optimized/design-studies/keep-going-webp-900.webp",
+      "width": 900,
+      "height": 1200,
+      "variants": [
+        {
+          "src": "/assets/optimized/design-studies/keep-going-webp-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 15652
+        },
+        {
+          "src": "/assets/optimized/design-studies/keep-going-webp-900.webp",
+          "width": 900,
+          "height": 1200,
+          "bytes": 31752
+        }
+      ],
+      "originalBytes": 34652,
+      "previewBytes": 31752
+    },
+    "/assets/design-studies/noise-rising.webp": {
+      "src": "/assets/optimized/design-studies/noise-rising-webp-900.webp",
+      "full": "/assets/optimized/design-studies/noise-rising-webp-900.webp",
+      "width": 900,
+      "height": 1200,
+      "variants": [
+        {
+          "src": "/assets/optimized/design-studies/noise-rising-webp-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 14630
+        },
+        {
+          "src": "/assets/optimized/design-studies/noise-rising-webp-900.webp",
+          "width": 900,
+          "height": 1200,
+          "bytes": 29228
+        }
+      ],
+      "originalBytes": 30922,
+      "previewBytes": 29228
+    },
+    "/assets/design-studies/slow-coffee-social.webp": {
+      "src": "/assets/optimized/design-studies/slow-coffee-social-webp-960.webp",
+      "full": "/assets/optimized/design-studies/slow-coffee-social-webp-1200.webp",
+      "width": 960,
+      "height": 624,
+      "variants": [
+        {
+          "src": "/assets/optimized/design-studies/slow-coffee-social-webp-480.webp",
+          "width": 480,
+          "height": 312,
+          "bytes": 16140
+        },
+        {
+          "src": "/assets/optimized/design-studies/slow-coffee-social-webp-960.webp",
+          "width": 960,
+          "height": 624,
+          "bytes": 37710
+        },
+        {
+          "src": "/assets/optimized/design-studies/slow-coffee-social-webp-1200.webp",
+          "width": 1200,
+          "height": 780,
+          "bytes": 53122
+        }
+      ],
+      "originalBytes": 57988,
+      "previewBytes": 37710
+    },
+    "/assets/design-studies/summer-splash.webp": {
+      "src": "/assets/optimized/design-studies/summer-splash-webp-900.webp",
+      "full": "/assets/optimized/design-studies/summer-splash-webp-900.webp",
+      "width": 900,
+      "height": 1200,
+      "variants": [
+        {
+          "src": "/assets/optimized/design-studies/summer-splash-webp-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 25224
+        },
+        {
+          "src": "/assets/optimized/design-studies/summer-splash-webp-900.webp",
+          "width": 900,
+          "height": 1200,
+          "bytes": 48906
+        }
+      ],
+      "originalBytes": 53904,
+      "previewBytes": 48906
+    },
+    "/assets/expertise/ai-v2.webp": {
+      "src": "/assets/optimized/expertise/ai-v2-webp-960.webp",
+      "full": "/assets/optimized/expertise/ai-v2-webp-1440.webp",
+      "width": 960,
+      "height": 640,
+      "variants": [
+        {
+          "src": "/assets/optimized/expertise/ai-v2-webp-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 26278
+        },
+        {
+          "src": "/assets/optimized/expertise/ai-v2-webp-960.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 66462
+        },
+        {
+          "src": "/assets/optimized/expertise/ai-v2-webp-1440.webp",
+          "width": 1440,
+          "height": 960,
+          "bytes": 120432
+        }
+      ],
+      "originalBytes": 134540,
+      "previewBytes": 66462
+    },
+    "/assets/expertise/graphic-v2.webp": {
+      "src": "/assets/optimized/expertise/graphic-v2-webp-960.webp",
+      "full": "/assets/optimized/expertise/graphic-v2-webp-1440.webp",
+      "width": 960,
+      "height": 640,
+      "variants": [
+        {
+          "src": "/assets/optimized/expertise/graphic-v2-webp-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 20018
+        },
+        {
+          "src": "/assets/optimized/expertise/graphic-v2-webp-960.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 50048
+        },
+        {
+          "src": "/assets/optimized/expertise/graphic-v2-webp-1440.webp",
+          "width": 1440,
+          "height": 960,
+          "bytes": 94124
+        }
+      ],
+      "originalBytes": 105902,
+      "previewBytes": 50048
+    },
+    "/assets/expertise/photography-v2.webp": {
+      "src": "/assets/optimized/expertise/photography-v2-webp-960.webp",
+      "full": "/assets/optimized/expertise/photography-v2-webp-1440.webp",
+      "width": 960,
+      "height": 640,
+      "variants": [
+        {
+          "src": "/assets/optimized/expertise/photography-v2-webp-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 20056
+        },
+        {
+          "src": "/assets/optimized/expertise/photography-v2-webp-960.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 53928
+        },
+        {
+          "src": "/assets/optimized/expertise/photography-v2-webp-1440.webp",
+          "width": 1440,
+          "height": 960,
+          "bytes": 100956
+        }
+      ],
+      "originalBytes": 116518,
+      "previewBytes": 53928
+    },
+    "/assets/expertise/social-media-v2.webp": {
+      "src": "/assets/optimized/expertise/social-media-v2-webp-960.webp",
+      "full": "/assets/optimized/expertise/social-media-v2-webp-1440.webp",
+      "width": 960,
+      "height": 640,
+      "variants": [
+        {
+          "src": "/assets/optimized/expertise/social-media-v2-webp-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 25314
+        },
+        {
+          "src": "/assets/optimized/expertise/social-media-v2-webp-960.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 63036
+        },
+        {
+          "src": "/assets/optimized/expertise/social-media-v2-webp-1440.webp",
+          "width": 1440,
+          "height": 960,
+          "bytes": 113136
+        }
+      ],
+      "originalBytes": 123652,
+      "previewBytes": 63036
+    },
+    "/assets/expertise/video-editing-v2.webp": {
+      "src": "/assets/optimized/expertise/video-editing-v2-webp-960.webp",
+      "full": "/assets/optimized/expertise/video-editing-v2-webp-1440.webp",
+      "width": 960,
+      "height": 640,
+      "variants": [
+        {
+          "src": "/assets/optimized/expertise/video-editing-v2-webp-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 20242
+        },
+        {
+          "src": "/assets/optimized/expertise/video-editing-v2-webp-960.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 52422
+        },
+        {
+          "src": "/assets/optimized/expertise/video-editing-v2-webp-1440.webp",
+          "width": 1440,
+          "height": 960,
+          "bytes": 95622
+        }
+      ],
+      "originalBytes": 104568,
+      "previewBytes": 52422
+    },
+    "/assets/expertise/web-design-v2.webp": {
+      "src": "/assets/optimized/expertise/web-design-v2-webp-960.webp",
+      "full": "/assets/optimized/expertise/web-design-v2-webp-1440.webp",
+      "width": 960,
+      "height": 640,
+      "variants": [
+        {
+          "src": "/assets/optimized/expertise/web-design-v2-webp-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 22306
+        },
+        {
+          "src": "/assets/optimized/expertise/web-design-v2-webp-960.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 56630
+        },
+        {
+          "src": "/assets/optimized/expertise/web-design-v2-webp-1440.webp",
+          "width": 1440,
+          "height": 960,
+          "bytes": 108696
+        }
+      ],
+      "originalBytes": 117772,
+      "previewBytes": 56630
+    },
+    "/assets/graphic-concepts/almasar-cover.png": {
+      "src": "/assets/optimized/graphic-concepts/almasar-cover-png-960.webp",
+      "full": "/assets/optimized/graphic-concepts/almasar-cover-png-1920.webp",
+      "width": 960,
+      "height": 640,
+      "variants": [
+        {
+          "src": "/assets/optimized/graphic-concepts/almasar-cover-png-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 14718
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/almasar-cover-png-960.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 37412
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/almasar-cover-png-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 94430
+        }
+      ],
+      "originalBytes": 2956252,
+      "previewBytes": 37412
+    },
+    "/assets/graphic-concepts/bakepoint-thumb.jpg": {
+      "src": "/assets/optimized/graphic-concepts/bakepoint-thumb-jpg-800.webp",
+      "full": "/assets/optimized/graphic-concepts/bakepoint-thumb-jpg-800.webp",
+      "width": 800,
+      "height": 640,
+      "variants": [
+        {
+          "src": "/assets/optimized/graphic-concepts/bakepoint-thumb-jpg-480.webp",
+          "width": 480,
+          "height": 384,
+          "bytes": 12356
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/bakepoint-thumb-jpg-800.webp",
+          "width": 800,
+          "height": 640,
+          "bytes": 28516
+        }
+      ],
+      "originalBytes": 38945,
+      "previewBytes": 28516
+    },
+    "/assets/graphic-concepts/business-cards.png": {
+      "src": "/assets/optimized/graphic-concepts/business-cards-png-960.webp",
+      "full": "/assets/optimized/graphic-concepts/business-cards-png-1280.webp",
+      "width": 960,
+      "height": 624,
+      "variants": [
+        {
+          "src": "/assets/optimized/graphic-concepts/business-cards-png-480.webp",
+          "width": 480,
+          "height": 312,
+          "bytes": 27266
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/business-cards-png-960.webp",
+          "width": 960,
+          "height": 624,
+          "bytes": 75812
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/business-cards-png-1280.webp",
+          "width": 1280,
+          "height": 832,
+          "bytes": 122256
+        }
+      ],
+      "originalBytes": 1989130,
+      "previewBytes": 75812
+    },
+    "/assets/graphic-concepts/click-business-cards.png": {
+      "src": "/assets/optimized/graphic-concepts/click-business-cards-png-960.webp",
+      "full": "/assets/optimized/graphic-concepts/click-business-cards-png-1920.webp",
+      "width": 960,
+      "height": 644,
+      "variants": [
+        {
+          "src": "/assets/optimized/graphic-concepts/click-business-cards-png-480.webp",
+          "width": 480,
+          "height": 322,
+          "bytes": 13854
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/click-business-cards-png-960.webp",
+          "width": 960,
+          "height": 644,
+          "bytes": 44744
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/click-business-cards-png-1920.webp",
+          "width": 1920,
+          "height": 1288,
+          "bytes": 157712
+        }
+      ],
+      "originalBytes": 6666013,
+      "previewBytes": 44744
+    },
+    "/assets/graphic-concepts/click-office-glass.jpg": {
+      "src": "/assets/optimized/graphic-concepts/click-office-glass-jpg-960.webp",
+      "full": "/assets/optimized/graphic-concepts/click-office-glass-jpg-1920.webp",
+      "width": 960,
+      "height": 644,
+      "variants": [
+        {
+          "src": "/assets/optimized/graphic-concepts/click-office-glass-jpg-480.webp",
+          "width": 480,
+          "height": 322,
+          "bytes": 13070
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/click-office-glass-jpg-960.webp",
+          "width": 960,
+          "height": 644,
+          "bytes": 28838
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/click-office-glass-jpg-1920.webp",
+          "width": 1920,
+          "height": 1288,
+          "bytes": 78102
+        }
+      ],
+      "originalBytes": 2201667,
+      "previewBytes": 28838
+    },
+    "/assets/graphic-concepts/click-reception-sign.png": {
+      "src": "/assets/optimized/graphic-concepts/click-reception-sign-png-960.webp",
+      "full": "/assets/optimized/graphic-concepts/click-reception-sign-png-1920.webp",
+      "width": 960,
+      "height": 644,
+      "variants": [
+        {
+          "src": "/assets/optimized/graphic-concepts/click-reception-sign-png-480.webp",
+          "width": 480,
+          "height": 322,
+          "bytes": 18320
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/click-reception-sign-png-960.webp",
+          "width": 960,
+          "height": 644,
+          "bytes": 53544
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/click-reception-sign-png-1920.webp",
+          "width": 1920,
+          "height": 1288,
+          "bytes": 167102
+        }
+      ],
+      "originalBytes": 8255548,
+      "previewBytes": 53544
+    },
+    "/assets/graphic-concepts/click-stationery.png": {
+      "src": "/assets/optimized/graphic-concepts/click-stationery-png-960.webp",
+      "full": "/assets/optimized/graphic-concepts/click-stationery-png-1920.webp",
+      "width": 960,
+      "height": 644,
+      "variants": [
+        {
+          "src": "/assets/optimized/graphic-concepts/click-stationery-png-480.webp",
+          "width": 480,
+          "height": 322,
+          "bytes": 11072
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/click-stationery-png-960.webp",
+          "width": 960,
+          "height": 644,
+          "bytes": 32278
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/click-stationery-png-1920.webp",
+          "width": 1920,
+          "height": 1288,
+          "bytes": 130068
+        }
+      ],
+      "originalBytes": 5823058,
+      "previewBytes": 32278
+    },
+    "/assets/graphic-concepts/coffee-packaging.png": {
+      "src": "/assets/optimized/graphic-concepts/coffee-packaging-png-960.webp",
+      "full": "/assets/optimized/graphic-concepts/coffee-packaging-png-1280.webp",
+      "width": 960,
+      "height": 624,
+      "variants": [
+        {
+          "src": "/assets/optimized/graphic-concepts/coffee-packaging-png-480.webp",
+          "width": 480,
+          "height": 312,
+          "bytes": 15972
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/coffee-packaging-png-960.webp",
+          "width": 960,
+          "height": 624,
+          "bytes": 44404
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/coffee-packaging-png-1280.webp",
+          "width": 1280,
+          "height": 832,
+          "bytes": 71682
+        }
+      ],
+      "originalBytes": 1574166,
+      "previewBytes": 44404
+    },
+    "/assets/graphic-concepts/dsps-cover.png": {
+      "src": "/assets/optimized/graphic-concepts/dsps-cover-png-960.webp",
+      "full": "/assets/optimized/graphic-concepts/dsps-cover-png-1920.webp",
+      "width": 960,
+      "height": 640,
+      "variants": [
+        {
+          "src": "/assets/optimized/graphic-concepts/dsps-cover-png-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 17532
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/dsps-cover-png-960.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 92632
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/dsps-cover-png-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 375276
+        }
+      ],
+      "originalBytes": 4555095,
+      "previewBytes": 92632
+    },
+    "/assets/graphic-concepts/folder.png": {
+      "src": "/assets/optimized/graphic-concepts/folder-png-960.webp",
+      "full": "/assets/optimized/graphic-concepts/folder-png-1280.webp",
+      "width": 960,
+      "height": 624,
+      "variants": [
+        {
+          "src": "/assets/optimized/graphic-concepts/folder-png-480.webp",
+          "width": 480,
+          "height": 312,
+          "bytes": 11058
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/folder-png-960.webp",
+          "width": 960,
+          "height": 624,
+          "bytes": 31056
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/folder-png-1280.webp",
+          "width": 1280,
+          "height": 832,
+          "bytes": 50556
+        }
+      ],
+      "originalBytes": 1464380,
+      "previewBytes": 31056
+    },
+    "/assets/graphic-concepts/habitmahshi-thumb.jpg": {
+      "src": "/assets/optimized/graphic-concepts/habitmahshi-thumb-jpg-800.webp",
+      "full": "/assets/optimized/graphic-concepts/habitmahshi-thumb-jpg-800.webp",
+      "width": 800,
+      "height": 640,
+      "variants": [
+        {
+          "src": "/assets/optimized/graphic-concepts/habitmahshi-thumb-jpg-480.webp",
+          "width": 480,
+          "height": 384,
+          "bytes": 16798
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/habitmahshi-thumb-jpg-800.webp",
+          "width": 800,
+          "height": 640,
+          "bytes": 34798
+        }
+      ],
+      "originalBytes": 44887,
+      "previewBytes": 34798
+    },
+    "/assets/graphic-concepts/letterhead-envelope.png": {
+      "src": "/assets/optimized/graphic-concepts/letterhead-envelope-png-960.webp",
+      "full": "/assets/optimized/graphic-concepts/letterhead-envelope-png-1280.webp",
+      "width": 960,
+      "height": 624,
+      "variants": [
+        {
+          "src": "/assets/optimized/graphic-concepts/letterhead-envelope-png-480.webp",
+          "width": 480,
+          "height": 312,
+          "bytes": 30868
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/letterhead-envelope-png-960.webp",
+          "width": 960,
+          "height": 624,
+          "bytes": 100502
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/letterhead-envelope-png-1280.webp",
+          "width": 1280,
+          "height": 832,
+          "bytes": 181422
+        }
+      ],
+      "originalBytes": 2066259,
+      "previewBytes": 100502
+    },
+    "/assets/graphic-concepts/notebook-pen.png": {
+      "src": "/assets/optimized/graphic-concepts/notebook-pen-png-960.webp",
+      "full": "/assets/optimized/graphic-concepts/notebook-pen-png-1280.webp",
+      "width": 960,
+      "height": 624,
+      "variants": [
+        {
+          "src": "/assets/optimized/graphic-concepts/notebook-pen-png-480.webp",
+          "width": 480,
+          "height": 312,
+          "bytes": 17192
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/notebook-pen-png-960.webp",
+          "width": 960,
+          "height": 624,
+          "bytes": 59292
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/notebook-pen-png-1280.webp",
+          "width": 1280,
+          "height": 832,
+          "bytes": 108412
+        }
+      ],
+      "originalBytes": 1790965,
+      "previewBytes": 59292
+    },
+    "/assets/graphic-concepts/poster-wall.png": {
+      "src": "/assets/optimized/graphic-concepts/poster-wall-png-960.webp",
+      "full": "/assets/optimized/graphic-concepts/poster-wall-png-1280.webp",
+      "width": 960,
+      "height": 624,
+      "variants": [
+        {
+          "src": "/assets/optimized/graphic-concepts/poster-wall-png-480.webp",
+          "width": 480,
+          "height": 312,
+          "bytes": 11342
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/poster-wall-png-960.webp",
+          "width": 960,
+          "height": 624,
+          "bytes": 31906
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/poster-wall-png-1280.webp",
+          "width": 1280,
+          "height": 832,
+          "bytes": 56586
+        }
+      ],
+      "originalBytes": 1514844,
+      "previewBytes": 31906
+    },
+    "/assets/graphic-concepts/skincare-packaging.png": {
+      "src": "/assets/optimized/graphic-concepts/skincare-packaging-png-960.webp",
+      "full": "/assets/optimized/graphic-concepts/skincare-packaging-png-1280.webp",
+      "width": 960,
+      "height": 624,
+      "variants": [
+        {
+          "src": "/assets/optimized/graphic-concepts/skincare-packaging-png-480.webp",
+          "width": 480,
+          "height": 312,
+          "bytes": 6202
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/skincare-packaging-png-960.webp",
+          "width": 960,
+          "height": 624,
+          "bytes": 16524
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/skincare-packaging-png-1280.webp",
+          "width": 1280,
+          "height": 832,
+          "bytes": 27352
+        }
+      ],
+      "originalBytes": 933959,
+      "previewBytes": 16524
+    },
+    "/assets/graphic-concepts/stationery-flatlay.png": {
+      "src": "/assets/optimized/graphic-concepts/stationery-flatlay-png-960.webp",
+      "full": "/assets/optimized/graphic-concepts/stationery-flatlay-png-1280.webp",
+      "width": 960,
+      "height": 624,
+      "variants": [
+        {
+          "src": "/assets/optimized/graphic-concepts/stationery-flatlay-png-480.webp",
+          "width": 480,
+          "height": 312,
+          "bytes": 7364
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/stationery-flatlay-png-960.webp",
+          "width": 960,
+          "height": 624,
+          "bytes": 23864
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/stationery-flatlay-png-1280.webp",
+          "width": 1280,
+          "height": 832,
+          "bytes": 46038
+        }
+      ],
+      "originalBytes": 1580065,
+      "previewBytes": 23864
+    },
+    "/assets/graphic-concepts/storefront-sign.png": {
+      "src": "/assets/optimized/graphic-concepts/storefront-sign-png-960.webp",
+      "full": "/assets/optimized/graphic-concepts/storefront-sign-png-1280.webp",
+      "width": 960,
+      "height": 624,
+      "variants": [
+        {
+          "src": "/assets/optimized/graphic-concepts/storefront-sign-png-480.webp",
+          "width": 480,
+          "height": 312,
+          "bytes": 25204
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/storefront-sign-png-960.webp",
+          "width": 960,
+          "height": 624,
+          "bytes": 77378
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/storefront-sign-png-1280.webp",
+          "width": 1280,
+          "height": 832,
+          "bytes": 136790
+        }
+      ],
+      "originalBytes": 1966712,
+      "previewBytes": 77378
+    },
+    "/assets/graphic-concepts/tote-bag.png": {
+      "src": "/assets/optimized/graphic-concepts/tote-bag-png-960.webp",
+      "full": "/assets/optimized/graphic-concepts/tote-bag-png-1280.webp",
+      "width": 960,
+      "height": 624,
+      "variants": [
+        {
+          "src": "/assets/optimized/graphic-concepts/tote-bag-png-480.webp",
+          "width": 480,
+          "height": 312,
+          "bytes": 9310
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/tote-bag-png-960.webp",
+          "width": 960,
+          "height": 624,
+          "bytes": 28806
+        },
+        {
+          "src": "/assets/optimized/graphic-concepts/tote-bag-png-1280.webp",
+          "width": 1280,
+          "height": 832,
+          "bytes": 49530
+        }
+      ],
+      "originalBytes": 1415974,
+      "previewBytes": 28806
+    },
+    "/assets/hero-bg.webp": {
+      "src": "/assets/optimized/hero-bg-webp-960.webp",
+      "full": "/assets/optimized/hero-bg-webp-1672.webp",
+      "width": 960,
+      "height": 540,
+      "variants": [
+        {
+          "src": "/assets/optimized/hero-bg-webp-480.webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 6264
+        },
+        {
+          "src": "/assets/optimized/hero-bg-webp-960.webp",
+          "width": 960,
+          "height": 540,
+          "bytes": 16388
+        },
+        {
+          "src": "/assets/optimized/hero-bg-webp-1672.webp",
+          "width": 1672,
+          "height": 941,
+          "bytes": 34064
+        }
+      ],
+      "originalBytes": 40374,
+      "previewBytes": 16388
+    },
+    "/assets/hero/artificial-intelligence.webp": {
+      "src": "/assets/optimized/hero/artificial-intelligence-webp-960.webp",
+      "full": "/assets/optimized/hero/artificial-intelligence-webp-1920.webp",
+      "width": 960,
+      "height": 540,
+      "variants": [
+        {
+          "src": "/assets/optimized/hero/artificial-intelligence-webp-480.webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 12156
+        },
+        {
+          "src": "/assets/optimized/hero/artificial-intelligence-webp-960.webp",
+          "width": 960,
+          "height": 540,
+          "bytes": 43446
+        },
+        {
+          "src": "/assets/optimized/hero/artificial-intelligence-webp-1920.webp",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 127324
+        }
+      ],
+      "originalBytes": 123924,
+      "previewBytes": 43446
+    },
+    "/assets/hero/graphic.webp": {
+      "src": "/assets/optimized/hero/graphic-webp-960.webp",
+      "full": "/assets/optimized/hero/graphic-webp-1920.webp",
+      "width": 960,
+      "height": 540,
+      "variants": [
+        {
+          "src": "/assets/optimized/hero/graphic-webp-480.webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 10872
+        },
+        {
+          "src": "/assets/optimized/hero/graphic-webp-960.webp",
+          "width": 960,
+          "height": 540,
+          "bytes": 34128
+        },
+        {
+          "src": "/assets/optimized/hero/graphic-webp-1920.webp",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 90458
+        }
+      ],
+      "originalBytes": 86936,
+      "previewBytes": 34128
+    },
+    "/assets/hero/photography.webp": {
+      "src": "/assets/optimized/hero/photography-webp-960.webp",
+      "full": "/assets/optimized/hero/photography-webp-1920.webp",
+      "width": 960,
+      "height": 540,
+      "variants": [
+        {
+          "src": "/assets/optimized/hero/photography-webp-480.webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 14396
+        },
+        {
+          "src": "/assets/optimized/hero/photography-webp-960.webp",
+          "width": 960,
+          "height": 540,
+          "bytes": 47600
+        },
+        {
+          "src": "/assets/optimized/hero/photography-webp-1920.webp",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 126402
+        }
+      ],
+      "originalBytes": 121116,
+      "previewBytes": 47600
+    },
+    "/assets/hero/social-media.webp": {
+      "src": "/assets/optimized/hero/social-media-webp-960.webp",
+      "full": "/assets/optimized/hero/social-media-webp-1920.webp",
+      "width": 960,
+      "height": 540,
+      "variants": [
+        {
+          "src": "/assets/optimized/hero/social-media-webp-480.webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 14160
+        },
+        {
+          "src": "/assets/optimized/hero/social-media-webp-960.webp",
+          "width": 960,
+          "height": 540,
+          "bytes": 44016
+        },
+        {
+          "src": "/assets/optimized/hero/social-media-webp-1920.webp",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 120312
+        }
+      ],
+      "originalBytes": 116554,
+      "previewBytes": 44016
+    },
+    "/assets/hero/video-editing.webp": {
+      "src": "/assets/optimized/hero/video-editing-webp-960.webp",
+      "full": "/assets/optimized/hero/video-editing-webp-1920.webp",
+      "width": 960,
+      "height": 540,
+      "variants": [
+        {
+          "src": "/assets/optimized/hero/video-editing-webp-480.webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 12690
+        },
+        {
+          "src": "/assets/optimized/hero/video-editing-webp-960.webp",
+          "width": 960,
+          "height": 540,
+          "bytes": 42474
+        },
+        {
+          "src": "/assets/optimized/hero/video-editing-webp-1920.webp",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 111760
+        }
+      ],
+      "originalBytes": 107980,
+      "previewBytes": 42474
+    },
+    "/assets/hero/web-design.webp": {
+      "src": "/assets/optimized/hero/web-design-webp-960.webp",
+      "full": "/assets/optimized/hero/web-design-webp-1920.webp",
+      "width": 960,
+      "height": 540,
+      "variants": [
+        {
+          "src": "/assets/optimized/hero/web-design-webp-480.webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 10540
+        },
+        {
+          "src": "/assets/optimized/hero/web-design-webp-960.webp",
+          "width": 960,
+          "height": 540,
+          "bytes": 34494
+        },
+        {
+          "src": "/assets/optimized/hero/web-design-webp-1920.webp",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 96938
+        }
+      ],
+      "originalBytes": 93490,
+      "previewBytes": 34494
+    },
+    "/assets/logo-black.png": {
+      "src": "/assets/optimized/logo-black-png-256.webp",
+      "full": "/assets/optimized/logo-black-png-256.webp",
+      "width": 256,
+      "height": 305,
+      "variants": [
+        {
+          "src": "/assets/optimized/logo-black-png-256.webp",
+          "width": 256,
+          "height": 305,
+          "bytes": 8492
+        }
+      ],
+      "originalBytes": 551429,
+      "previewBytes": 8492
+    },
+    "/assets/photography/beverage-1.jpg": {
+      "src": "/assets/optimized/photography/beverage-1-jpg-800.webp",
+      "full": "/assets/optimized/photography/beverage-1-jpg-800.webp",
+      "width": 800,
+      "height": 800,
+      "variants": [
+        {
+          "src": "/assets/optimized/photography/beverage-1-jpg-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 16474
+        },
+        {
+          "src": "/assets/optimized/photography/beverage-1-jpg-800.webp",
+          "width": 800,
+          "height": 800,
+          "bytes": 34328
+        }
+      ],
+      "originalBytes": 125712,
+      "previewBytes": 34328
+    },
+    "/assets/photography/beverage-2.jpg": {
+      "src": "/assets/optimized/photography/beverage-2-jpg-960.webp",
+      "full": "/assets/optimized/photography/beverage-2-jpg-1080.webp",
+      "width": 960,
+      "height": 960,
+      "variants": [
+        {
+          "src": "/assets/optimized/photography/beverage-2-jpg-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 39102
+        },
+        {
+          "src": "/assets/optimized/photography/beverage-2-jpg-960.webp",
+          "width": 960,
+          "height": 960,
+          "bytes": 103420
+        },
+        {
+          "src": "/assets/optimized/photography/beverage-2-jpg-1080.webp",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 128356
+        }
+      ],
+      "originalBytes": 369604,
+      "previewBytes": 103420
+    },
+    "/assets/photography/beverage-3.jpg": {
+      "src": "/assets/optimized/photography/beverage-3-jpg-800.webp",
+      "full": "/assets/optimized/photography/beverage-3-jpg-800.webp",
+      "width": 800,
+      "height": 800,
+      "variants": [
+        {
+          "src": "/assets/optimized/photography/beverage-3-jpg-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 50132
+        },
+        {
+          "src": "/assets/optimized/photography/beverage-3-jpg-800.webp",
+          "width": 800,
+          "height": 800,
+          "bytes": 130438
+        }
+      ],
+      "originalBytes": 322866,
+      "previewBytes": 130438
+    },
+    "/assets/photography/beverage-4.jpg": {
+      "src": "/assets/optimized/photography/beverage-4-jpg-800.webp",
+      "full": "/assets/optimized/photography/beverage-4-jpg-800.webp",
+      "width": 800,
+      "height": 800,
+      "variants": [
+        {
+          "src": "/assets/optimized/photography/beverage-4-jpg-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 30176
+        },
+        {
+          "src": "/assets/optimized/photography/beverage-4-jpg-800.webp",
+          "width": 800,
+          "height": 800,
+          "bytes": 61324
+        }
+      ],
+      "originalBytes": 198532,
+      "previewBytes": 61324
+    },
+    "/assets/photography/beverage-5.jpg": {
+      "src": "/assets/optimized/photography/beverage-5-jpg-800.webp",
+      "full": "/assets/optimized/photography/beverage-5-jpg-800.webp",
+      "width": 800,
+      "height": 800,
+      "variants": [
+        {
+          "src": "/assets/optimized/photography/beverage-5-jpg-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 33322
+        },
+        {
+          "src": "/assets/optimized/photography/beverage-5-jpg-800.webp",
+          "width": 800,
+          "height": 800,
+          "bytes": 77304
+        }
+      ],
+      "originalBytes": 236087,
+      "previewBytes": 77304
+    },
+    "/assets/photography/coffee-1.jpg": {
+      "src": "/assets/optimized/photography/coffee-1-jpg-640.webp",
+      "full": "/assets/optimized/photography/coffee-1-jpg-640.webp",
+      "width": 640,
+      "height": 640,
+      "variants": [
+        {
+          "src": "/assets/optimized/photography/coffee-1-jpg-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 10178
+        },
+        {
+          "src": "/assets/optimized/photography/coffee-1-jpg-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 15158
+        }
+      ],
+      "originalBytes": 22918,
+      "previewBytes": 15158
+    },
+    "/assets/photography/food-1.jpg": {
+      "src": "/assets/optimized/photography/food-1-jpg-800.webp",
+      "full": "/assets/optimized/photography/food-1-jpg-800.webp",
+      "width": 800,
+      "height": 800,
+      "variants": [
+        {
+          "src": "/assets/optimized/photography/food-1-jpg-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 44294
+        },
+        {
+          "src": "/assets/optimized/photography/food-1-jpg-800.webp",
+          "width": 800,
+          "height": 800,
+          "bytes": 96574
+        }
+      ],
+      "originalBytes": 265742,
+      "previewBytes": 96574
+    },
+    "/assets/photography/food-2.jpg": {
+      "src": "/assets/optimized/photography/food-2-jpg-800.webp",
+      "full": "/assets/optimized/photography/food-2-jpg-800.webp",
+      "width": 800,
+      "height": 800,
+      "variants": [
+        {
+          "src": "/assets/optimized/photography/food-2-jpg-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 25820
+        },
+        {
+          "src": "/assets/optimized/photography/food-2-jpg-800.webp",
+          "width": 800,
+          "height": 800,
+          "bytes": 54216
+        }
+      ],
+      "originalBytes": 184410,
+      "previewBytes": 54216
+    },
+    "/assets/photography/food-3.jpg": {
+      "src": "/assets/optimized/photography/food-3-jpg-800.webp",
+      "full": "/assets/optimized/photography/food-3-jpg-800.webp",
+      "width": 800,
+      "height": 800,
+      "variants": [
+        {
+          "src": "/assets/optimized/photography/food-3-jpg-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 23268
+        },
+        {
+          "src": "/assets/optimized/photography/food-3-jpg-800.webp",
+          "width": 800,
+          "height": 800,
+          "bytes": 47288
+        }
+      ],
+      "originalBytes": 166126,
+      "previewBytes": 47288
+    },
+    "/assets/photography/food-4.jpg": {
+      "src": "/assets/optimized/photography/food-4-jpg-800.webp",
+      "full": "/assets/optimized/photography/food-4-jpg-800.webp",
+      "width": 800,
+      "height": 800,
+      "variants": [
+        {
+          "src": "/assets/optimized/photography/food-4-jpg-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 29030
+        },
+        {
+          "src": "/assets/optimized/photography/food-4-jpg-800.webp",
+          "width": 800,
+          "height": 800,
+          "bytes": 60970
+        }
+      ],
+      "originalBytes": 204735,
+      "previewBytes": 60970
+    },
+    "/assets/photography/food-5.jpg": {
+      "src": "/assets/optimized/photography/food-5-jpg-800.webp",
+      "full": "/assets/optimized/photography/food-5-jpg-800.webp",
+      "width": 800,
+      "height": 800,
+      "variants": [
+        {
+          "src": "/assets/optimized/photography/food-5-jpg-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 33126
+        },
+        {
+          "src": "/assets/optimized/photography/food-5-jpg-800.webp",
+          "width": 800,
+          "height": 800,
+          "bytes": 69694
+        }
+      ],
+      "originalBytes": 205777,
+      "previewBytes": 69694
+    },
+    "/assets/photography/food-6.jpg": {
+      "src": "/assets/optimized/photography/food-6-jpg-800.webp",
+      "full": "/assets/optimized/photography/food-6-jpg-800.webp",
+      "width": 800,
+      "height": 800,
+      "variants": [
+        {
+          "src": "/assets/optimized/photography/food-6-jpg-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 22980
+        },
+        {
+          "src": "/assets/optimized/photography/food-6-jpg-800.webp",
+          "width": 800,
+          "height": 800,
+          "bytes": 44126
+        }
+      ],
+      "originalBytes": 152305,
+      "previewBytes": 44126
+    },
+    "/assets/photography/portrait-1.jpg": {
+      "src": "/assets/optimized/photography/portrait-1-jpg-960.webp",
+      "full": "/assets/optimized/photography/portrait-1-jpg-1080.webp",
+      "width": 960,
+      "height": 1200,
+      "variants": [
+        {
+          "src": "/assets/optimized/photography/portrait-1-jpg-480.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 15116
+        },
+        {
+          "src": "/assets/optimized/photography/portrait-1-jpg-960.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 45872
+        },
+        {
+          "src": "/assets/optimized/photography/portrait-1-jpg-1080.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 54988
+        }
+      ],
+      "originalBytes": 586330,
+      "previewBytes": 45872
+    },
+    "/assets/photography/portrait-2.jpg": {
+      "src": "/assets/optimized/photography/portrait-2-jpg-960.webp",
+      "full": "/assets/optimized/photography/portrait-2-jpg-1080.webp",
+      "width": 960,
+      "height": 1200,
+      "variants": [
+        {
+          "src": "/assets/optimized/photography/portrait-2-jpg-480.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 19018
+        },
+        {
+          "src": "/assets/optimized/photography/portrait-2-jpg-960.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 57976
+        },
+        {
+          "src": "/assets/optimized/photography/portrait-2-jpg-1080.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 69386
+        }
+      ],
+      "originalBytes": 712379,
+      "previewBytes": 57976
+    },
+    "/assets/photography/portrait-3.jpg": {
+      "src": "/assets/optimized/photography/portrait-3-jpg-960.webp",
+      "full": "/assets/optimized/photography/portrait-3-jpg-1080.webp",
+      "width": 960,
+      "height": 1200,
+      "variants": [
+        {
+          "src": "/assets/optimized/photography/portrait-3-jpg-480.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 22506
+        },
+        {
+          "src": "/assets/optimized/photography/portrait-3-jpg-960.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 71020
+        },
+        {
+          "src": "/assets/optimized/photography/portrait-3-jpg-1080.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 84136
+        }
+      ],
+      "originalBytes": 821875,
+      "previewBytes": 71020
+    },
+    "/assets/photography/portrait-4.jpg": {
+      "src": "/assets/optimized/photography/portrait-4-jpg-960.webp",
+      "full": "/assets/optimized/photography/portrait-4-jpg-1080.webp",
+      "width": 960,
+      "height": 1200,
+      "variants": [
+        {
+          "src": "/assets/optimized/photography/portrait-4-jpg-480.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 16156
+        },
+        {
+          "src": "/assets/optimized/photography/portrait-4-jpg-960.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 51340
+        },
+        {
+          "src": "/assets/optimized/photography/portrait-4-jpg-1080.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 61938
+        }
+      ],
+      "originalBytes": 534570,
+      "previewBytes": 51340
+    },
+    "/assets/portrait.png": {
+      "src": "/assets/optimized/portrait-png-960.webp",
+      "full": "/assets/optimized/portrait-png-1086.webp",
+      "width": 960,
+      "height": 1280,
+      "variants": [
+        {
+          "src": "/assets/optimized/portrait-png-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 12016
+        },
+        {
+          "src": "/assets/optimized/portrait-png-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 35242
+        },
+        {
+          "src": "/assets/optimized/portrait-png-1086.webp",
+          "width": 1086,
+          "height": 1448,
+          "bytes": 43342
+        }
+      ],
+      "originalBytes": 1782581,
+      "previewBytes": 35242
+    },
+    "/assets/power-media-proposal-cover.jpg": {
+      "src": "/assets/optimized/power-media-proposal-cover-jpg-960.webp",
+      "full": "/assets/optimized/power-media-proposal-cover-jpg-1100.webp",
+      "width": 960,
+      "height": 1360,
+      "variants": [
+        {
+          "src": "/assets/optimized/power-media-proposal-cover-jpg-480.webp",
+          "width": 480,
+          "height": 680,
+          "bytes": 19650
+        },
+        {
+          "src": "/assets/optimized/power-media-proposal-cover-jpg-960.webp",
+          "width": 960,
+          "height": 1360,
+          "bytes": 49128
+        },
+        {
+          "src": "/assets/optimized/power-media-proposal-cover-jpg-1100.webp",
+          "width": 1100,
+          "height": 1558,
+          "bytes": 60088
+        }
+      ],
+      "originalBytes": 132143,
+      "previewBytes": 49128
+    },
+    "/assets/social/alcon-1.webp": {
+      "src": "/assets/optimized/social/alcon-1-webp-941.webp",
+      "full": "/assets/optimized/social/alcon-1-webp-941.webp",
+      "width": 941,
+      "height": 1672,
+      "variants": [
+        {
+          "src": "/assets/optimized/social/alcon-1-webp-480.webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 64056
+        },
+        {
+          "src": "/assets/optimized/social/alcon-1-webp-941.webp",
+          "width": 941,
+          "height": 1672,
+          "bytes": 158574
+        }
+      ],
+      "originalBytes": 139344,
+      "previewBytes": 158574
+    },
+    "/assets/social/alcon-2.webp": {
+      "src": "/assets/optimized/social/alcon-2-webp-941.webp",
+      "full": "/assets/optimized/social/alcon-2-webp-941.webp",
+      "width": 941,
+      "height": 1672,
+      "variants": [
+        {
+          "src": "/assets/optimized/social/alcon-2-webp-480.webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 42200
+        },
+        {
+          "src": "/assets/optimized/social/alcon-2-webp-941.webp",
+          "width": 941,
+          "height": 1672,
+          "bytes": 96130
+        }
+      ],
+      "originalBytes": 84080,
+      "previewBytes": 96130
+    },
+    "/assets/social/alcon-3.webp": {
+      "src": "/assets/optimized/social/alcon-3-webp-941.webp",
+      "full": "/assets/optimized/social/alcon-3-webp-941.webp",
+      "width": 941,
+      "height": 1672,
+      "variants": [
+        {
+          "src": "/assets/optimized/social/alcon-3-webp-480.webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 53280
+        },
+        {
+          "src": "/assets/optimized/social/alcon-3-webp-941.webp",
+          "width": 941,
+          "height": 1672,
+          "bytes": 129876
+        }
+      ],
+      "originalBytes": 114460,
+      "previewBytes": 129876
+    },
+    "/assets/social/click-1.webp": {
+      "src": "/assets/optimized/social/click-1-webp-941.webp",
+      "full": "/assets/optimized/social/click-1-webp-941.webp",
+      "width": 941,
+      "height": 1672,
+      "variants": [
+        {
+          "src": "/assets/optimized/social/click-1-webp-480.webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 54174
+        },
+        {
+          "src": "/assets/optimized/social/click-1-webp-941.webp",
+          "width": 941,
+          "height": 1672,
+          "bytes": 128756
+        }
+      ],
+      "originalBytes": 112586,
+      "previewBytes": 128756
+    },
+    "/assets/social/click-2.webp": {
+      "src": "/assets/optimized/social/click-2-webp-941.webp",
+      "full": "/assets/optimized/social/click-2-webp-941.webp",
+      "width": 941,
+      "height": 1672,
+      "variants": [
+        {
+          "src": "/assets/optimized/social/click-2-webp-480.webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 48238
+        },
+        {
+          "src": "/assets/optimized/social/click-2-webp-941.webp",
+          "width": 941,
+          "height": 1672,
+          "bytes": 117432
+        }
+      ],
+      "originalBytes": 103092,
+      "previewBytes": 117432
+    },
+    "/assets/social/click-3.webp": {
+      "src": "/assets/optimized/social/click-3-webp-941.webp",
+      "full": "/assets/optimized/social/click-3-webp-941.webp",
+      "width": 941,
+      "height": 1672,
+      "variants": [
+        {
+          "src": "/assets/optimized/social/click-3-webp-480.webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 45630
+        },
+        {
+          "src": "/assets/optimized/social/click-3-webp-941.webp",
+          "width": 941,
+          "height": 1672,
+          "bytes": 110726
+        }
+      ],
+      "originalBytes": 97994,
+      "previewBytes": 110726
+    },
+    "/assets/social/ig-1.jpg": {
+      "src": "/assets/optimized/social/ig-1-jpg-960.webp",
+      "full": "/assets/optimized/social/ig-1-jpg-1080.webp",
+      "width": 960,
+      "height": 1200,
+      "variants": [
+        {
+          "src": "/assets/optimized/social/ig-1-jpg-480.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 25304
+        },
+        {
+          "src": "/assets/optimized/social/ig-1-jpg-960.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 59606
+        },
+        {
+          "src": "/assets/optimized/social/ig-1-jpg-1080.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 66698
+        }
+      ],
+      "originalBytes": 510592,
+      "previewBytes": 59606
+    },
+    "/assets/social/ig-2.jpg": {
+      "src": "/assets/optimized/social/ig-2-jpg-640.webp",
+      "full": "/assets/optimized/social/ig-2-jpg-640.webp",
+      "width": 640,
+      "height": 800,
+      "variants": [
+        {
+          "src": "/assets/optimized/social/ig-2-jpg-480.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 41074
+        },
+        {
+          "src": "/assets/optimized/social/ig-2-jpg-640.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 63172
+        }
+      ],
+      "originalBytes": 84143,
+      "previewBytes": 63172
+    },
+    "/assets/social/ig-3.jpg": {
+      "src": "/assets/optimized/social/ig-3-jpg-640.webp",
+      "full": "/assets/optimized/social/ig-3-jpg-640.webp",
+      "width": 640,
+      "height": 800,
+      "variants": [
+        {
+          "src": "/assets/optimized/social/ig-3-jpg-480.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 46288
+        },
+        {
+          "src": "/assets/optimized/social/ig-3-jpg-640.webp",
+          "width": 640,
+          "height": 800,
+          "bytes": 67492
+        }
+      ],
+      "originalBytes": 77108,
+      "previewBytes": 67492
+    },
+    "/assets/social/ils-carousel-1.png": {
+      "src": "/assets/optimized/social/ils-carousel-1-png-960.webp",
+      "full": "/assets/optimized/social/ils-carousel-1-png-1920.webp",
+      "width": 960,
+      "height": 1200,
+      "variants": [
+        {
+          "src": "/assets/optimized/social/ils-carousel-1-png-480.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 50122
+        },
+        {
+          "src": "/assets/optimized/social/ils-carousel-1-png-960.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 137554
+        },
+        {
+          "src": "/assets/optimized/social/ils-carousel-1-png-1920.webp",
+          "width": 1920,
+          "height": 2400,
+          "bytes": 337250
+        }
+      ],
+      "originalBytes": 2858493,
+      "previewBytes": 137554
+    },
+    "/assets/social/ils-carousel-2.png": {
+      "src": "/assets/optimized/social/ils-carousel-2-png-960.webp",
+      "full": "/assets/optimized/social/ils-carousel-2-png-1920.webp",
+      "width": 960,
+      "height": 1200,
+      "variants": [
+        {
+          "src": "/assets/optimized/social/ils-carousel-2-png-480.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 39368
+        },
+        {
+          "src": "/assets/optimized/social/ils-carousel-2-png-960.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 109318
+        },
+        {
+          "src": "/assets/optimized/social/ils-carousel-2-png-1920.webp",
+          "width": 1920,
+          "height": 2400,
+          "bytes": 279902
+        }
+      ],
+      "originalBytes": 2519687,
+      "previewBytes": 109318
+    },
+    "/assets/social/ils-carousel-3.png": {
+      "src": "/assets/optimized/social/ils-carousel-3-png-960.webp",
+      "full": "/assets/optimized/social/ils-carousel-3-png-1920.webp",
+      "width": 960,
+      "height": 1200,
+      "variants": [
+        {
+          "src": "/assets/optimized/social/ils-carousel-3-png-480.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 45384
+        },
+        {
+          "src": "/assets/optimized/social/ils-carousel-3-png-960.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 121104
+        },
+        {
+          "src": "/assets/optimized/social/ils-carousel-3-png-1920.webp",
+          "width": 1920,
+          "height": 2400,
+          "bytes": 293228
+        }
+      ],
+      "originalBytes": 2745455,
+      "previewBytes": 121104
+    },
+    "/assets/social/ils-carousel-4.png": {
+      "src": "/assets/optimized/social/ils-carousel-4-png-960.webp",
+      "full": "/assets/optimized/social/ils-carousel-4-png-1920.webp",
+      "width": 960,
+      "height": 1200,
+      "variants": [
+        {
+          "src": "/assets/optimized/social/ils-carousel-4-png-480.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 64270
+        },
+        {
+          "src": "/assets/optimized/social/ils-carousel-4-png-960.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 172442
+        },
+        {
+          "src": "/assets/optimized/social/ils-carousel-4-png-1920.webp",
+          "width": 1920,
+          "height": 2400,
+          "bytes": 402244
+        }
+      ],
+      "originalBytes": 3675020,
+      "previewBytes": 172442
+    },
+    "/assets/social/ils-event-1.webp": {
+      "src": "/assets/optimized/social/ils-event-1-webp-960.webp",
+      "full": "/assets/optimized/social/ils-event-1-webp-1040.webp",
+      "width": 960,
+      "height": 1200,
+      "variants": [
+        {
+          "src": "/assets/optimized/social/ils-event-1-webp-480.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 45034
+        },
+        {
+          "src": "/assets/optimized/social/ils-event-1-webp-960.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 105722
+        },
+        {
+          "src": "/assets/optimized/social/ils-event-1-webp-1040.webp",
+          "width": 1040,
+          "height": 1300,
+          "bytes": 134242
+        }
+      ],
+      "originalBytes": 144726,
+      "previewBytes": 105722
+    },
+    "/assets/social/ils-event-2.webp": {
+      "src": "/assets/optimized/social/ils-event-2-webp-960.webp",
+      "full": "/assets/optimized/social/ils-event-2-webp-1040.webp",
+      "width": 960,
+      "height": 1200,
+      "variants": [
+        {
+          "src": "/assets/optimized/social/ils-event-2-webp-480.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 46832
+        },
+        {
+          "src": "/assets/optimized/social/ils-event-2-webp-960.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 107680
+        },
+        {
+          "src": "/assets/optimized/social/ils-event-2-webp-1040.webp",
+          "width": 1040,
+          "height": 1300,
+          "bytes": 132908
+        }
+      ],
+      "originalBytes": 143970,
+      "previewBytes": 107680
+    },
+    "/assets/social/ils-event-3.webp": {
+      "src": "/assets/optimized/social/ils-event-3-webp-960.webp",
+      "full": "/assets/optimized/social/ils-event-3-webp-1040.webp",
+      "width": 960,
+      "height": 1200,
+      "variants": [
+        {
+          "src": "/assets/optimized/social/ils-event-3-webp-480.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 44170
+        },
+        {
+          "src": "/assets/optimized/social/ils-event-3-webp-960.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 103024
+        },
+        {
+          "src": "/assets/optimized/social/ils-event-3-webp-1040.webp",
+          "width": 1040,
+          "height": 1300,
+          "bytes": 128928
+        }
+      ],
+      "originalBytes": 137642,
+      "previewBytes": 103024
+    },
+    "/assets/social/post-2.webp": {
+      "src": "/assets/optimized/social/post-2-webp-960.webp",
+      "full": "/assets/optimized/social/post-2-webp-1080.webp",
+      "width": 960,
+      "height": 1200,
+      "variants": [
+        {
+          "src": "/assets/optimized/social/post-2-webp-480.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 27972
+        },
+        {
+          "src": "/assets/optimized/social/post-2-webp-960.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 67328
+        },
+        {
+          "src": "/assets/optimized/social/post-2-webp-1080.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 86830
+        }
+      ],
+      "originalBytes": 89118,
+      "previewBytes": 67328
+    },
+    "/assets/social/post-3.webp": {
+      "src": "/assets/optimized/social/post-3-webp-960.webp",
+      "full": "/assets/optimized/social/post-3-webp-1080.webp",
+      "width": 960,
+      "height": 1200,
+      "variants": [
+        {
+          "src": "/assets/optimized/social/post-3-webp-480.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 17530
+        },
+        {
+          "src": "/assets/optimized/social/post-3-webp-960.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 40922
+        },
+        {
+          "src": "/assets/optimized/social/post-3-webp-1080.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 51312
+        }
+      ],
+      "originalBytes": 51392,
+      "previewBytes": 40922
+    },
+    "/assets/social/power-media-post-1.png": {
+      "src": "/assets/optimized/social/power-media-post-1-png-960.webp",
+      "full": "/assets/optimized/social/power-media-post-1-png-1086.webp",
+      "width": 960,
+      "height": 1280,
+      "variants": [
+        {
+          "src": "/assets/optimized/social/power-media-post-1-png-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 48500
+        },
+        {
+          "src": "/assets/optimized/social/power-media-post-1-png-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 122384
+        },
+        {
+          "src": "/assets/optimized/social/power-media-post-1-png-1086.webp",
+          "width": 1086,
+          "height": 1448,
+          "bytes": 144560
+        }
+      ],
+      "originalBytes": 2030363,
+      "previewBytes": 122384
+    },
+    "/assets/social/power-media-post-2.png": {
+      "src": "/assets/optimized/social/power-media-post-2-png-960.webp",
+      "full": "/assets/optimized/social/power-media-post-2-png-1086.webp",
+      "width": 960,
+      "height": 1280,
+      "variants": [
+        {
+          "src": "/assets/optimized/social/power-media-post-2-png-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 49894
+        },
+        {
+          "src": "/assets/optimized/social/power-media-post-2-png-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 132802
+        },
+        {
+          "src": "/assets/optimized/social/power-media-post-2-png-1086.webp",
+          "width": 1086,
+          "height": 1448,
+          "bytes": 154548
+        }
+      ],
+      "originalBytes": 1987740,
+      "previewBytes": 132802
+    },
+    "/assets/social/power-media-post-3.png": {
+      "src": "/assets/optimized/social/power-media-post-3-png-960.webp",
+      "full": "/assets/optimized/social/power-media-post-3-png-1086.webp",
+      "width": 960,
+      "height": 1280,
+      "variants": [
+        {
+          "src": "/assets/optimized/social/power-media-post-3-png-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 31646
+        },
+        {
+          "src": "/assets/optimized/social/power-media-post-3-png-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 78136
+        },
+        {
+          "src": "/assets/optimized/social/power-media-post-3-png-1086.webp",
+          "width": 1086,
+          "height": 1448,
+          "bytes": 89708
+        }
+      ],
+      "originalBytes": 1710684,
+      "previewBytes": 78136
+    },
+    "/assets/social/sm-hero-1.webp": {
+      "src": "/assets/optimized/social/sm-hero-1-webp-900.webp",
+      "full": "/assets/optimized/social/sm-hero-1-webp-900.webp",
+      "width": 900,
+      "height": 900,
+      "variants": [
+        {
+          "src": "/assets/optimized/social/sm-hero-1-webp-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 24130
+        },
+        {
+          "src": "/assets/optimized/social/sm-hero-1-webp-900.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 48938
+        }
+      ],
+      "originalBytes": 48732,
+      "previewBytes": 48938
+    },
+    "/assets/social/sm-hero-2.webp": {
+      "src": "/assets/optimized/social/sm-hero-2-webp-900.webp",
+      "full": "/assets/optimized/social/sm-hero-2-webp-900.webp",
+      "width": 900,
+      "height": 900,
+      "variants": [
+        {
+          "src": "/assets/optimized/social/sm-hero-2-webp-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 13888
+        },
+        {
+          "src": "/assets/optimized/social/sm-hero-2-webp-900.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 30022
+        }
+      ],
+      "originalBytes": 30698,
+      "previewBytes": 30022
+    },
+    "/assets/social/sm-hero-3.webp": {
+      "src": "/assets/optimized/social/sm-hero-3-webp-900.webp",
+      "full": "/assets/optimized/social/sm-hero-3-webp-900.webp",
+      "width": 900,
+      "height": 900,
+      "variants": [
+        {
+          "src": "/assets/optimized/social/sm-hero-3-webp-480.webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 13670
+        },
+        {
+          "src": "/assets/optimized/social/sm-hero-3-webp-900.webp",
+          "width": 900,
+          "height": 900,
+          "bytes": 31340
+        }
+      ],
+      "originalBytes": 32216,
+      "previewBytes": 31340
+    },
+    "/assets/tools/chatgpt.jpg": {
+      "src": "/assets/optimized/tools/chatgpt-jpg-48.webp",
+      "full": "/assets/optimized/tools/chatgpt-jpg-48.webp",
+      "width": 48,
+      "height": 48,
+      "variants": [
+        {
+          "src": "/assets/optimized/tools/chatgpt-jpg-48.webp",
+          "width": 48,
+          "height": 48,
+          "bytes": 852
+        }
+      ],
+      "originalBytes": 5942,
+      "previewBytes": 852
+    },
+    "/assets/tools/claude.jpg": {
+      "src": "/assets/optimized/tools/claude-jpg-48.webp",
+      "full": "/assets/optimized/tools/claude-jpg-48.webp",
+      "width": 48,
+      "height": 48,
+      "variants": [
+        {
+          "src": "/assets/optimized/tools/claude-jpg-48.webp",
+          "width": 48,
+          "height": 48,
+          "bytes": 808
+        }
+      ],
+      "originalBytes": 6029,
+      "previewBytes": 808
+    },
+    "/assets/tools/dreamina.jpg": {
+      "src": "/assets/optimized/tools/dreamina-jpg-48.webp",
+      "full": "/assets/optimized/tools/dreamina-jpg-48.webp",
+      "width": 48,
+      "height": 48,
+      "variants": [
+        {
+          "src": "/assets/optimized/tools/dreamina-jpg-48.webp",
+          "width": 48,
+          "height": 48,
+          "bytes": 716
+        }
+      ],
+      "originalBytes": 5880,
+      "previewBytes": 716
+    },
+    "/assets/tools/figma.jpg": {
+      "src": "/assets/optimized/tools/figma-jpg-48.webp",
+      "full": "/assets/optimized/tools/figma-jpg-48.webp",
+      "width": 48,
+      "height": 48,
+      "variants": [
+        {
+          "src": "/assets/optimized/tools/figma-jpg-48.webp",
+          "width": 48,
+          "height": 48,
+          "bytes": 638
+        }
+      ],
+      "originalBytes": 5861,
+      "previewBytes": 638
+    },
+    "/assets/tools/freepik.jpg": {
+      "src": "/assets/optimized/tools/freepik-jpg-48.webp",
+      "full": "/assets/optimized/tools/freepik-jpg-48.webp",
+      "width": 48,
+      "height": 48,
+      "variants": [
+        {
+          "src": "/assets/optimized/tools/freepik-jpg-48.webp",
+          "width": 48,
+          "height": 48,
+          "bytes": 586
+        }
+      ],
+      "originalBytes": 5761,
+      "previewBytes": 586
+    },
+    "/assets/tools/illustrator.jpg": {
+      "src": "/assets/optimized/tools/illustrator-jpg-48.webp",
+      "full": "/assets/optimized/tools/illustrator-jpg-48.webp",
+      "width": 48,
+      "height": 48,
+      "variants": [
+        {
+          "src": "/assets/optimized/tools/illustrator-jpg-48.webp",
+          "width": 48,
+          "height": 48,
+          "bytes": 634
+        }
+      ],
+      "originalBytes": 5581,
+      "previewBytes": 634
+    },
+    "/assets/tools/indesign.jpg": {
+      "src": "/assets/optimized/tools/indesign-jpg-48.webp",
+      "full": "/assets/optimized/tools/indesign-jpg-48.webp",
+      "width": 48,
+      "height": 48,
+      "variants": [
+        {
+          "src": "/assets/optimized/tools/indesign-jpg-48.webp",
+          "width": 48,
+          "height": 48,
+          "bytes": 582
+        }
+      ],
+      "originalBytes": 5569,
+      "previewBytes": 582
+    },
+    "/assets/tools/kling.jpg": {
+      "src": "/assets/optimized/tools/kling-jpg-48.webp",
+      "full": "/assets/optimized/tools/kling-jpg-48.webp",
+      "width": 48,
+      "height": 48,
+      "variants": [
+        {
+          "src": "/assets/optimized/tools/kling-jpg-48.webp",
+          "width": 48,
+          "height": 48,
+          "bytes": 878
+        }
+      ],
+      "originalBytes": 6003,
+      "previewBytes": 878
+    },
+    "/assets/tools/lightroom.jpg": {
+      "src": "/assets/optimized/tools/lightroom-jpg-48.webp",
+      "full": "/assets/optimized/tools/lightroom-jpg-48.webp",
+      "width": 48,
+      "height": 48,
+      "variants": [
+        {
+          "src": "/assets/optimized/tools/lightroom-jpg-48.webp",
+          "width": 48,
+          "height": 48,
+          "bytes": 522
+        }
+      ],
+      "originalBytes": 5383,
+      "previewBytes": 522
+    },
+    "/assets/tools/midjourney.jpg": {
+      "src": "/assets/optimized/tools/midjourney-jpg-48.webp",
+      "full": "/assets/optimized/tools/midjourney-jpg-48.webp",
+      "width": 48,
+      "height": 48,
+      "variants": [
+        {
+          "src": "/assets/optimized/tools/midjourney-jpg-48.webp",
+          "width": 48,
+          "height": 48,
+          "bytes": 754
+        }
+      ],
+      "originalBytes": 5929,
+      "previewBytes": 754
+    },
+    "/assets/tools/photoshop.jpg": {
+      "src": "/assets/optimized/tools/photoshop-jpg-48.webp",
+      "full": "/assets/optimized/tools/photoshop-jpg-48.webp",
+      "width": 48,
+      "height": 48,
+      "variants": [
+        {
+          "src": "/assets/optimized/tools/photoshop-jpg-48.webp",
+          "width": 48,
+          "height": 48,
+          "bytes": 636
+        }
+      ],
+      "originalBytes": 5689,
+      "previewBytes": 636
+    },
+    "/assets/tools/premiere.jpg": {
+      "src": "/assets/optimized/tools/premiere-jpg-48.webp",
+      "full": "/assets/optimized/tools/premiere-jpg-48.webp",
+      "width": 48,
+      "height": 48,
+      "variants": [
+        {
+          "src": "/assets/optimized/tools/premiere-jpg-48.webp",
+          "width": 48,
+          "height": 48,
+          "bytes": 588
+        }
+      ],
+      "originalBytes": 5442,
+      "previewBytes": 588
+    },
+    "/assets/tools/vscode.jpg": {
+      "src": "/assets/optimized/tools/vscode-jpg-48.webp",
+      "full": "/assets/optimized/tools/vscode-jpg-48.webp",
+      "width": 48,
+      "height": 48,
+      "variants": [
+        {
+          "src": "/assets/optimized/tools/vscode-jpg-48.webp",
+          "width": 48,
+          "height": 48,
+          "bytes": 686
+        }
+      ],
+      "originalBytes": 5858,
+      "previewBytes": 686
+    },
+    "/assets/tools/xd.jpg": {
+      "src": "/assets/optimized/tools/xd-jpg-48.webp",
+      "full": "/assets/optimized/tools/xd-jpg-48.webp",
+      "width": 48,
+      "height": 48,
+      "variants": [
+        {
+          "src": "/assets/optimized/tools/xd-jpg-48.webp",
+          "width": 48,
+          "height": 48,
+          "bytes": 732
+        }
+      ],
+      "originalBytes": 5724,
+      "previewBytes": 732
+    },
+    "/assets/video-posters/ai-1.jpg": {
+      "src": "/assets/optimized/video-posters/ai-1-jpg-360.webp",
+      "full": "/assets/optimized/video-posters/ai-1-jpg-360.webp",
+      "width": 360,
+      "height": 640,
+      "variants": [
+        {
+          "src": "/assets/optimized/video-posters/ai-1-jpg-360.webp",
+          "width": 360,
+          "height": 640,
+          "bytes": 28488
+        }
+      ],
+      "originalBytes": 39792,
+      "previewBytes": 28488
+    },
+    "/assets/video-posters/ai-2.jpg": {
+      "src": "/assets/optimized/video-posters/ai-2-jpg-360.webp",
+      "full": "/assets/optimized/video-posters/ai-2-jpg-360.webp",
+      "width": 360,
+      "height": 450,
+      "variants": [
+        {
+          "src": "/assets/optimized/video-posters/ai-2-jpg-360.webp",
+          "width": 360,
+          "height": 450,
+          "bytes": 24902
+        }
+      ],
+      "originalBytes": 33345,
+      "previewBytes": 24902
+    },
+    "/assets/video-posters/ai-3.jpg": {
+      "src": "/assets/optimized/video-posters/ai-3-jpg-720.webp",
+      "full": "/assets/optimized/video-posters/ai-3-jpg-720.webp",
+      "width": 720,
+      "height": 1280,
+      "variants": [
+        {
+          "src": "/assets/optimized/video-posters/ai-3-jpg-480.webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 62234
+        },
+        {
+          "src": "/assets/optimized/video-posters/ai-3-jpg-720.webp",
+          "width": 720,
+          "height": 1280,
+          "bytes": 100288
+        }
+      ],
+      "originalBytes": 136797,
+      "previewBytes": 100288
+    },
+    "/assets/video-posters/ai-4.jpg": {
+      "src": "/assets/optimized/video-posters/ai-4-jpg-720.webp",
+      "full": "/assets/optimized/video-posters/ai-4-jpg-720.webp",
+      "width": 720,
+      "height": 1280,
+      "variants": [
+        {
+          "src": "/assets/optimized/video-posters/ai-4-jpg-480.webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 50096
+        },
+        {
+          "src": "/assets/optimized/video-posters/ai-4-jpg-720.webp",
+          "width": 720,
+          "height": 1280,
+          "bytes": 77566
+        }
+      ],
+      "originalBytes": 121574,
+      "previewBytes": 77566
+    },
+    "/assets/video-posters/ai-5.jpg": {
+      "src": "/assets/optimized/video-posters/ai-5-jpg-360.webp",
+      "full": "/assets/optimized/video-posters/ai-5-jpg-360.webp",
+      "width": 360,
+      "height": 640,
+      "variants": [
+        {
+          "src": "/assets/optimized/video-posters/ai-5-jpg-360.webp",
+          "width": 360,
+          "height": 640,
+          "bytes": 28794
+        }
+      ],
+      "originalBytes": 42020,
+      "previewBytes": 28794
+    },
+    "/assets/video-posters/ai-6.jpg": {
+      "src": "/assets/optimized/video-posters/ai-6-jpg-360.webp",
+      "full": "/assets/optimized/video-posters/ai-6-jpg-360.webp",
+      "width": 360,
+      "height": 640,
+      "variants": [
+        {
+          "src": "/assets/optimized/video-posters/ai-6-jpg-360.webp",
+          "width": 360,
+          "height": 640,
+          "bytes": 30196
+        }
+      ],
+      "originalBytes": 41025,
+      "previewBytes": 30196
+    },
+    "/assets/video-posters/ils-story.jpg": {
+      "src": "/assets/optimized/video-posters/ils-story-jpg-960.webp",
+      "full": "/assets/optimized/video-posters/ils-story-jpg-1080.webp",
+      "width": 960,
+      "height": 1707,
+      "variants": [
+        {
+          "src": "/assets/optimized/video-posters/ils-story-jpg-480.webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 38304
+        },
+        {
+          "src": "/assets/optimized/video-posters/ils-story-jpg-960.webp",
+          "width": 960,
+          "height": 1707,
+          "bytes": 90110
+        },
+        {
+          "src": "/assets/optimized/video-posters/ils-story-jpg-1080.webp",
+          "width": 1080,
+          "height": 1920,
+          "bytes": 105700
+        }
+      ],
+      "originalBytes": 180360,
+      "previewBytes": 90110
+    },
+    "/assets/video-posters/instagram-story-1.jpg": {
+      "src": "/assets/optimized/video-posters/instagram-story-1-jpg-720.webp",
+      "full": "/assets/optimized/video-posters/instagram-story-1-jpg-720.webp",
+      "width": 720,
+      "height": 1280,
+      "variants": [
+        {
+          "src": "/assets/optimized/video-posters/instagram-story-1-jpg-480.webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 44984
+        },
+        {
+          "src": "/assets/optimized/video-posters/instagram-story-1-jpg-720.webp",
+          "width": 720,
+          "height": 1280,
+          "bytes": 80786
+        }
+      ],
+      "originalBytes": 109281,
+      "previewBytes": 80786
+    },
+    "/assets/video-posters/instagram-story-2.jpg": {
+      "src": "/assets/optimized/video-posters/instagram-story-2-jpg-720.webp",
+      "full": "/assets/optimized/video-posters/instagram-story-2-jpg-720.webp",
+      "width": 720,
+      "height": 1280,
+      "variants": [
+        {
+          "src": "/assets/optimized/video-posters/instagram-story-2-jpg-480.webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 14790
+        },
+        {
+          "src": "/assets/optimized/video-posters/instagram-story-2-jpg-720.webp",
+          "width": 720,
+          "height": 1280,
+          "bytes": 25958
+        }
+      ],
+      "originalBytes": 43084,
+      "previewBytes": 25958
+    },
+    "/assets/video-posters/reel-1.jpg": {
+      "src": "/assets/optimized/video-posters/reel-1-jpg-719.webp",
+      "full": "/assets/optimized/video-posters/reel-1-jpg-719.webp",
+      "width": 719,
+      "height": 900,
+      "variants": [
+        {
+          "src": "/assets/optimized/video-posters/reel-1-jpg-480.webp",
+          "width": 480,
+          "height": 601,
+          "bytes": 34108
+        },
+        {
+          "src": "/assets/optimized/video-posters/reel-1-jpg-719.webp",
+          "width": 719,
+          "height": 900,
+          "bytes": 56302
+        }
+      ],
+      "originalBytes": 86174,
+      "previewBytes": 56302
+    },
+    "/assets/web-design/apparel.png": {
+      "src": "/assets/optimized/web-design/apparel-png-960.webp",
+      "full": "/assets/optimized/web-design/apparel-png-1080.webp",
+      "width": 960,
+      "height": 1707,
+      "variants": [
+        {
+          "src": "/assets/optimized/web-design/apparel-png-480.webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 39770
+        },
+        {
+          "src": "/assets/optimized/web-design/apparel-png-960.webp",
+          "width": 960,
+          "height": 1707,
+          "bytes": 99768
+        },
+        {
+          "src": "/assets/optimized/web-design/apparel-png-1080.webp",
+          "width": 1080,
+          "height": 1920,
+          "bytes": 116398
+        }
+      ],
+      "originalBytes": 885812,
+      "previewBytes": 99768
+    },
+    "/assets/web-design/cacl.webp": {
+      "src": "/assets/optimized/web-design/cacl-webp-960.webp",
+      "full": "/assets/optimized/web-design/cacl-webp-1083.webp",
+      "width": 960,
+      "height": 1702,
+      "variants": [
+        {
+          "src": "/assets/optimized/web-design/cacl-webp-480.webp",
+          "width": 480,
+          "height": 851,
+          "bytes": 28084
+        },
+        {
+          "src": "/assets/optimized/web-design/cacl-webp-960.webp",
+          "width": 960,
+          "height": 1702,
+          "bytes": 74122
+        },
+        {
+          "src": "/assets/optimized/web-design/cacl-webp-1083.webp",
+          "width": 1083,
+          "height": 1920,
+          "bytes": 95438
+        }
+      ],
+      "originalBytes": 793948,
+      "previewBytes": 74122
+    },
+    "/assets/web-design/click.png": {
+      "src": "/assets/optimized/web-design/click-png-941.webp",
+      "full": "/assets/optimized/web-design/click-png-941.webp",
+      "width": 941,
+      "height": 1672,
+      "variants": [
+        {
+          "src": "/assets/optimized/web-design/click-png-480.webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 56750
+        },
+        {
+          "src": "/assets/optimized/web-design/click-png-941.webp",
+          "width": 941,
+          "height": 1672,
+          "bytes": 146244
+        }
+      ],
+      "originalBytes": 1583890,
+      "previewBytes": 146244
+    },
+    "/assets/web-design/coffee-and-sweets.png": {
+      "src": "/assets/optimized/web-design/coffee-and-sweets-png-941.webp",
+      "full": "/assets/optimized/web-design/coffee-and-sweets-png-941.webp",
+      "width": 941,
+      "height": 1672,
+      "variants": [
+        {
+          "src": "/assets/optimized/web-design/coffee-and-sweets-png-480.webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 23118
+        },
+        {
+          "src": "/assets/optimized/web-design/coffee-and-sweets-png-941.webp",
+          "width": 941,
+          "height": 1672,
+          "bytes": 60810
+        }
+      ],
+      "originalBytes": 1307162,
+      "previewBytes": 60810
+    },
+    "/assets/web-design/crypto.webp": {
+      "src": "/assets/optimized/web-design/crypto-webp-960.webp",
+      "full": "/assets/optimized/web-design/crypto-webp-1082.webp",
+      "width": 960,
+      "height": 1704,
+      "variants": [
+        {
+          "src": "/assets/optimized/web-design/crypto-webp-480.webp",
+          "width": 480,
+          "height": 852,
+          "bytes": 23850
+        },
+        {
+          "src": "/assets/optimized/web-design/crypto-webp-960.webp",
+          "width": 960,
+          "height": 1704,
+          "bytes": 57998
+        },
+        {
+          "src": "/assets/optimized/web-design/crypto-webp-1082.webp",
+          "width": 1082,
+          "height": 1920,
+          "bytes": 74696
+        }
+      ],
+      "originalBytes": 246706,
+      "previewBytes": 57998
+    },
+    "/assets/web-design/food-hub.png": {
+      "src": "/assets/optimized/web-design/food-hub-png-960.webp",
+      "full": "/assets/optimized/web-design/food-hub-png-1080.webp",
+      "width": 960,
+      "height": 1707,
+      "variants": [
+        {
+          "src": "/assets/optimized/web-design/food-hub-png-480.webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 52568
+        },
+        {
+          "src": "/assets/optimized/web-design/food-hub-png-960.webp",
+          "width": 960,
+          "height": 1707,
+          "bytes": 149444
+        },
+        {
+          "src": "/assets/optimized/web-design/food-hub-png-1080.webp",
+          "width": 1080,
+          "height": 1920,
+          "bytes": 175332
+        }
+      ],
+      "originalBytes": 1828987,
+      "previewBytes": 149444
+    },
+    "/assets/web-design/foodie.png": {
+      "src": "/assets/optimized/web-design/foodie-png-960.webp",
+      "full": "/assets/optimized/web-design/foodie-png-1080.webp",
+      "width": 960,
+      "height": 1707,
+      "variants": [
+        {
+          "src": "/assets/optimized/web-design/foodie-png-480.webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 45164
+        },
+        {
+          "src": "/assets/optimized/web-design/foodie-png-960.webp",
+          "width": 960,
+          "height": 1707,
+          "bytes": 112652
+        },
+        {
+          "src": "/assets/optimized/web-design/foodie-png-1080.webp",
+          "width": 1080,
+          "height": 1920,
+          "bytes": 129994
+        }
+      ],
+      "originalBytes": 1021587,
+      "previewBytes": 112652
+    },
+    "/assets/web-design/ils.png": {
+      "src": "/assets/optimized/web-design/ils-png-960.webp",
+      "full": "/assets/optimized/web-design/ils-png-1080.webp",
+      "width": 960,
+      "height": 1707,
+      "variants": [
+        {
+          "src": "/assets/optimized/web-design/ils-png-480.webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 50416
+        },
+        {
+          "src": "/assets/optimized/web-design/ils-png-960.webp",
+          "width": 960,
+          "height": 1707,
+          "bytes": 144556
+        },
+        {
+          "src": "/assets/optimized/web-design/ils-png-1080.webp",
+          "width": 1080,
+          "height": 1920,
+          "bytes": 170906
+        }
+      ],
+      "originalBytes": 1377744,
+      "previewBytes": 144556
+    },
+    "/assets/web-design/paw.webp": {
+      "src": "/assets/optimized/web-design/paw-webp-960.webp",
+      "full": "/assets/optimized/web-design/paw-webp-1080.webp",
+      "width": 960,
+      "height": 1703,
+      "variants": [
+        {
+          "src": "/assets/optimized/web-design/paw-webp-480.webp",
+          "width": 480,
+          "height": 852,
+          "bytes": 29774
+        },
+        {
+          "src": "/assets/optimized/web-design/paw-webp-960.webp",
+          "width": 960,
+          "height": 1703,
+          "bytes": 73768
+        },
+        {
+          "src": "/assets/optimized/web-design/paw-webp-1080.webp",
+          "width": 1080,
+          "height": 1916,
+          "bytes": 97318
+        }
+      ],
+      "originalBytes": 657358,
+      "previewBytes": 73768
+    }
+  }
+}

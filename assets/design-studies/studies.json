@@ -1,0 +1,74 @@
+[
+  {
+    "id": "noise-rising",
+    "title": "Noise Rising",
+    "type": "Poster",
+    "description": "A two-colour music identity built around condensed type and a rhythmic sound motif.",
+    "width": 900,
+    "height": 1200
+  },
+  {
+    "id": "beyond-the-canvas",
+    "title": "Beyond the Canvas",
+    "type": "Poster",
+    "description": "An exhibition concept exploring negative space, optical geometry and editorial type.",
+    "width": 900,
+    "height": 1200
+  },
+  {
+    "id": "summer-splash",
+    "title": "Summer Splash",
+    "type": "Poster",
+    "description": "A summer campaign direction using expansive type, a citrus accent and flowing wave forms.",
+    "width": 900,
+    "height": 1200
+  },
+  {
+    "id": "burgers-and-shakes",
+    "title": "Burgers & Shakes",
+    "type": "Poster",
+    "description": "A diner identity study with a custom vector illustration and a warm, limited colour palette.",
+    "width": 900,
+    "height": 1200
+  },
+  {
+    "id": "coastal-escape",
+    "title": "Coastal Escape",
+    "type": "Poster",
+    "description": "An illustrated travel print combining a restrained coastal palette with expressive serif type.",
+    "width": 900,
+    "height": 1200
+  },
+  {
+    "id": "keep-going",
+    "title": "Let's Keep Going",
+    "type": "Poster",
+    "description": "A typography study pairing assertive letterforms with a single directional graphic.",
+    "width": 900,
+    "height": 1200
+  },
+  {
+    "id": "dinner-menu",
+    "title": "Table / 01",
+    "type": "Print",
+    "description": "A restaurant menu study with readable hierarchy, deliberate spacing and a restrained botanical detail.",
+    "width": 1200,
+    "height": 1000
+  },
+  {
+    "id": "editorial-ritual",
+    "title": "The Everyday Ritual",
+    "type": "Print",
+    "description": "A magazine spread with controlled type hierarchy, generous margins and existing portfolio photography.",
+    "width": 1200,
+    "height": 880
+  },
+  {
+    "id": "slow-coffee-social",
+    "title": "Slow Coffee",
+    "type": "Social",
+    "description": "A coordinated three-post campaign study with one type system, palette and photographic direction.",
+    "width": 1200,
+    "height": 780
+  }
+]
